@@ -5,7 +5,7 @@
 This project consumes the **Mindenity-DS** Figma file (`fileKey: qU7OupeoYyrtlNMEKi7ao5`) exclusively. A full catalog of the DS lives under [design-system/](design-system/). Read [design-system/README.md](design-system/README.md) at the start of any UI/Figma task.
 
 Key facts:
-- **Bridge:** `paperclip-figma-bridge` only. Never `figma-console` (retired, PUR-131).
+- **Bridge:** Both `paperclip-figma-bridge` and `figma-console` are supported. Use whichever is currently available and specified — `figma-console` MCP tools are registered with a `mcp_figma_console_` prefix. Prefer the bridge the agent already has connected.
 - **Theme model:** light + dark are separate Figma pages today (NOT variable modes — Phase 2 set up the infrastructure but pages aren't flipped). Pick the matching page. Phase 2.5 will collapse this when template-page screen backgrounds are migrated to semantic surfaces.
 - **Tokens:** 36 numeric variables (radius, spacing, size, icon-size) + 144 `Palette` colors (renamed from `Colors` in Phase 2A) + 32 `Semantic` tokens with Light/Dark modes (31 from Phase 2 + `surface/base` from Phase 2.5 Step 1, both complete 2026-05-12). New components should bind to `Semantic` tokens (`surface/*`, `text/*`, `border/*`, `interactive/*`, `state/*`); `Palette` is implementation detail for decorative tints + Semantic aliases. Dark mode infrastructure exists but no page is flipped yet — see Phase 2 + Phase 2.5 Step 1 retrospectives for status.
 - **Components:** 183 across 24 categories — see [design-system/components.md](design-system/components.md).
