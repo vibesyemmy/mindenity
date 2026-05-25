@@ -1,0 +1,10 @@
+{
+  "phase": "2.5",
+  "step": "1-redux-pre-state",
+  "createdAt": "2026-05-12",
+  "pageId": "20307:23730",
+  "pageName": "Mobile template - light",
+  "discovery": "Mobile-Light frames use raw hex fills (no Palette bindings). Cream (#f7f3ef = Brand/5 hex) is the dominant page surface. Anomalous olive (#9bb167) found on one screen (22398:27000) — left for separate designer review.",
+  "approach": "Bind raw #f7f3ef fills on FRAME/RECTANGLE nodes (outside INSTANCE/COMPONENT/COMPONENT_SET) to new Semantic token surface/base (Light: Brand/5, Dark: Gray/95).",
+  "scopeThisDispatch": "Authentication section only (22543:61121)"
+}

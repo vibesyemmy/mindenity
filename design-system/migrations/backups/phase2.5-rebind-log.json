@@ -1,0 +1,3833 @@
+{
+  "phase": "2.5",
+  "step": "1-complete",
+  "createdAt": "2026-05-12",
+  "sectionsProcessed": [
+    "22543:61121",
+    "22543:56128",
+    "22543:60702",
+    "22544:67968",
+    "22545:60042",
+    "22548:102299",
+    "22572:67306",
+    "22576:67293",
+    "22573:60811",
+    "22549:64318",
+    "22550:44765",
+    "22556:45332",
+    "22557:63998",
+    "22570:49353",
+    "22571:47187",
+    "22576:70870",
+    "22579:48841",
+    "22582:53319",
+    "22582:75676",
+    "22583:67135",
+    "22583:72850"
+  ],
+  "newSemanticToken": "surface/base",
+  "totalBindings": 542,
+  "byKind": {
+    "fill": 539,
+    "stroke": 3
+  },
+  "byHex": {
+    "#f7f3ef": 542
+  },
+  "entries": [
+    {
+      "nodeId": "22543:60944",
+      "sectionId": "22543:61121",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22400:36807",
+      "sectionId": "22543:61121",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22400:37369",
+      "sectionId": "22543:61121",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22400:37668",
+      "sectionId": "22543:61121",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22400:37815",
+      "sectionId": "22543:61121",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22401:29134",
+      "sectionId": "22543:61121",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22401:35000",
+      "sectionId": "22543:61121",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22398:39235",
+      "sectionId": "22543:56128",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22398:41191",
+      "sectionId": "22543:60702",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22543:57123",
+      "sectionId": "22543:60702",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22543:57675",
+      "sectionId": "22543:60702",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22584:49316",
+      "sectionId": "22543:60702",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22400:20947",
+      "sectionId": "22543:60702",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22584:49364",
+      "sectionId": "22543:60702",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22548:102610",
+      "sectionId": "22543:60702",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22584:49378",
+      "sectionId": "22543:60702",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22543:57367",
+      "sectionId": "22543:60702",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22584:49429",
+      "sectionId": "22543:60702",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22543:57623",
+      "sectionId": "22543:60702",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22584:49436",
+      "sectionId": "22543:60702",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22543:58017",
+      "sectionId": "22543:60702",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22584:49441",
+      "sectionId": "22543:60702",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22543:58154",
+      "sectionId": "22543:60702",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22584:50774",
+      "sectionId": "22543:60702",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22543:58210",
+      "sectionId": "22543:60702",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22584:50779",
+      "sectionId": "22543:60702",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22543:59179",
+      "sectionId": "22543:60702",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22584:50924",
+      "sectionId": "22543:60702",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22543:59282",
+      "sectionId": "22543:60702",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22584:50956",
+      "sectionId": "22543:60702",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22543:58096",
+      "sectionId": "22543:60702",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22584:50647",
+      "sectionId": "22543:60702",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22543:59395",
+      "sectionId": "22543:60702",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22584:51012",
+      "sectionId": "22543:60702",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22401:35734",
+      "sectionId": "22544:67968",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22401:36541",
+      "sectionId": "22544:67968",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22398:34603",
+      "sectionId": "22544:67968",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22398:34615",
+      "sectionId": "22544:67968",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22398:34629",
+      "sectionId": "22544:67968",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22401:36915",
+      "sectionId": "22544:67968",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22401:40103",
+      "sectionId": "22544:67968",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22401:37506",
+      "sectionId": "22544:67968",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22401:37854",
+      "sectionId": "22544:67968",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22401:41104",
+      "sectionId": "22544:67968",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22401:41911",
+      "sectionId": "22544:67968",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22401:42398",
+      "sectionId": "22544:67968",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22401:42557",
+      "sectionId": "22544:67968",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22401:45164",
+      "sectionId": "22544:67968",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22401:45568",
+      "sectionId": "22544:67968",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22402:1921",
+      "sectionId": "22544:67968",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22401:45743",
+      "sectionId": "22544:67968",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22402:21821",
+      "sectionId": "22544:67968",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22402:21951",
+      "sectionId": "22544:67968",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22402:22772",
+      "sectionId": "22544:67968",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22402:26091",
+      "sectionId": "22544:67968",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22402:26351",
+      "sectionId": "22544:67968",
+      "kind": "stroke",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22402:26905",
+      "sectionId": "22544:67968",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22544:67706",
+      "sectionId": "22544:67968",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22403:23599",
+      "sectionId": "22544:67968",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22403:35837",
+      "sectionId": "22544:67968",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22403:35884",
+      "sectionId": "22544:67968",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22403:36124",
+      "sectionId": "22544:67968",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22403:37384",
+      "sectionId": "22545:60042",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22404:2962",
+      "sectionId": "22545:60042",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22404:25815",
+      "sectionId": "22545:60042",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22404:26472",
+      "sectionId": "22545:60042",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22404:26658",
+      "sectionId": "22545:60042",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22404:27057",
+      "sectionId": "22545:60042",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22404:26859",
+      "sectionId": "22545:60042",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22404:27889",
+      "sectionId": "22545:60042",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22404:28062",
+      "sectionId": "22545:60042",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22404:28558",
+      "sectionId": "22545:60042",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22404:28684",
+      "sectionId": "22545:60042",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22404:28692",
+      "sectionId": "22545:60042",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22404:29664",
+      "sectionId": "22545:60042",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22404:29741",
+      "sectionId": "22545:60042",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22404:28774",
+      "sectionId": "22545:60042",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22404:30028",
+      "sectionId": "22545:60042",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22404:30200",
+      "sectionId": "22545:60042",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22545:58159",
+      "sectionId": "22545:60042",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22405:5954",
+      "sectionId": "22545:60042",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22405:28562",
+      "sectionId": "22545:60042",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22405:29336",
+      "sectionId": "22545:60042",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22405:37709",
+      "sectionId": "22545:60042",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22405:42524",
+      "sectionId": "22545:60042",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22405:47463",
+      "sectionId": "22545:60042",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22405:47469",
+      "sectionId": "22545:60042",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22405:47916",
+      "sectionId": "22548:102299",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22405:53581",
+      "sectionId": "22548:102299",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22410:3949",
+      "sectionId": "22548:102299",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22410:4327",
+      "sectionId": "22548:102299",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22410:38604",
+      "sectionId": "22548:102299",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22410:39793",
+      "sectionId": "22548:102299",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22411:11057",
+      "sectionId": "22548:102299",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22411:16762",
+      "sectionId": "22548:102299",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22411:37800",
+      "sectionId": "22548:102299",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22419:28821",
+      "sectionId": "22548:102299",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22419:41906",
+      "sectionId": "22548:102299",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22547:59851",
+      "sectionId": "22548:102299",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22421:34641",
+      "sectionId": "22548:102299",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22421:34894",
+      "sectionId": "22548:102299",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22421:7941",
+      "sectionId": "22548:102299",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22421:40108",
+      "sectionId": "22548:102299",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22421:40425",
+      "sectionId": "22548:102299",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22423:48034",
+      "sectionId": "22548:102299",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22421:38145",
+      "sectionId": "22548:102299",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22421:38330",
+      "sectionId": "22548:102299",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22421:38400",
+      "sectionId": "22548:102299",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22427:74222",
+      "sectionId": "22548:102299",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22421:38421",
+      "sectionId": "22548:102299",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22421:38567",
+      "sectionId": "22548:102299",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22427:74603",
+      "sectionId": "22548:102299",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22427:75182",
+      "sectionId": "22548:102299",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22427:76620",
+      "sectionId": "22548:102299",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22427:79476",
+      "sectionId": "22548:102299",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22427:79810",
+      "sectionId": "22548:102299",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22427:80480",
+      "sectionId": "22548:102299",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22427:76824",
+      "sectionId": "22548:102299",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22427:120200",
+      "sectionId": "22548:102299",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22427:120835",
+      "sectionId": "22548:102299",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22427:122520",
+      "sectionId": "22548:102299",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22427:77743",
+      "sectionId": "22548:102299",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22454:8631",
+      "sectionId": "22548:102299",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22454:9320",
+      "sectionId": "22548:102299",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22454:17175",
+      "sectionId": "22548:102299",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22454:17975",
+      "sectionId": "22548:102299",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22454:27036",
+      "sectionId": "22548:102299",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22454:26816",
+      "sectionId": "22548:102299",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22454:28473",
+      "sectionId": "22548:102299",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22454:30390",
+      "sectionId": "22548:102299",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22454:30475",
+      "sectionId": "22548:102299",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22548:47363",
+      "sectionId": "22548:102299",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22454:28938",
+      "sectionId": "22548:102299",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22454:32478",
+      "sectionId": "22548:102299",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22454:32625",
+      "sectionId": "22548:102299",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22454:32998",
+      "sectionId": "22548:102299",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22454:30919",
+      "sectionId": "22548:102299",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22454:30993",
+      "sectionId": "22548:102299",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22454:30943",
+      "sectionId": "22548:102299",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22454:72167",
+      "sectionId": "22548:102299",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22454:31040",
+      "sectionId": "22548:102299",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22454:31478",
+      "sectionId": "22548:102299",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22463:11138",
+      "sectionId": "22548:102299",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22463:32569",
+      "sectionId": "22548:102299",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22463:51036",
+      "sectionId": "22548:102299",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22463:9915",
+      "sectionId": "22548:102299",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22463:54127",
+      "sectionId": "22548:102299",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22463:9939",
+      "sectionId": "22548:102299",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22463:9960",
+      "sectionId": "22548:102299",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22463:54543",
+      "sectionId": "22548:102299",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22463:10211",
+      "sectionId": "22548:102299",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22484:59905",
+      "sectionId": "22548:102299",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22485:11991",
+      "sectionId": "22548:102299",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22485:31692",
+      "sectionId": "22548:102299",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22530:36073",
+      "sectionId": "22572:67306",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22530:32060",
+      "sectionId": "22572:67306",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22530:32076",
+      "sectionId": "22572:67306",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22530:36839",
+      "sectionId": "22572:67306",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22530:32088",
+      "sectionId": "22572:67306",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22530:32109",
+      "sectionId": "22572:67306",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22530:55858",
+      "sectionId": "22572:67306",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22530:56253",
+      "sectionId": "22572:67306",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22530:32118",
+      "sectionId": "22572:67306",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22530:56927",
+      "sectionId": "22572:67306",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22530:32142",
+      "sectionId": "22572:67306",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22530:57324",
+      "sectionId": "22572:67306",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22531:54724",
+      "sectionId": "22572:67306",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22531:55318",
+      "sectionId": "22572:67306",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22531:55880",
+      "sectionId": "22572:67306",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22531:56068",
+      "sectionId": "22572:67306",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22531:56235",
+      "sectionId": "22572:67306",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22532:56586",
+      "sectionId": "22572:67306",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22532:56873",
+      "sectionId": "22572:67306",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22537:58305",
+      "sectionId": "22572:67306",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22532:57113",
+      "sectionId": "22572:67306",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22572:64940",
+      "sectionId": "22572:67306",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22532:57566",
+      "sectionId": "22572:67306",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22537:57833",
+      "sectionId": "22572:67306",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22532:57907",
+      "sectionId": "22572:67306",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22532:58214",
+      "sectionId": "22572:67306",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22572:65418",
+      "sectionId": "22572:67306",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22532:58391",
+      "sectionId": "22572:67306",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22530:32278",
+      "sectionId": "22572:67306",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22532:58578",
+      "sectionId": "22572:67306",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22536:35439",
+      "sectionId": "22572:67306",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22537:55216",
+      "sectionId": "22572:67306",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22537:55301",
+      "sectionId": "22572:67306",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22537:55344",
+      "sectionId": "22572:67306",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22537:57012",
+      "sectionId": "22572:67306",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22537:55312",
+      "sectionId": "22572:67306",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22537:55379",
+      "sectionId": "22572:67306",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22537:55419",
+      "sectionId": "22572:67306",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22537:55474",
+      "sectionId": "22572:67306",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22537:55507",
+      "sectionId": "22572:67306",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22537:55547",
+      "sectionId": "22572:67306",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22537:57469",
+      "sectionId": "22572:67306",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22572:66617",
+      "sectionId": "22572:67306",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22572:66683",
+      "sectionId": "22572:67306",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22537:58700",
+      "sectionId": "22572:67306",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22538:34209",
+      "sectionId": "22572:67306",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22538:34693",
+      "sectionId": "22572:67306",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22539:33952",
+      "sectionId": "22572:67306",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22539:34114",
+      "sectionId": "22572:67306",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22537:55756",
+      "sectionId": "22572:67306",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22522:34903",
+      "sectionId": "22576:67293",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22522:35111",
+      "sectionId": "22576:67293",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22522:35124",
+      "sectionId": "22576:67293",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22522:35142",
+      "sectionId": "22576:67293",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22522:41847",
+      "sectionId": "22576:67293",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22522:44394",
+      "sectionId": "22576:67293",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22522:45321",
+      "sectionId": "22576:67293",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22522:65714",
+      "sectionId": "22576:67293",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22524:29748",
+      "sectionId": "22576:67293",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22524:29773",
+      "sectionId": "22576:67293",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22522:36079",
+      "sectionId": "22576:67293",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22522:36123",
+      "sectionId": "22576:67293",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22575:82418",
+      "sectionId": "22576:67293",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22524:50899",
+      "sectionId": "22576:67293",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22524:50922",
+      "sectionId": "22576:67293",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22524:51233",
+      "sectionId": "22576:67293",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22524:51330",
+      "sectionId": "22576:67293",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22524:51421",
+      "sectionId": "22576:67293",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22524:51641",
+      "sectionId": "22576:67293",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22524:51367",
+      "sectionId": "22576:67293",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22525:29172",
+      "sectionId": "22576:67293",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22525:29096",
+      "sectionId": "22576:67293",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22525:29241",
+      "sectionId": "22576:67293",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22525:29283",
+      "sectionId": "22576:67293",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22525:29326",
+      "sectionId": "22576:67293",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22525:29367",
+      "sectionId": "22576:67293",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22525:29819",
+      "sectionId": "22576:67293",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22522:36427",
+      "sectionId": "22576:67293",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22522:36433",
+      "sectionId": "22576:67293",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22522:36448",
+      "sectionId": "22576:67293",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22586:68368",
+      "sectionId": "22576:67293",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22576:66986",
+      "sectionId": "22576:67293",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22525:30587",
+      "sectionId": "22576:67293",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22525:30637",
+      "sectionId": "22576:67293",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22525:30669",
+      "sectionId": "22576:67293",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22525:30808",
+      "sectionId": "22576:67293",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22522:36535",
+      "sectionId": "22576:67293",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22522:36622",
+      "sectionId": "22576:67293",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22522:23198",
+      "sectionId": "22573:60811",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22522:23374",
+      "sectionId": "22573:60811",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22522:25476",
+      "sectionId": "22573:60811",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22522:25954",
+      "sectionId": "22573:60811",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22522:25647",
+      "sectionId": "22573:60811",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22573:57286",
+      "sectionId": "22573:60811",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22522:23441",
+      "sectionId": "22573:60811",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22522:25139",
+      "sectionId": "22573:60811",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22522:25307",
+      "sectionId": "22573:60811",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22494:13006",
+      "sectionId": "22549:64318",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22485:42193",
+      "sectionId": "22549:64318",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22494:13582",
+      "sectionId": "22549:64318",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22494:12082",
+      "sectionId": "22549:64318",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22494:12244",
+      "sectionId": "22549:64318",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22485:42269",
+      "sectionId": "22549:64318",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22493:11905",
+      "sectionId": "22549:64318",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22548:103162",
+      "sectionId": "22549:64318",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22494:13671",
+      "sectionId": "22549:64318",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22548:106554",
+      "sectionId": "22549:64318",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22498:36726",
+      "sectionId": "22549:64318",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22498:36858",
+      "sectionId": "22549:64318",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22498:37038",
+      "sectionId": "22549:64318",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22498:38310",
+      "sectionId": "22549:64318",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22498:38999",
+      "sectionId": "22549:64318",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22498:35325",
+      "sectionId": "22549:64318",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22496:13997",
+      "sectionId": "22549:64318",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22496:33424",
+      "sectionId": "22549:64318",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22496:35104",
+      "sectionId": "22549:64318",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22496:35352",
+      "sectionId": "22549:64318",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22496:35656",
+      "sectionId": "22549:64318",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22497:11792",
+      "sectionId": "22549:64318",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22497:11886",
+      "sectionId": "22549:64318",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22497:12098",
+      "sectionId": "22549:64318",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22497:13238",
+      "sectionId": "22549:64318",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22497:14301",
+      "sectionId": "22549:64318",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22549:62152",
+      "sectionId": "22549:64318",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22497:13330",
+      "sectionId": "22549:64318",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22497:13803",
+      "sectionId": "22549:64318",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22497:14056",
+      "sectionId": "22549:64318",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22498:36293",
+      "sectionId": "22549:64318",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22498:13555",
+      "sectionId": "22549:64318",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22498:14025",
+      "sectionId": "22549:64318",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22498:12034",
+      "sectionId": "22549:64318",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22498:14124",
+      "sectionId": "22549:64318",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22549:43494",
+      "sectionId": "22549:64318",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22549:43567",
+      "sectionId": "22549:64318",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22549:43640",
+      "sectionId": "22549:64318",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22549:43786",
+      "sectionId": "22549:64318",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22498:14364",
+      "sectionId": "22549:64318",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22498:44183",
+      "sectionId": "22549:64318",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22498:40437",
+      "sectionId": "22549:64318",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22498:14685",
+      "sectionId": "22549:64318",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22498:39524",
+      "sectionId": "22549:64318",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22498:41753",
+      "sectionId": "22549:64318",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22498:51370",
+      "sectionId": "22550:44765",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22498:46877",
+      "sectionId": "22550:44765",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22498:46901",
+      "sectionId": "22550:44765",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22498:46947",
+      "sectionId": "22550:44765",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22498:47468",
+      "sectionId": "22550:44765",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22498:48074",
+      "sectionId": "22550:44765",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22498:48289",
+      "sectionId": "22550:44765",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22549:72656",
+      "sectionId": "22550:44765",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22498:48372",
+      "sectionId": "22550:44765",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22498:49928",
+      "sectionId": "22550:44765",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22498:48491",
+      "sectionId": "22550:44765",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22549:85165",
+      "sectionId": "22550:44765",
+      "kind": "stroke",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22499:15602",
+      "sectionId": "22550:44765",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22499:15980",
+      "sectionId": "22550:44765",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22499:15745",
+      "sectionId": "22550:44765",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22498:52446",
+      "sectionId": "22550:44765",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22498:52556",
+      "sectionId": "22550:44765",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22498:52600",
+      "sectionId": "22550:44765",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22498:45491",
+      "sectionId": "22550:44765",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22498:53531",
+      "sectionId": "22550:44765",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22498:53812",
+      "sectionId": "22550:44765",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22549:87320",
+      "sectionId": "22550:44765",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22498:54143",
+      "sectionId": "22550:44765",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22498:54263",
+      "sectionId": "22550:44765",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22550:43812",
+      "sectionId": "22550:44765",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22499:14327",
+      "sectionId": "22550:44765",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22499:14595",
+      "sectionId": "22550:44765",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22499:16238",
+      "sectionId": "22550:44765",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22499:21094",
+      "sectionId": "22556:45332",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22499:21971",
+      "sectionId": "22556:45332",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22499:21994",
+      "sectionId": "22556:45332",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22499:22049",
+      "sectionId": "22556:45332",
+      "kind": "stroke",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22499:22170",
+      "sectionId": "22556:45332",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22499:22173",
+      "sectionId": "22556:45332",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22499:22247",
+      "sectionId": "22556:45332",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22499:22234",
+      "sectionId": "22556:45332",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22499:22319",
+      "sectionId": "22556:45332",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22499:22304",
+      "sectionId": "22556:45332",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22499:22381",
+      "sectionId": "22556:45332",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22550:52284",
+      "sectionId": "22556:45332",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22499:47958",
+      "sectionId": "22556:45332",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22500:16942",
+      "sectionId": "22556:45332",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22500:17218",
+      "sectionId": "22556:45332",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22500:28487",
+      "sectionId": "22556:45332",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22551:47101",
+      "sectionId": "22556:45332",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22501:38449",
+      "sectionId": "22556:45332",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22501:38669",
+      "sectionId": "22556:45332",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22500:28855",
+      "sectionId": "22556:45332",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22500:32437",
+      "sectionId": "22556:45332",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22501:17266",
+      "sectionId": "22556:45332",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22501:17213",
+      "sectionId": "22556:45332",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22500:52373",
+      "sectionId": "22556:45332",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22500:53629",
+      "sectionId": "22556:45332",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22501:37994",
+      "sectionId": "22556:45332",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22501:38777",
+      "sectionId": "22556:45332",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22501:39012",
+      "sectionId": "22556:45332",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22501:39363",
+      "sectionId": "22556:45332",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22502:22064",
+      "sectionId": "22556:45332",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22502:21986",
+      "sectionId": "22556:45332",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22502:17727",
+      "sectionId": "22556:45332",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22502:21735",
+      "sectionId": "22556:45332",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22502:31131",
+      "sectionId": "22557:63998",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22502:31401",
+      "sectionId": "22557:63998",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22502:31464",
+      "sectionId": "22557:63998",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22502:31517",
+      "sectionId": "22557:63998",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22503:18687",
+      "sectionId": "22557:63998",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22503:18758",
+      "sectionId": "22557:63998",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22503:18789",
+      "sectionId": "22557:63998",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22503:19030",
+      "sectionId": "22557:63998",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22503:19100",
+      "sectionId": "22557:63998",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22503:19149",
+      "sectionId": "22557:63998",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22503:48667",
+      "sectionId": "22557:63998",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22507:39363",
+      "sectionId": "22557:63998",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22503:48228",
+      "sectionId": "22557:63998",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22503:48476",
+      "sectionId": "22557:63998",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22503:49766",
+      "sectionId": "22557:63998",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22502:25850",
+      "sectionId": "22557:63998",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22502:25860",
+      "sectionId": "22557:63998",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22502:25866",
+      "sectionId": "22557:63998",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22502:25868",
+      "sectionId": "22557:63998",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22502:25870",
+      "sectionId": "22557:63998",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22503:50133",
+      "sectionId": "22557:63998",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22502:26027",
+      "sectionId": "22557:63998",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22502:26300",
+      "sectionId": "22557:63998",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22504:18246",
+      "sectionId": "22557:63998",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22503:50874",
+      "sectionId": "22557:63998",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22505:18611",
+      "sectionId": "22557:63998",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22502:26690",
+      "sectionId": "22557:63998",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22507:18880",
+      "sectionId": "22557:63998",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22507:18906",
+      "sectionId": "22557:63998",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22557:63559",
+      "sectionId": "22557:63998",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22508:21396",
+      "sectionId": "22570:49353",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22508:22452",
+      "sectionId": "22570:49353",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22508:23462",
+      "sectionId": "22570:49353",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22508:22475",
+      "sectionId": "22570:49353",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22508:22564",
+      "sectionId": "22570:49353",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22508:22680",
+      "sectionId": "22570:49353",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22508:22800",
+      "sectionId": "22570:49353",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22512:22502",
+      "sectionId": "22570:49353",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22512:22541",
+      "sectionId": "22570:49353",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22508:23601",
+      "sectionId": "22570:49353",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22563:47913",
+      "sectionId": "22570:49353",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22512:21905",
+      "sectionId": "22570:49353",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22512:22270",
+      "sectionId": "22570:49353",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22512:24973",
+      "sectionId": "22570:49353",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22570:47096",
+      "sectionId": "22570:49353",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22512:25016",
+      "sectionId": "22570:49353",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22512:21324",
+      "sectionId": "22570:49353",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22567:46103",
+      "sectionId": "22570:49353",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22512:23598",
+      "sectionId": "22570:49353",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22567:46454",
+      "sectionId": "22570:49353",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22512:25354",
+      "sectionId": "22570:49353",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22512:21751",
+      "sectionId": "22570:49353",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22512:23536",
+      "sectionId": "22570:49353",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22512:22449",
+      "sectionId": "22570:49353",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22512:23530",
+      "sectionId": "22570:49353",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22512:23533",
+      "sectionId": "22570:49353",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22569:65666",
+      "sectionId": "22570:49353",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22512:24162",
+      "sectionId": "22570:49353",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22512:24575",
+      "sectionId": "22570:49353",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22513:22227",
+      "sectionId": "22571:47187",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22518:41712",
+      "sectionId": "22571:47187",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22518:41732",
+      "sectionId": "22571:47187",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22518:42009",
+      "sectionId": "22571:47187",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22520:53174",
+      "sectionId": "22571:47187",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22518:43660",
+      "sectionId": "22571:47187",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22518:47812",
+      "sectionId": "22571:47187",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22570:72906",
+      "sectionId": "22571:47187",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22519:46932",
+      "sectionId": "22571:47187",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22520:24445",
+      "sectionId": "22571:47187",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22520:24767",
+      "sectionId": "22571:47187",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22520:25269",
+      "sectionId": "22571:47187",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22519:44768",
+      "sectionId": "22571:47187",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22520:26765",
+      "sectionId": "22571:47187",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22520:26794",
+      "sectionId": "22571:47187",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22520:26819",
+      "sectionId": "22571:47187",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22520:27145",
+      "sectionId": "22571:47187",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22520:50527",
+      "sectionId": "22571:47187",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22520:50678",
+      "sectionId": "22571:47187",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22520:50986",
+      "sectionId": "22571:47187",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22520:51005",
+      "sectionId": "22571:47187",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22586:68030",
+      "sectionId": "22571:47187",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22520:54105",
+      "sectionId": "22571:47187",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22571:46725",
+      "sectionId": "22571:47187",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22520:51068",
+      "sectionId": "22571:47187",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22520:51077",
+      "sectionId": "22571:47187",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22520:51088",
+      "sectionId": "22571:47187",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22520:51098",
+      "sectionId": "22571:47187",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22520:51209",
+      "sectionId": "22571:47187",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22525:52879",
+      "sectionId": "22576:70870",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22525:50205",
+      "sectionId": "22576:70870",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22525:50274",
+      "sectionId": "22576:70870",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22525:50287",
+      "sectionId": "22576:70870",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22525:50304",
+      "sectionId": "22576:70870",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22525:50310",
+      "sectionId": "22576:70870",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22525:50525",
+      "sectionId": "22576:70870",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22525:55378",
+      "sectionId": "22579:48841",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22525:55478",
+      "sectionId": "22579:48841",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22525:55701",
+      "sectionId": "22579:48841",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22525:55775",
+      "sectionId": "22579:48841",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22525:55950",
+      "sectionId": "22579:48841",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22525:56073",
+      "sectionId": "22579:48841",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22525:56312",
+      "sectionId": "22579:48841",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22525:56547",
+      "sectionId": "22579:48841",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22578:48411",
+      "sectionId": "22579:48841",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22578:48746",
+      "sectionId": "22579:48841",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22578:48997",
+      "sectionId": "22579:48841",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22578:49228",
+      "sectionId": "22579:48841",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22579:48318",
+      "sectionId": "22579:48841",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22579:48565",
+      "sectionId": "22579:48841",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22526:28569",
+      "sectionId": "22582:53319",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22526:28906",
+      "sectionId": "22582:53319",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22525:60812",
+      "sectionId": "22582:53319",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22526:29198",
+      "sectionId": "22582:53319",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22525:60824",
+      "sectionId": "22582:53319",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22526:51372",
+      "sectionId": "22582:53319",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22525:60844",
+      "sectionId": "22582:53319",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22525:60864",
+      "sectionId": "22582:53319",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22526:51887",
+      "sectionId": "22582:53319",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22526:52274",
+      "sectionId": "22582:53319",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22526:52408",
+      "sectionId": "22582:53319",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22526:52469",
+      "sectionId": "22582:53319",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22527:31427",
+      "sectionId": "22582:53319",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22581:48990",
+      "sectionId": "22582:53319",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22528:57107",
+      "sectionId": "22582:53319",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22528:50900",
+      "sectionId": "22582:53319",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22528:50957",
+      "sectionId": "22582:53319",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22528:50999",
+      "sectionId": "22582:53319",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22528:51074",
+      "sectionId": "22582:53319",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22528:57151",
+      "sectionId": "22582:53319",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22582:50389",
+      "sectionId": "22582:53319",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22582:50727",
+      "sectionId": "22582:53319",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22539:37304",
+      "sectionId": "22582:75676",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22539:37594",
+      "sectionId": "22582:75676",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22539:43397",
+      "sectionId": "22582:75676",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22539:62896",
+      "sectionId": "22582:75676",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22539:63731",
+      "sectionId": "22582:75676",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22539:37747",
+      "sectionId": "22582:75676",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22539:66598",
+      "sectionId": "22582:75676",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22539:37849",
+      "sectionId": "22582:75676",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22539:37892",
+      "sectionId": "22582:75676",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22539:67587",
+      "sectionId": "22582:75676",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22539:67724",
+      "sectionId": "22582:75676",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22539:68221",
+      "sectionId": "22582:75676",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22539:38610",
+      "sectionId": "22582:75676",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22539:38643",
+      "sectionId": "22582:75676",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22539:69600",
+      "sectionId": "22582:75676",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22539:38704",
+      "sectionId": "22582:75676",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22587:67445",
+      "sectionId": "22583:67135",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22539:78523",
+      "sectionId": "22583:67135",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22539:80435",
+      "sectionId": "22583:67135",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22539:80535",
+      "sectionId": "22583:67135",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22539:81139",
+      "sectionId": "22583:67135",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22539:81464",
+      "sectionId": "22583:67135",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22539:81567",
+      "sectionId": "22583:67135",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22539:82306",
+      "sectionId": "22583:67135",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22539:73540",
+      "sectionId": "22583:67135",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22539:73593",
+      "sectionId": "22583:67135",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22539:73847",
+      "sectionId": "22583:67135",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22539:73871",
+      "sectionId": "22583:67135",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22539:73923",
+      "sectionId": "22583:67135",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22539:73947",
+      "sectionId": "22583:67135",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22539:74072",
+      "sectionId": "22583:67135",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22539:74189",
+      "sectionId": "22583:67135",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22539:74204",
+      "sectionId": "22583:67135",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22539:74252",
+      "sectionId": "22583:67135",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22539:74312",
+      "sectionId": "22583:67135",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22539:74513",
+      "sectionId": "22583:67135",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22539:74526",
+      "sectionId": "22583:67135",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22539:74662",
+      "sectionId": "22583:67135",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22539:74822",
+      "sectionId": "22583:67135",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22539:74952",
+      "sectionId": "22583:67135",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22539:74961",
+      "sectionId": "22583:67135",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22540:56058",
+      "sectionId": "22583:67135",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22540:56124",
+      "sectionId": "22583:67135",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22540:56374",
+      "sectionId": "22583:67135",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22539:75272",
+      "sectionId": "22583:67135",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22539:75378",
+      "sectionId": "22583:67135",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22539:75607",
+      "sectionId": "22583:67135",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22539:75680",
+      "sectionId": "22583:67135",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22540:58602",
+      "sectionId": "22583:72850",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22540:57089",
+      "sectionId": "22583:72850",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22540:57111",
+      "sectionId": "22583:72850",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22540:57431",
+      "sectionId": "22583:72850",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22540:57454",
+      "sectionId": "22583:72850",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    },
+    {
+      "nodeId": "22540:57485",
+      "sectionId": "22583:72850",
+      "kind": "fill",
+      "fromHex": "#f7f3ef",
+      "toVar": "surface/base"
+    }
+  ]
+}

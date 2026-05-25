@@ -1,0 +1,161 @@
+{
+  "phase": "2.5",
+  "step": "1-complete",
+  "createdAt": "2026-05-12",
+  "tokenIntroduced": "surface/base",
+  "totals": {
+    "fillsBound": 539,
+    "strokesBound": 3,
+    "sectionsProcessed": 21,
+    "errors": 0
+  },
+  "bySection": [
+    {
+      "sectionId": "22543:61121",
+      "name": "Authentication",
+      "fills": 7,
+      "strokes": 0,
+      "errors": 0
+    },
+    {
+      "sectionId": "22543:56128",
+      "name": "Splash & Loading",
+      "fills": 1,
+      "strokes": 0,
+      "errors": 0
+    },
+    {
+      "sectionId": "22543:60702",
+      "name": "Welcome Screen",
+      "fills": 26,
+      "strokes": 0,
+      "errors": 0
+    },
+    {
+      "sectionId": "22544:67968",
+      "name": "Comprehensive Mental Health Assessment",
+      "fills": 27,
+      "strokes": 1,
+      "errors": 0
+    },
+    {
+      "sectionId": "22545:60042",
+      "name": "Profile Setup & Account Completion",
+      "fills": 25,
+      "strokes": 0,
+      "errors": 0
+    },
+    {
+      "sectionId": "22548:102299",
+      "name": "Home & Mental Health Metrics",
+      "fills": 67,
+      "strokes": 0,
+      "errors": 0
+    },
+    {
+      "sectionId": "22572:67306",
+      "name": "Mindful AI Companion",
+      "fills": 50,
+      "strokes": 0,
+      "errors": 0
+    },
+    {
+      "sectionId": "22576:67293",
+      "name": "AI Symptom Checker",
+      "fills": 38,
+      "strokes": 0,
+      "errors": 0
+    },
+    {
+      "sectionId": "22573:60811",
+      "name": "Gratefulness & Affirmations",
+      "fills": 9,
+      "strokes": 0,
+      "errors": 0
+    },
+    {
+      "sectionId": "22549:64318",
+      "name": "Self Journaling",
+      "fills": 45,
+      "strokes": 0,
+      "errors": 0
+    },
+    {
+      "sectionId": "22550:44765",
+      "name": "Stress Management",
+      "fills": 27,
+      "strokes": 1,
+      "errors": 0
+    },
+    {
+      "sectionId": "22556:45332",
+      "name": "Mood Tracker",
+      "fills": 32,
+      "strokes": 1,
+      "errors": 0
+    },
+    {
+      "sectionId": "22557:63998",
+      "name": "Sleep Level",
+      "fills": 30,
+      "strokes": 0,
+      "errors": 0
+    },
+    {
+      "sectionId": "22570:49353",
+      "name": "Mindful Minutes",
+      "fills": 29,
+      "strokes": 0,
+      "errors": 0
+    },
+    {
+      "sectionId": "22571:47187",
+      "name": "Therapist Appointment",
+      "fills": 29,
+      "strokes": 0,
+      "errors": 0
+    },
+    {
+      "sectionId": "22576:70870",
+      "name": "Search & Notifications",
+      "fills": 7,
+      "strokes": 0,
+      "errors": 0
+    },
+    {
+      "sectionId": "22579:48841",
+      "name": "Error & Utility",
+      "fills": 14,
+      "strokes": 0,
+      "errors": 0
+    },
+    {
+      "sectionId": "22582:53319",
+      "name": "Mental Health Resources",
+      "fills": 22,
+      "strokes": 0,
+      "errors": 0
+    },
+    {
+      "sectionId": "22582:75676",
+      "name": "Mindful Community",
+      "fills": 16,
+      "strokes": 0,
+      "errors": 0
+    },
+    {
+      "sectionId": "22583:67135",
+      "name": "Profile Settings & Help Center",
+      "fills": 32,
+      "strokes": 0,
+      "errors": 0
+    },
+    {
+      "sectionId": "22583:72850",
+      "name": "Achievements",
+      "fills": 6,
+      "strokes": 0,
+      "errors": 0
+    }
+  ]
+}

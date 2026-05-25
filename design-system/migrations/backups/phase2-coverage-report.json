@@ -1,0 +1,204 @@
+{
+  "phase": 2,
+  "step": "2E",
+  "createdAt": "2026-05-12",
+  "totals": {
+    "totalBindings": 25720,
+    "onSemantic": 16471,
+    "onPalette": 9249,
+    "overallSemanticPct": 64.0
+  },
+  "byCategory": [
+    {
+      "category": "Dropdown",
+      "total": 937,
+      "onSemantic": 905,
+      "onPalette": 32,
+      "semanticPct": 96.6
+    },
+    {
+      "category": "Progress & Indicator",
+      "total": 181,
+      "onSemantic": 163,
+      "onPalette": 18,
+      "semanticPct": 90.1
+    },
+    {
+      "category": "Dialog/Modal",
+      "total": 244,
+      "onSemantic": 212,
+      "onPalette": 32,
+      "semanticPct": 86.9
+    },
+    {
+      "category": "Input",
+      "total": 1657,
+      "onSemantic": 1406,
+      "onPalette": 251,
+      "semanticPct": 84.9
+    },
+    {
+      "category": "Tooltip",
+      "total": 298,
+      "onSemantic": 253,
+      "onPalette": 45,
+      "semanticPct": 84.9
+    },
+    {
+      "category": "Pagination",
+      "total": 274,
+      "onSemantic": 205,
+      "onPalette": 69,
+      "semanticPct": 74.8
+    },
+    {
+      "category": "Misc & Helper",
+      "total": 1442,
+      "onSemantic": 1076,
+      "onPalette": 366,
+      "semanticPct": 74.6
+    },
+    {
+      "category": "Alert & Notification",
+      "total": 270,
+      "onSemantic": 201,
+      "onPalette": 69,
+      "semanticPct": 74.4
+    },
+    {
+      "category": "Chat System",
+      "total": 1733,
+      "onSemantic": 1288,
+      "onPalette": 445,
+      "semanticPct": 74.3
+    },
+    {
+      "category": "Navigations",
+      "total": 333,
+      "onSemantic": 247,
+      "onPalette": 86,
+      "semanticPct": 74.2
+    },
+    {
+      "category": "Line Chart",
+      "total": 278,
+      "onSemantic": 203,
+      "onPalette": 75,
+      "semanticPct": 73.0
+    },
+    {
+      "category": "Step",
+      "total": 1841,
+      "onSemantic": 1307,
+      "onPalette": 534,
+      "semanticPct": 71.0
+    },
+    {
+      "category": "Breadcrumb",
+      "total": 665,
+      "onSemantic": 454,
+      "onPalette": 211,
+      "semanticPct": 68.3
+    },
+    {
+      "category": "Date Picker",
+      "total": 1132,
+      "onSemantic": 763,
+      "onPalette": 369,
+      "semanticPct": 67.4
+    },
+    {
+      "category": "Slider",
+      "total": 194,
+      "onSemantic": 130,
+      "onPalette": 64,
+      "semanticPct": 67.0
+    },
+    {
+      "category": "Table",
+      "total": 1290,
+      "onSemantic": 846,
+      "onPalette": 444,
+      "semanticPct": 65.6
+    },
+    {
+      "category": "Mobile App Components",
+      "total": 2774,
+      "onSemantic": 1811,
+      "onPalette": 963,
+      "semanticPct": 65.3
+    },
+    {
+      "category": "File Upload",
+      "total": 227,
+      "onSemantic": 148,
+      "onPalette": 79,
+      "semanticPct": 65.2
+    },
+    {
+      "category": "Form Controls",
+      "total": 1106,
+      "onSemantic": 696,
+      "onPalette": 410,
+      "semanticPct": 62.9
+    },
+    {
+      "category": "Accordion",
+      "total": 254,
+      "onSemantic": 145,
+      "onPalette": 109,
+      "semanticPct": 57.1
+    },
+    {
+      "category": "Button",
+      "total": 4358,
+      "onSemantic": 2396,
+      "onPalette": 1962,
+      "semanticPct": 55.0
+    },
+    {
+      "category": "Tab",
+      "total": 2318,
+      "onSemantic": 890,
+      "onPalette": 1428,
+      "semanticPct": 38.4
+    },
+    {
+      "category": "Badge/Tag",
+      "total": 1566,
+      "onSemantic": 597,
+      "onPalette": 969,
+      "semanticPct": 38.1
+    },
+    {
+      "category": "Loader",
+      "total": 348,
+      "onSemantic": 129,
+      "onPalette": 219,
+      "semanticPct": 37.1
+    }
+  ],
+  "flaggedForPhase25_below50pct": [
+    {
+      "category": "Loader",
+      "total": 348,
+      "onSemantic": 129,
+      "onPalette": 219,
+      "semanticPct": 37.1
+    },
+    {
+      "category": "Badge/Tag",
+      "total": 1566,
+      "onSemantic": 597,
+      "onPalette": 969,
+      "semanticPct": 38.1
+    },
+    {
+      "category": "Tab",
+      "total": 2318,
+      "onSemantic": 890,
+      "onPalette": 1428,
+      "semanticPct": 38.4
+    }
+  ]
+}

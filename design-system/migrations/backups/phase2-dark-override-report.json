@@ -1,0 +1,145 @@
+{
+  "phase": 2,
+  "step": "2C",
+  "createdAt": "2026-05-12",
+  "decision": "All 12 proposed overrides rejected. Mobile-Dark is not a true dark-mode theme — text/borders/hover-states use light-theme palette values. The heuristic surfaced miscategorized bindings (e.g. dark-text-on-light-pill within a dark page tagged as text/primary role). Spec defaults from Tailwind/Material conventions are correct and have better contrast ratios (Brand/40 at 9.4:1 vs Brand/60 at 4.7:1 against Gray/95 dark surface). Task 9 visual parity check will diverge from Mobile-Dark — that's expected and correct.",
+  "decisionDate": "2026-05-12",
+  "fullTally": {
+    "text/secondary": {
+      "Gray/60": 970,
+      "Gray/70": 12
+    },
+    "text/inverse": {
+      "Gray/0 (White)": 5556,
+      "Gray/10": 4
+    },
+    "text/tertiary": {
+      "Gray/40": 694
+    },
+    "state/warning": {
+      "Warning/50": 144
+    },
+    "interactive/primary": {
+      "Brand/60": 184
+    },
+    "text/primary": {
+      "Gray/80": 401
+    },
+    "border/focus": {
+      "Brand/60": 34
+    },
+    "border/strong": {
+      "Gray/40": 47
+    },
+    "border/error": {
+      "Destructive/40": 25,
+      "Destructive/50": 1
+    },
+    "text/disabled": {
+      "Gray/30": 44,
+      "Gray/20": 10
+    },
+    "surface/elevated": {
+      "Gray/80": 23
+    },
+    "state/success": {
+      "Success/50": 13
+    },
+    "border/subtle": {
+      "Gray/30": 10
+    },
+    "state/danger": {
+      "Destructive/60": 1
+    },
+    "interactive/primary-hover": {
+      "Brand/70": 18
+    }
+  },
+  "proposedOverrides": [
+    {
+      "role": "text/primary",
+      "default": "Gray/10",
+      "mobileDarkChoice": "Gray/80",
+      "confidence": "100%",
+      "total": 401
+    },
+    {
+      "role": "text/secondary",
+      "default": "Gray/30",
+      "mobileDarkChoice": "Gray/60",
+      "confidence": "99%",
+      "total": 982
+    },
+    {
+      "role": "text/disabled",
+      "default": "Gray/70",
+      "mobileDarkChoice": "Gray/30",
+      "confidence": "81%",
+      "total": 54
+    },
+    {
+      "role": "text/inverse",
+      "default": "Gray/95",
+      "mobileDarkChoice": "Gray/0 (White)",
+      "confidence": "100%",
+      "total": 5560
+    },
+    {
+      "role": "border/subtle",
+      "default": "Gray/80",
+      "mobileDarkChoice": "Gray/30",
+      "confidence": "100%",
+      "total": 10
+    },
+    {
+      "role": "border/strong",
+      "default": "Gray/60",
+      "mobileDarkChoice": "Gray/40",
+      "confidence": "100%",
+      "total": 47
+    },
+    {
+      "role": "border/focus",
+      "default": "Brand/40",
+      "mobileDarkChoice": "Brand/60",
+      "confidence": "100%",
+      "total": 34
+    },
+    {
+      "role": "interactive/primary",
+      "default": "Brand/40",
+      "mobileDarkChoice": "Brand/60",
+      "confidence": "100%",
+      "total": 184
+    },
+    {
+      "role": "interactive/primary-hover",
+      "default": "Brand/30",
+      "mobileDarkChoice": "Brand/70",
+      "confidence": "100%",
+      "total": 18
+    },
+    {
+      "role": "state/success",
+      "default": "Success/30",
+      "mobileDarkChoice": "Success/50",
+      "confidence": "100%",
+      "total": 13
+    },
+    {
+      "role": "state/danger",
+      "default": "Destructive/40",
+      "mobileDarkChoice": "Destructive/60",
+      "confidence": "100%",
+      "total": 1
+    },
+    {
+      "role": "state/warning",
+      "default": "Warning/30",
+      "mobileDarkChoice": "Warning/50",
+      "confidence": "100%",
+      "total": 144
+    }
+  ],
+  "approvedOverrides": []
+}

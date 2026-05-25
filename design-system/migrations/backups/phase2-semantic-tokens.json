@@ -1,0 +1,309 @@
+{
+  "phase": 2,
+  "step": "2D-final + 2.5 surface/base",
+  "createdAt": "2026-05-12",
+  "collectionId": "VariableCollectionId:24312:128110",
+  "lightModeId": "24312:0",
+  "darkModeId": "24313:1",
+  "tokens": [
+    {
+      "name": "surface/primary",
+      "variableId": "VariableID:24312:128111",
+      "light": "Gray/0 (White)",
+      "lightVariableId": "VariableID:24302:186442",
+      "dark": "Gray/95",
+      "darkVariableId": "VariableID:24302:186453",
+      "darkApplied": true
+    },
+    {
+      "name": "surface/secondary",
+      "variableId": "VariableID:24312:128112",
+      "light": "Gray/5",
+      "lightVariableId": "VariableID:24302:186443",
+      "dark": "Gray/90",
+      "darkVariableId": "VariableID:24302:186452",
+      "darkApplied": true
+    },
+    {
+      "name": "surface/elevated",
+      "variableId": "VariableID:24312:128113",
+      "light": "Gray/0 (White)",
+      "lightVariableId": "VariableID:24302:186442",
+      "dark": "Gray/80",
+      "darkVariableId": "VariableID:24302:186451",
+      "darkApplied": true
+    },
+    {
+      "name": "surface/inverse",
+      "variableId": "VariableID:24312:128114",
+      "light": "Gray/95",
+      "lightVariableId": "VariableID:24302:186453",
+      "dark": "Gray/0 (White)",
+      "darkVariableId": "VariableID:24302:186442",
+      "darkApplied": true
+    },
+    {
+      "name": "surface/overlay",
+      "variableId": "VariableID:24312:128115",
+      "light": "Transparent/Black/48%",
+      "lightVariableId": "VariableID:24302:186583",
+      "dark": "Transparent/Black/64%",
+      "darkVariableId": "VariableID:24302:186584",
+      "darkApplied": true
+    },
+    {
+      "name": "text/primary",
+      "variableId": "VariableID:24312:128116",
+      "light": "Gray/80",
+      "lightVariableId": "VariableID:24302:186451",
+      "dark": "Gray/10",
+      "darkVariableId": "VariableID:24302:186444",
+      "darkApplied": true
+    },
+    {
+      "name": "text/secondary",
+      "variableId": "VariableID:24312:128117",
+      "light": "Gray/60",
+      "lightVariableId": "VariableID:24302:186449",
+      "dark": "Gray/30",
+      "darkVariableId": "VariableID:24302:186446",
+      "darkApplied": true
+    },
+    {
+      "name": "text/tertiary",
+      "variableId": "VariableID:24312:128118",
+      "light": "Gray/50",
+      "lightVariableId": "VariableID:24302:186448",
+      "dark": "Gray/40",
+      "darkVariableId": "VariableID:24302:186447",
+      "darkApplied": true
+    },
+    {
+      "name": "text/disabled",
+      "variableId": "VariableID:24312:128119",
+      "light": "Gray/30",
+      "lightVariableId": "VariableID:24302:186446",
+      "dark": "Gray/70",
+      "darkVariableId": "VariableID:24302:186450",
+      "darkApplied": true
+    },
+    {
+      "name": "text/inverse",
+      "variableId": "VariableID:24312:128120",
+      "light": "Gray/0 (White)",
+      "lightVariableId": "VariableID:24302:186442",
+      "dark": "Gray/95",
+      "darkVariableId": "VariableID:24302:186453",
+      "darkApplied": true
+    },
+    {
+      "name": "border/subtle",
+      "variableId": "VariableID:24312:128121",
+      "light": "Gray/20",
+      "lightVariableId": "VariableID:24302:186445",
+      "dark": "Gray/80",
+      "darkVariableId": "VariableID:24302:186451",
+      "darkApplied": true
+    },
+    {
+      "name": "border/strong",
+      "variableId": "VariableID:24312:128122",
+      "light": "Gray/40",
+      "lightVariableId": "VariableID:24302:186447",
+      "dark": "Gray/60",
+      "darkVariableId": "VariableID:24302:186449",
+      "darkApplied": true
+    },
+    {
+      "name": "border/focus",
+      "variableId": "VariableID:24312:128123",
+      "light": "Brand/60",
+      "lightVariableId": "VariableID:24302:186461",
+      "dark": "Brand/40",
+      "darkVariableId": "VariableID:24302:186459",
+      "darkApplied": true
+    },
+    {
+      "name": "border/error",
+      "variableId": "VariableID:24312:128124",
+      "light": "Destructive/60",
+      "lightVariableId": "VariableID:24302:186472",
+      "dark": "Destructive/40",
+      "darkVariableId": "VariableID:24302:186470",
+      "darkApplied": true
+    },
+    {
+      "name": "interactive/primary",
+      "variableId": "VariableID:24312:128125",
+      "light": "Brand/60",
+      "lightVariableId": "VariableID:24302:186461",
+      "dark": "Brand/40",
+      "darkVariableId": "VariableID:24302:186459",
+      "darkApplied": true
+    },
+    {
+      "name": "interactive/primary-hover",
+      "variableId": "VariableID:24312:128126",
+      "light": "Brand/70",
+      "lightVariableId": "VariableID:24302:186462",
+      "dark": "Brand/30",
+      "darkVariableId": "VariableID:24302:186458",
+      "darkApplied": true
+    },
+    {
+      "name": "interactive/primary-pressed",
+      "variableId": "VariableID:24312:128127",
+      "light": "Brand/80",
+      "lightVariableId": "VariableID:24302:186463",
+      "dark": "Brand/20",
+      "darkVariableId": "VariableID:24302:186457",
+      "darkApplied": true
+    },
+    {
+      "name": "interactive/primary-disabled",
+      "variableId": "VariableID:24312:128128",
+      "light": "Brand/20",
+      "lightVariableId": "VariableID:24302:186457",
+      "dark": "Brand/80",
+      "darkVariableId": "VariableID:24302:186463",
+      "darkApplied": true
+    },
+    {
+      "name": "interactive/secondary",
+      "variableId": "VariableID:24312:128129",
+      "light": "Gray/10",
+      "lightVariableId": "VariableID:24302:186444",
+      "dark": "Gray/80",
+      "darkVariableId": "VariableID:24302:186451",
+      "darkApplied": true
+    },
+    {
+      "name": "interactive/secondary-hover",
+      "variableId": "VariableID:24312:128130",
+      "light": "Gray/20",
+      "lightVariableId": "VariableID:24302:186445",
+      "dark": "Gray/70",
+      "darkVariableId": "VariableID:24302:186450",
+      "darkApplied": true
+    },
+    {
+      "name": "interactive/secondary-pressed",
+      "variableId": "VariableID:24312:128131",
+      "light": "Gray/30",
+      "lightVariableId": "VariableID:24302:186446",
+      "dark": "Gray/60",
+      "darkVariableId": "VariableID:24302:186449",
+      "darkApplied": true
+    },
+    {
+      "name": "interactive/destructive",
+      "variableId": "VariableID:24312:128132",
+      "light": "Destructive/60",
+      "lightVariableId": "VariableID:24302:186472",
+      "dark": "Destructive/40",
+      "darkVariableId": "VariableID:24302:186470",
+      "darkApplied": true
+    },
+    {
+      "name": "interactive/destructive-hover",
+      "variableId": "VariableID:24312:128133",
+      "light": "Destructive/70",
+      "lightVariableId": "VariableID:24302:186473",
+      "dark": "Destructive/30",
+      "darkVariableId": "VariableID:24302:186469",
+      "darkApplied": true
+    },
+    {
+      "name": "interactive/destructive-pressed",
+      "variableId": "VariableID:24312:128134",
+      "light": "Destructive/80",
+      "lightVariableId": "VariableID:24302:186474",
+      "dark": "Destructive/20",
+      "darkVariableId": "VariableID:24302:186468",
+      "darkApplied": true
+    },
+    {
+      "name": "text/link",
+      "variableId": "VariableID:24312:128135",
+      "light": "Blue/60",
+      "lightVariableId": "VariableID:24302:186538",
+      "dark": "Blue/40",
+      "darkVariableId": "VariableID:24302:186536",
+      "darkApplied": true
+    },
+    {
+      "name": "text/link-hover",
+      "variableId": "VariableID:24312:128136",
+      "light": "Blue/70",
+      "lightVariableId": "VariableID:24302:186539",
+      "dark": "Blue/30",
+      "darkVariableId": "VariableID:24302:186535",
+      "darkApplied": true
+    },
+    {
+      "name": "state/success",
+      "variableId": "VariableID:24312:128137",
+      "light": "Success/50",
+      "lightVariableId": "VariableID:24302:186493",
+      "dark": "Success/30",
+      "darkVariableId": "VariableID:24302:186491",
+      "darkApplied": true
+    },
+    {
+      "name": "state/danger",
+      "variableId": "VariableID:24312:128138",
+      "light": "Destructive/60",
+      "lightVariableId": "VariableID:24302:186472",
+      "dark": "Destructive/40",
+      "darkVariableId": "VariableID:24302:186470",
+      "darkApplied": true
+    },
+    {
+      "name": "state/warning",
+      "variableId": "VariableID:24312:128139",
+      "light": "Warning/50",
+      "lightVariableId": "VariableID:24302:186482",
+      "dark": "Warning/30",
+      "darkVariableId": "VariableID:24302:186480",
+      "darkApplied": true
+    },
+    {
+      "name": "state/info",
+      "variableId": "VariableID:24312:128140",
+      "light": "Blue/60",
+      "lightVariableId": "VariableID:24302:186538",
+      "dark": "Blue/40",
+      "darkVariableId": "VariableID:24302:186536",
+      "darkApplied": true
+    },
+    {
+      "name": "state/neutral",
+      "variableId": "VariableID:24312:128141",
+      "light": "Gray/50",
+      "lightVariableId": "VariableID:24302:186448",
+      "dark": "Gray/40",
+      "darkVariableId": "VariableID:24302:186447",
+      "darkApplied": true
+    },
+    {
+      "name": "surface/base",
+      "variableId": "VariableID:24315:194991",
+      "light": "Brand/5",
+      "lightVariableId": "VariableID:24302:186455",
+      "dark": "Gray/95",
+      "darkVariableId": "VariableID:24302:186453",
+      "darkApplied": true,
+      "addedIn": "Phase 2.5"
+    },
+    {
+      "name": "surface/hero",
+      "variableId": "VariableID:24319:242559",
+      "light": "Brand/80",
+      "lightVariableId": "VariableID:24302:186463",
+      "dark": "Brand/60",
+      "darkVariableId": "VariableID:24302:186461",
+      "darkApplied": true,
+      "addedIn": "Patient app Flow 1 (1.1 Splash)"
+    }
+  ]
+}
