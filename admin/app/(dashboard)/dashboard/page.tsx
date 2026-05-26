@@ -1,10 +1,29 @@
-export default function DashboardPage() {
+import { getDashboardData } from "@/lib/dummy/dashboard";
+import type { Region, Window } from "@/lib/dummy/types";
+import { PageHeader } from "@/components/dashboard/page-header";
+
+type SearchParams = Promise<{ window?: string; region?: string }>;
+
+function asWindow(v?: string): Window {
+  return v === "30d" || v === "90d" || v === "ytd" ? v : "7d";
+}
+function asRegion(v?: string): Region {
+  return v === "ng" || v === "intl" ? v : "all";
+}
+
+export default async function DashboardPage({
+  searchParams,
+}: {
+  searchParams: SearchParams;
+}) {
+  const params = await searchParams;
+  const window = asWindow(params.window);
+  const region = asRegion(params.region);
+  const data = getDashboardData(window, region);
+
   return (
-    <div className="space-y-2">
-      <h1 className="font-heading text-3xl tracking-tight">Dashboard</h1>
-      <p className="text-muted-foreground text-sm">
-        Sections render here as they ship.
-      </p>
+    <div className="space-y-8">
+      <PageHeader window={window} region={region} updatedLabel="Updated just now" />
     </div>
   );
 }
