@@ -2,6 +2,7 @@ import { getDashboardData } from "@/lib/dummy/dashboard";
 import type { Region, Window } from "@/lib/dummy/types";
 import { PageHeader } from "@/components/dashboard/page-header";
 import { CrisisTier } from "@/components/dashboard/crisis-tier";
+import { KpiStrip } from "@/components/dashboard/kpi-strip";
 
 type SearchParams = Promise<{ window?: string; region?: string }>;
 
@@ -26,6 +27,7 @@ export default async function DashboardPage({
     <div className="space-y-8">
       <PageHeader window={window} region={region} updatedLabel="Updated just now" />
       <CrisisTier state={data.crisisTier} />
+      <KpiStrip cards={data.kpis} />
     </div>
   );
 }
