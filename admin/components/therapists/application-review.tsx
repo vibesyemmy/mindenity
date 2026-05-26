@@ -124,7 +124,6 @@ export function ApplicationReview({ application: v }: Props) {
               <div className="flex flex-col gap-2 pt-1">
                 <a
                   href="#"
-                  onClick={(e) => e.preventDefault()}
                   className="inline-flex items-center gap-2 text-sm hover:underline"
                 >
                   <FileText className="size-3.5" />
@@ -132,7 +131,6 @@ export function ApplicationReview({ application: v }: Props) {
                 </a>
                 <a
                   href="#"
-                  onClick={(e) => e.preventDefault()}
                   className="inline-flex items-center gap-2 text-sm hover:underline"
                 >
                   <FileText className="size-3.5" />
