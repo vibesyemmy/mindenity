@@ -1,2 +1,8 @@
 .DS_Store
 .claude/
+
+# Build + cache
+node-compile-cache/
+admin/.next/
+admin/node_modules/
+admin/.turbo/
