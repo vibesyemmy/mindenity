@@ -8,6 +8,7 @@ import { OperationsZone } from "@/components/dashboard/operations-zone";
 import { PlanCoverageSpotlight } from "@/components/dashboard/plan-coverage-spotlight";
 import { ClinicalSafetyZone } from "@/components/dashboard/clinical-safety-zone";
 import { OnboardingFunnel } from "@/components/dashboard/onboarding-funnel";
+import { RecentActivity } from "@/components/dashboard/recent-activity";
 
 type SearchParams = Promise<{ window?: string; region?: string }>;
 
@@ -38,6 +39,7 @@ export default async function DashboardPage({
       <PlanCoverageSpotlight items={data.planCoverage} />
       <ClinicalSafetyZone clinical={data.clinical} />
       <OnboardingFunnel funnel={data.funnel} />
+      <RecentActivity items={data.activity} />
     </div>
   );
 }
