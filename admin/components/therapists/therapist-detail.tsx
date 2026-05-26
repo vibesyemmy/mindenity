@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { ArrowLeft } from "lucide-react";
+import { ArrowLeft, FileText } from "lucide-react";
 import { useState } from "react";
 import { toast } from "sonner";
 
@@ -202,6 +202,59 @@ export function TherapistDetail({ therapist: t }: Props) {
               </CardContent>
             </Card>
           </div>
+
+          <Card>
+            <CardHeader className="flex flex-row items-center justify-between">
+              <CardTitle>Uploaded documents</CardTitle>
+              <Badge variant="secondary" className="font-normal">
+                {t.documents.length}
+              </Badge>
+            </CardHeader>
+            <CardContent>
+              {t.documents.length === 0 ? (
+                <p className="text-sm text-muted-foreground">
+                  No documents on file.
+                </p>
+              ) : (
+                <div className="grid grid-cols-1 gap-2 sm:grid-cols-2">
+                  {t.documents.map((doc) => (
+                    <a
+                      key={doc.id}
+                      href="#"
+                      className="flex items-center justify-between gap-3 rounded-md border border-border/60 px-3 py-2 hover:bg-muted/40"
+                    >
+                      <span className="flex items-center gap-2 min-w-0">
+                        <FileText className="size-3.5 text-muted-foreground shrink-0" />
+                        <span className="flex flex-col min-w-0">
+                          <span className="text-sm font-medium truncate">
+                            {doc.label}
+                          </span>
+                          <span className="text-xs text-muted-foreground truncate">
+                            {doc.fileName} · {doc.sizeKb} KB
+                          </span>
+                        </span>
+                      </span>
+                      {doc.kind === "license" && (
+                        <Badge variant="secondary" className="font-normal shrink-0">
+                          License
+                        </Badge>
+                      )}
+                      {doc.kind === "id" && (
+                        <Badge variant="secondary" className="font-normal shrink-0">
+                          ID
+                        </Badge>
+                      )}
+                      {doc.kind === "certification" && (
+                        <Badge variant="outline" className="font-normal shrink-0">
+                          Certification
+                        </Badge>
+                      )}
+                    </a>
+                  ))}
+                </div>
+              )}
+            </CardContent>
+          </Card>
         </TabsContent>
 
         {(["plans", "sessions", "risk", "earnings", "activity"] as const).map(

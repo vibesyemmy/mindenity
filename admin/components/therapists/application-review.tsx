@@ -121,21 +121,42 @@ export function ApplicationReview({ application: v }: Props) {
                 <span className="text-muted-foreground">Expires:</span>{" "}
                 {formatDate(v.licenseExpiry)}
               </p>
-              <div className="flex flex-col gap-2 pt-1">
-                <a
-                  href="#"
-                  className="inline-flex items-center gap-2 text-sm hover:underline"
-                >
-                  <FileText className="size-3.5" />
-                  {v.licenseFile}
-                </a>
-                <a
-                  href="#"
-                  className="inline-flex items-center gap-2 text-sm hover:underline"
-                >
-                  <FileText className="size-3.5" />
-                  {v.idFile}
-                </a>
+              <div className="flex flex-col gap-2 pt-2">
+                <p className="text-muted-foreground text-xs uppercase tracking-wide">
+                  Uploaded documents ({v.documents.length})
+                </p>
+                {v.documents.map((doc) => (
+                  <a
+                    key={doc.id}
+                    href="#"
+                    className="flex items-center justify-between gap-2 rounded-md border border-border/60 px-3 py-2 hover:bg-muted/40"
+                  >
+                    <span className="flex items-center gap-2">
+                      <FileText className="size-3.5 text-muted-foreground" />
+                      <span className="flex flex-col">
+                        <span className="text-sm font-medium">{doc.label}</span>
+                        <span className="text-xs text-muted-foreground">
+                          {doc.fileName} · {doc.sizeKb} KB
+                        </span>
+                      </span>
+                    </span>
+                    {doc.kind === "license" && (
+                      <Badge variant="secondary" className="font-normal">
+                        License
+                      </Badge>
+                    )}
+                    {doc.kind === "id" && (
+                      <Badge variant="secondary" className="font-normal">
+                        ID
+                      </Badge>
+                    )}
+                    {doc.kind === "certification" && (
+                      <Badge variant="outline" className="font-normal">
+                        Certification
+                      </Badge>
+                    )}
+                  </a>
+                ))}
               </div>
             </CardContent>
           </Card>

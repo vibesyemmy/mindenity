@@ -6,6 +6,17 @@ export type TherapistStatus = "Active" | "Suspended" | "On leave";
 export type VerificationStatus = "Pending" | "Info requested" | "On hold";
 export type AiFlag = "Clean" | "Flagged";
 
+// Document type matches PRD US-021 AC#3 — professional license + government ID
+// (both required) + optional certifications (variadic).
+export type UploadedDocument = {
+  id: string;
+  kind: "license" | "id" | "certification";
+  label: string;
+  fileName: string;
+  uploadedAt: string;
+  sizeKb: number;
+};
+
 export type Therapist = {
   id: string;
   name: string;
@@ -29,6 +40,7 @@ export type Therapist = {
   joinedAt: string;
   verifiedBy: string;
   verifiedAt: string;
+  documents: UploadedDocument[];
 };
 
 export type VerificationApplication = {
@@ -49,8 +61,7 @@ export type VerificationApplication = {
   licenseNumber: string;
   licenseIssuer: string;
   licenseExpiry: string;
-  licenseFile: string;
-  idFile: string;
+  documents: UploadedDocument[];
   submittedAt: string;
   submittedAgo: string;
   status: VerificationStatus;
@@ -101,6 +112,12 @@ const THERAPISTS: Therapist[] = [
     joinedAt: "2024-03-12",
     verifiedBy: "Adaeze Nwosu",
     verifiedAt: "2024-03-15",
+    documents: [
+      { id: "d-001-1", kind: "license", label: "Professional license", fileName: "license-tola-adesina.pdf", uploadedAt: "2024-03-10", sizeKb: 412 },
+      { id: "d-001-2", kind: "id", label: "Government ID", fileName: "id-tola-adesina.pdf", uploadedAt: "2024-03-10", sizeKb: 218 },
+      { id: "d-001-3", kind: "certification", label: "EFT Level 2 certification", fileName: "cert-eft-l2.pdf", uploadedAt: "2024-03-11", sizeKb: 184 },
+      { id: "d-001-4", kind: "certification", label: "CBT post-grad diploma", fileName: "cert-cbt-diploma.pdf", uploadedAt: "2024-03-11", sizeKb: 304 },
+    ],
   },
   {
     id: "t-002",
@@ -125,6 +142,11 @@ const THERAPISTS: Therapist[] = [
     joinedAt: "2024-01-08",
     verifiedBy: "Adaeze Nwosu",
     verifiedAt: "2024-01-12",
+    documents: [
+      { id: "d-002-1", kind: "license", label: "HCPC registration", fileName: "hcpc-marcus-quinn.pdf", uploadedAt: "2024-01-04", sizeKb: 388 },
+      { id: "d-002-2", kind: "id", label: "Government ID (passport)", fileName: "passport-marcus-quinn.pdf", uploadedAt: "2024-01-04", sizeKb: 240 },
+      { id: "d-002-3", kind: "certification", label: "EMDR Europe certification", fileName: "cert-emdr-europe.pdf", uploadedAt: "2024-01-05", sizeKb: 196 },
+    ],
   },
   {
     id: "t-003",
@@ -149,6 +171,10 @@ const THERAPISTS: Therapist[] = [
     joinedAt: "2024-05-22",
     verifiedBy: "Adaeze Nwosu",
     verifiedAt: "2024-05-25",
+    documents: [
+      { id: "d-003-1", kind: "license", label: "Singapore Association for Counselling registration", fileName: "sac-lina-park.pdf", uploadedAt: "2024-05-20", sizeKb: 332 },
+      { id: "d-003-2", kind: "id", label: "Government ID", fileName: "id-lina-park.pdf", uploadedAt: "2024-05-20", sizeKb: 198 },
+    ],
   },
   {
     id: "t-004",
@@ -173,6 +199,10 @@ const THERAPISTS: Therapist[] = [
     joinedAt: "2025-09-01",
     verifiedBy: "Sarah Okeke",
     verifiedAt: "2025-09-04",
+    documents: [
+      { id: "d-004-1", kind: "license", label: "Professional license", fileName: "license-aisha-bello.pdf", uploadedAt: "2025-08-29", sizeKb: 401 },
+      { id: "d-004-2", kind: "id", label: "Government ID (NIN slip)", fileName: "nin-aisha-bello.pdf", uploadedAt: "2025-08-29", sizeKb: 156 },
+    ],
   },
   {
     id: "t-005",
@@ -197,6 +227,12 @@ const THERAPISTS: Therapist[] = [
     joinedAt: "2023-11-04",
     verifiedBy: "Adaeze Nwosu",
     verifiedAt: "2023-11-08",
+    documents: [
+      { id: "d-005-1", kind: "license", label: "College of Psychologists of Ontario license", fileName: "cpo-priya-shah.pdf", uploadedAt: "2023-11-01", sizeKb: 420 },
+      { id: "d-005-2", kind: "id", label: "Government ID (passport)", fileName: "passport-priya-shah.pdf", uploadedAt: "2023-11-01", sizeKb: 256 },
+      { id: "d-005-3", kind: "certification", label: "Grief & bereavement counselling certificate", fileName: "cert-grief-counselling.pdf", uploadedAt: "2023-11-02", sizeKb: 178 },
+      { id: "d-005-4", kind: "certification", label: "Family systems therapy diploma", fileName: "cert-family-systems.pdf", uploadedAt: "2023-11-02", sizeKb: 312 },
+    ],
   },
   {
     id: "t-006",
@@ -221,6 +257,10 @@ const THERAPISTS: Therapist[] = [
     joinedAt: "2025-02-18",
     verifiedBy: "Sarah Okeke",
     verifiedAt: "2025-02-21",
+    documents: [
+      { id: "d-006-1", kind: "license", label: "Professional license", fileName: "license-femi-ojo.pdf", uploadedAt: "2025-02-15", sizeKb: 372 },
+      { id: "d-006-2", kind: "id", label: "Government ID", fileName: "id-femi-ojo.pdf", uploadedAt: "2025-02-15", sizeKb: 188 },
+    ],
   },
 ];
 
@@ -243,8 +283,11 @@ const VERIFICATIONS: VerificationApplication[] = [
     licenseNumber: "NG-CLP-66120",
     licenseIssuer: "Nigerian Council for Psychologists",
     licenseExpiry: "2028-03-04",
-    licenseFile: "license-chinwe-okoro.pdf",
-    idFile: "id-chinwe-okoro.pdf",
+    documents: [
+      { id: "vd-001-1", kind: "license", label: "Professional license", fileName: "license-chinwe-okoro.pdf", uploadedAt: "2026-05-24", sizeKb: 412 },
+      { id: "vd-001-2", kind: "id", label: "Government ID (NIN slip)", fileName: "id-chinwe-okoro.pdf", uploadedAt: "2026-05-24", sizeKb: 168 },
+      { id: "vd-001-3", kind: "certification", label: "ACT therapist certification", fileName: "cert-act-chinwe.pdf", uploadedAt: "2026-05-24", sizeKb: 224 },
+    ],
     submittedAt: "2026-05-24T10:14:00Z",
     submittedAgo: "2d ago",
     status: "Pending",
@@ -275,8 +318,11 @@ const VERIFICATIONS: VerificationApplication[] = [
     licenseNumber: "ES-COP-1422",
     licenseIssuer: "Consejo General de la Psicología de España",
     licenseExpiry: "2027-12-19",
-    licenseFile: "license-mateo-alvarez.pdf",
-    idFile: "id-mateo-alvarez.pdf",
+    documents: [
+      { id: "vd-002-1", kind: "license", label: "Colegiado registration", fileName: "license-mateo-alvarez.pdf", uploadedAt: "2026-05-25", sizeKb: 388 },
+      { id: "vd-002-2", kind: "id", label: "Government ID (DNI)", fileName: "id-mateo-alvarez.pdf", uploadedAt: "2026-05-25", sizeKb: 212 },
+      { id: "vd-002-3", kind: "certification", label: "EMDR Europe certification", fileName: "cert-emdr-mateo.pdf", uploadedAt: "2026-05-25", sizeKb: 196 },
+    ],
     submittedAt: "2026-05-25T08:30:00Z",
     submittedAgo: "1d ago",
     status: "Pending",
@@ -307,8 +353,10 @@ const VERIFICATIONS: VerificationApplication[] = [
     licenseNumber: "JP-AP-22118",
     licenseIssuer: "Japanese Association of Psychology",
     licenseExpiry: "2026-10-02",
-    licenseFile: "license-yui-tanaka.pdf",
-    idFile: "id-yui-tanaka.pdf",
+    documents: [
+      { id: "vd-003-1", kind: "license", label: "Professional license", fileName: "license-yui-tanaka.pdf", uploadedAt: "2026-05-22", sizeKb: 356 },
+      { id: "vd-003-2", kind: "id", label: "Government ID (passport)", fileName: "id-yui-tanaka.pdf", uploadedAt: "2026-05-22", sizeKb: 240 },
+    ],
     submittedAt: "2026-05-22T14:00:00Z",
     submittedAgo: "4d ago",
     status: "Info requested",
@@ -339,8 +387,10 @@ const VERIFICATIONS: VerificationApplication[] = [
     licenseNumber: "NG-CLP-72441",
     licenseIssuer: "Nigerian Council for Psychologists",
     licenseExpiry: "2029-01-22",
-    licenseFile: "license-kemi-adeyemi.pdf",
-    idFile: "id-kemi-adeyemi.pdf",
+    documents: [
+      { id: "vd-004-1", kind: "license", label: "Professional license", fileName: "license-kemi-adeyemi.pdf", uploadedAt: "2026-05-26", sizeKb: 396 },
+      { id: "vd-004-2", kind: "id", label: "Government ID (NIN slip)", fileName: "id-kemi-adeyemi.pdf", uploadedAt: "2026-05-26", sizeKb: 172 },
+    ],
     submittedAt: "2026-05-26T07:45:00Z",
     submittedAgo: "6h ago",
     status: "Pending",
@@ -371,8 +421,12 @@ const VERIFICATIONS: VerificationApplication[] = [
     licenseNumber: "DE-BDP-88112",
     licenseIssuer: "Berufsverband Deutscher Psychologinnen und Psychologen",
     licenseExpiry: "2028-06-30",
-    licenseFile: "license-sven-mueller.pdf",
-    idFile: "id-sven-mueller.pdf",
+    documents: [
+      { id: "vd-005-1", kind: "license", label: "BDP registration", fileName: "license-sven-mueller.pdf", uploadedAt: "2026-05-26", sizeKb: 432 },
+      { id: "vd-005-2", kind: "id", label: "Government ID (Personalausweis)", fileName: "id-sven-mueller.pdf", uploadedAt: "2026-05-26", sizeKb: 220 },
+      { id: "vd-005-3", kind: "certification", label: "Corporate wellbeing certification", fileName: "cert-corporate-wellbeing.pdf", uploadedAt: "2026-05-26", sizeKb: 188 },
+      { id: "vd-005-4", kind: "certification", label: "Trauma-informed care diploma", fileName: "cert-trauma-informed.pdf", uploadedAt: "2026-05-26", sizeKb: 248 },
+    ],
     submittedAt: "2026-05-26T11:00:00Z",
     submittedAgo: "3h ago",
     status: "Pending",
