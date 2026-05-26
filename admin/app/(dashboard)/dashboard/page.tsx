@@ -3,6 +3,7 @@ import type { Region, Window } from "@/lib/dummy/types";
 import { PageHeader } from "@/components/dashboard/page-header";
 import { CrisisTier } from "@/components/dashboard/crisis-tier";
 import { KpiStrip } from "@/components/dashboard/kpi-strip";
+import { RevenueChart } from "@/components/dashboard/revenue-chart";
 
 type SearchParams = Promise<{ window?: string; region?: string }>;
 
@@ -28,6 +29,7 @@ export default async function DashboardPage({
       <PageHeader window={window} region={region} updatedLabel="Updated just now" />
       <CrisisTier state={data.crisisTier} />
       <KpiStrip cards={data.kpis} />
+      <RevenueChart points={data.revenue} />
     </div>
   );
 }
