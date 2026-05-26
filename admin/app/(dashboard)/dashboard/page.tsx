@@ -4,6 +4,7 @@ import { PageHeader } from "@/components/dashboard/page-header";
 import { CrisisTier } from "@/components/dashboard/crisis-tier";
 import { KpiStrip } from "@/components/dashboard/kpi-strip";
 import { RevenueChart } from "@/components/dashboard/revenue-chart";
+import { OperationsZone } from "@/components/dashboard/operations-zone";
 
 type SearchParams = Promise<{ window?: string; region?: string }>;
 
@@ -30,6 +31,7 @@ export default async function DashboardPage({
       <CrisisTier state={data.crisisTier} />
       <KpiStrip cards={data.kpis} />
       <RevenueChart points={data.revenue} />
+      <OperationsZone queues={data.queues} />
     </div>
   );
 }
