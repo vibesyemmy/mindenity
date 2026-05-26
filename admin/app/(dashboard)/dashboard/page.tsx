@@ -7,6 +7,7 @@ import { RevenueChart } from "@/components/dashboard/revenue-chart";
 import { OperationsZone } from "@/components/dashboard/operations-zone";
 import { PlanCoverageSpotlight } from "@/components/dashboard/plan-coverage-spotlight";
 import { ClinicalSafetyZone } from "@/components/dashboard/clinical-safety-zone";
+import { OnboardingFunnel } from "@/components/dashboard/onboarding-funnel";
 
 type SearchParams = Promise<{ window?: string; region?: string }>;
 
@@ -36,6 +37,7 @@ export default async function DashboardPage({
       <OperationsZone queues={data.queues} />
       <PlanCoverageSpotlight items={data.planCoverage} />
       <ClinicalSafetyZone clinical={data.clinical} />
+      <OnboardingFunnel funnel={data.funnel} />
     </div>
   );
 }
