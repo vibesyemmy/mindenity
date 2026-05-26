@@ -6,6 +6,7 @@ import { KpiStrip } from "@/components/dashboard/kpi-strip";
 import { RevenueChart } from "@/components/dashboard/revenue-chart";
 import { OperationsZone } from "@/components/dashboard/operations-zone";
 import { PlanCoverageSpotlight } from "@/components/dashboard/plan-coverage-spotlight";
+import { ClinicalSafetyZone } from "@/components/dashboard/clinical-safety-zone";
 
 type SearchParams = Promise<{ window?: string; region?: string }>;
 
@@ -34,6 +35,7 @@ export default async function DashboardPage({
       <RevenueChart points={data.revenue} />
       <OperationsZone queues={data.queues} />
       <PlanCoverageSpotlight items={data.planCoverage} />
+      <ClinicalSafetyZone clinical={data.clinical} />
     </div>
   );
 }
