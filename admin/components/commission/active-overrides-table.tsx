@@ -42,11 +42,16 @@ import {
 } from "@/lib/dummy/commission";
 
 export function ActiveOverridesTable() {
-  const overrides = getActiveOverrides();
+  // Seed from dummy data and track local mutations so removes visibly drop
+  // the row. Resets on remount — fine for prototype.
+  const [overrides, setOverrides] = useState<TierOverride[]>(() =>
+    getActiveOverrides()
+  );
   const [removeTarget, setRemoveTarget] = useState<TierOverride | null>(null);
 
   const handleRemove = () => {
     if (!removeTarget) return;
+    setOverrides((prev) => prev.filter((o) => o.id !== removeTarget.id));
     toast.success(`Override removed for ${removeTarget.therapistName}`, {
       description: "Therapist's tier reverts to automatic calculation.",
     });
