@@ -26,9 +26,8 @@ export function MoreActionsMenu({ items, label = "More" }: Props) {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Button variant="outline">
-          {label}
-          <MoreHorizontal className="ml-1 size-4" />
+        <Button variant="outline" size="icon" aria-label={label}>
+          <MoreHorizontal className="size-4" />
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end">
