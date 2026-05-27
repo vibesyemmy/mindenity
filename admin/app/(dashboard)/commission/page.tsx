@@ -1,6 +1,5 @@
 "use client";
 
-import Link from "next/link";
 import { useState } from "react";
 
 import { Button } from "@/components/ui/button";
@@ -12,6 +11,7 @@ import {
 } from "@/components/ui/card";
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { StatCard, StatCardGrid } from "@/components/stat-card";
+import { MoreActionsMenu } from "@/components/more-actions-menu";
 
 import { TierChart } from "@/components/commission/tier-chart";
 import { TopEarnersTable } from "@/components/commission/top-earners-table";
@@ -47,14 +47,12 @@ export default function CommissionPage() {
             avg therapist share {stats.avgPct}%
           </p>
         </div>
-        <div className="flex items-center gap-2">
-          <Button asChild variant="outline">
-            <Link href="/commission/payouts">Payout runs →</Link>
-          </Button>
-          <Button asChild variant="outline">
-            <Link href="/commission/overrides">Tier overrides →</Link>
-          </Button>
-        </div>
+        <MoreActionsMenu
+          items={[
+            { label: "Payout runs", href: "/commission/payouts" },
+            { label: "Tier overrides", href: "/commission/overrides" },
+          ]}
+        />
       </header>
 
       <Tabs value={tab} onValueChange={(v) => setTab(v as RegionTab)}>

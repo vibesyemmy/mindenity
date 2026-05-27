@@ -1,6 +1,3 @@
-import Link from "next/link";
-
-import { Button } from "@/components/ui/button";
 import {
   Card,
   CardContent,
@@ -11,6 +8,7 @@ import {
 import { AuditsTable } from "@/components/compliance/audits-table";
 import { ActionItemsList } from "@/components/compliance/action-items-list";
 import { StatCard, StatCardGrid } from "@/components/stat-card";
+import { MoreActionsMenu } from "@/components/more-actions-menu";
 
 import { getComplianceStats } from "@/lib/dummy/compliance";
 
@@ -27,14 +25,12 @@ export default function CompliancePage() {
             {stats.overdueCount} overdue
           </p>
         </div>
-        <div className="flex items-center gap-2">
-          <Button asChild variant="outline">
-            <Link href="/compliance/requests">Subject requests →</Link>
-          </Button>
-          <Button asChild variant="outline">
-            <Link href="/compliance/residency">Residency settings →</Link>
-          </Button>
-        </div>
+        <MoreActionsMenu
+          items={[
+            { label: "Subject requests", href: "/compliance/requests" },
+            { label: "Residency settings", href: "/compliance/residency" },
+          ]}
+        />
       </header>
 
       <StatCardGrid columns={3}>

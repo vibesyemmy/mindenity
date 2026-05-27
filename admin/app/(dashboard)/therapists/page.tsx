@@ -1,6 +1,4 @@
-import Link from "next/link";
-
-import { Button } from "@/components/ui/button";
+import { MoreActionsMenu } from "@/components/more-actions-menu";
 import { DataTable } from "@/components/therapists/data-table";
 import { directoryColumns } from "@/components/therapists/directory-columns";
 import { DirectoryFilters } from "@/components/therapists/directory-filters";
@@ -47,14 +45,12 @@ export default async function TherapistsPage({
             {stats.awaitingVerification} awaiting verification
           </p>
         </div>
-        <div className="flex items-center gap-2">
-          <Button asChild variant="outline">
-            <Link href="/therapists/verifications">Open verifications →</Link>
-          </Button>
-          <Button variant="outline" disabled>
-            Export CSV
-          </Button>
-        </div>
+        <MoreActionsMenu
+          items={[
+            { label: "Open verifications", href: "/therapists/verifications" },
+            { label: "Export CSV", disabled: true },
+          ]}
+        />
       </header>
 
       <DirectoryFilters />

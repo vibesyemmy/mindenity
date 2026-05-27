@@ -1,14 +1,13 @@
 "use client";
 
-import Link from "next/link";
 import { useState, useMemo } from "react";
 
-import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 import { DataTable } from "@/components/therapists/data-table";
 import { makePricingColumns } from "@/components/plans/pricing-columns";
 import { PricingEditDialog } from "@/components/plans/pricing-edit-dialog";
+import { MoreActionsMenu } from "@/components/more-actions-menu";
 
 import {
   getPricingByRegion,
@@ -39,14 +38,12 @@ export default function PlansPage() {
             {stats.pendingApprovals} with out-of-band requests pending
           </p>
         </div>
-        <div className="flex items-center gap-2">
-          <Button asChild variant="outline">
-            <Link href="/plans/eligibility">Eligibility matrix →</Link>
-          </Button>
-          <Button asChild variant="outline">
-            <Link href="/plans/coverage">Coverage report →</Link>
-          </Button>
-        </div>
+        <MoreActionsMenu
+          items={[
+            { label: "Eligibility matrix", href: "/plans/eligibility" },
+            { label: "Coverage report", href: "/plans/coverage" },
+          ]}
+        />
       </header>
 
       <Tabs defaultValue="ng">

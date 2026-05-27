@@ -1,10 +1,7 @@
-import Link from "next/link";
-
-import { Button } from "@/components/ui/button";
-
 import { AdminFilters } from "@/components/settings/admin-filters";
 import { AdminsList } from "@/components/settings/admins-list";
 import { InviteAdminButton } from "@/components/settings/admin-actions";
+import { MoreActionsMenu } from "@/components/more-actions-menu";
 
 import {
   getAdminUsers,
@@ -47,12 +44,12 @@ export default async function AdminUsersPage({
           </p>
         </div>
         <div className="flex flex-wrap items-center gap-2">
-          <Button asChild variant="outline">
-            <Link href="/settings/roles">Role permissions →</Link>
-          </Button>
-          <Button asChild variant="outline">
-            <Link href="/settings/audit">Audit log →</Link>
-          </Button>
+          <MoreActionsMenu
+            items={[
+              { label: "Role permissions", href: "/settings/roles" },
+              { label: "Audit log", href: "/settings/audit" },
+            ]}
+          />
           <InviteAdminButton />
         </div>
       </header>
