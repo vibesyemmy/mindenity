@@ -26,7 +26,8 @@ export function RiskFormFilters() {
 
   const setParam = (key: string, value: string) => {
     const next = new URLSearchParams(params);
-    if (value === "" || value === "all") next.delete(key);
+    const dropOnAll = key === "region";
+    if (value === "" || (dropOnAll && value === "all")) next.delete(key);
     else next.set(key, value);
     startTransition(() => {
       router.replace(`${pathname}?${next.toString()}`);
