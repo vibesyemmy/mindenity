@@ -23,6 +23,14 @@ import {
 } from "@/components/ui/dialog";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
+import {
+  PlansPricingTab,
+  SessionsTab,
+  RiskRecordTab,
+  EarningsTab,
+  ActivityLogTab,
+} from "@/components/therapists/therapist-tabs";
+
 import type { Therapist } from "@/lib/dummy/therapists";
 
 const statusVariant: Record<
@@ -257,31 +265,21 @@ export function TherapistDetail({ therapist: t }: Props) {
           </Card>
         </TabsContent>
 
-        {(["plans", "sessions", "risk", "earnings", "activity"] as const).map(
-          (key) => (
-            <TabsContent key={key} value={key} className="pt-4">
-              <Card>
-                <CardHeader>
-                  <CardTitle className="capitalize">
-                    {key === "plans"
-                      ? "Plans & pricing"
-                      : key === "risk"
-                        ? "Risk record"
-                        : key === "activity"
-                          ? "Activity log"
-                          : key}
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-sm text-muted-foreground">
-                    Full {key} view not built in this prototype. Wire to a
-                    dedicated screen when the underlying data layer lands.
-                  </p>
-                </CardContent>
-              </Card>
-            </TabsContent>
-          )
-        )}
+        <TabsContent value="plans" className="pt-4">
+          <PlansPricingTab therapist={t} />
+        </TabsContent>
+        <TabsContent value="sessions" className="pt-4">
+          <SessionsTab therapist={t} />
+        </TabsContent>
+        <TabsContent value="risk" className="pt-4">
+          <RiskRecordTab therapist={t} />
+        </TabsContent>
+        <TabsContent value="earnings" className="pt-4">
+          <EarningsTab therapist={t} />
+        </TabsContent>
+        <TabsContent value="activity" className="pt-4">
+          <ActivityLogTab therapist={t} />
+        </TabsContent>
       </Tabs>
 
       <Dialog open={suspendOpen} onOpenChange={setSuspendOpen}>

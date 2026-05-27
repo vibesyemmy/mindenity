@@ -344,6 +344,63 @@ export function getPayoutRun(id: string): PayoutRun | undefined {
   return PAYOUT_RUNS.find((r) => r.id === id);
 }
 
+export type TherapistEarning = {
+  runId: string;
+  runDate: string; // ISO
+  region: Region;
+  currency: Currency;
+  tier: TierLabel;
+  sessions: number;
+  gross: number;
+  net: number;
+  status: PayoutItemStatus;
+};
+
+export function getEarningsByTherapist(therapistId: string): {
+  lifetimeNet: number;
+  lifetimeCurrency: Currency;
+  lastPayout: TherapistEarning | undefined;
+  currentTier: TierLabel | undefined;
+  isTierPlus: boolean;
+  recent: TherapistEarning[];
+} {
+  const items: TherapistEarning[] = [];
+  for (const run of PAYOUT_RUNS) {
+    for (const it of run.items) {
+      if (it.therapistId !== therapistId) continue;
+      items.push({
+        runId: run.id,
+        runDate: run.date,
+        region: run.region,
+        currency: run.currency,
+        tier: it.tier,
+        sessions: it.sessions,
+        gross: it.gross,
+        net: it.net,
+        status: it.status,
+      });
+    }
+  }
+  items.sort(
+    (a, b) => new Date(b.runDate).getTime() - new Date(a.runDate).getTime()
+  );
+  const lifetimeNet = items
+    .filter((e) => e.status === "Paid")
+    .reduce((sum, e) => sum + e.net, 0);
+  const lifetimeCurrency = items[0]?.currency ?? "NGN";
+  const lastPayout = items.find((e) => e.status === "Paid");
+  const currentTier = lastPayout?.tier;
+  const isTierPlus = currentTier?.endsWith("+") ?? false;
+  return {
+    lifetimeNet,
+    lifetimeCurrency,
+    lastPayout,
+    currentTier,
+    isTierPlus,
+    recent: items.slice(0, 3),
+  };
+}
+
 export function getPayoutRunStats() {
   const next = PAYOUT_RUNS.find((r) => r.status === "Scheduled");
   return {

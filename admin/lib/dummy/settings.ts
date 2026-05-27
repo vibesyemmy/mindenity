@@ -447,6 +447,16 @@ export function getAdminsForFilter(): Array<{ id: string; name: string }> {
   return ADMINS.map((a) => ({ id: a.id, name: a.name }));
 }
 
+// Return audit entries whose `target` string contains the given name (case-insensitive).
+// Used by therapist + client detail pages to show per-subject activity log.
+export function getAuditEntriesByTarget(name: string, limit = 5): AuditEntry[] {
+  const needle = name.toLowerCase();
+  return AUDIT_ENTRIES.filter((e) => e.target.toLowerCase().includes(needle)).slice(
+    0,
+    limit
+  );
+}
+
 export const ALL_ACTION_TYPES = ACTION_TYPES;
 
 export function formatRelative(iso: string): string {
