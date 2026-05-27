@@ -37,7 +37,7 @@ export function KpiStrip({ cards }: Props) {
           <Card key={card.id} className="@container/card">
             <CardHeader>
               <CardDescription>{card.label}</CardDescription>
-              <CardTitle className="text-2xl font-semibold tabular-nums @[250px]/card:text-3xl">
+              <CardTitle className="whitespace-nowrap text-2xl font-semibold tabular-nums @[300px]/card:text-3xl">
                 {card.primary}
               </CardTitle>
               <CardAction>
