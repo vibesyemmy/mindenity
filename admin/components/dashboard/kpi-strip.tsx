@@ -2,7 +2,6 @@ import { TrendingDown, TrendingUp, Minus } from "lucide-react";
 
 import {
   Card,
-  CardAction,
   CardDescription,
   CardFooter,
   CardHeader,
@@ -36,16 +35,16 @@ export function KpiStrip({ cards }: Props) {
         return (
           <Card key={card.id} className="@container/card">
             <CardHeader>
-              <CardDescription>{card.label}</CardDescription>
-              <CardTitle className="whitespace-nowrap text-2xl font-semibold tabular-nums @[300px]/card:text-3xl">
-                {card.primary}
-              </CardTitle>
-              <CardAction>
-                <Badge variant="outline">
+              <CardDescription className="flex items-center justify-between gap-2">
+                <span>{card.label}</span>
+                <Badge variant="outline" className="shrink-0">
                   <Icon className="size-3" />
                   {card.delta}
                 </Badge>
-              </CardAction>
+              </CardDescription>
+              <CardTitle className="whitespace-nowrap text-2xl font-semibold tabular-nums @[300px]/card:text-3xl">
+                {card.primary}
+              </CardTitle>
             </CardHeader>
             <CardFooter className="flex-col items-start gap-1 text-sm">
               <div className="line-clamp-1 flex gap-2 font-medium">
