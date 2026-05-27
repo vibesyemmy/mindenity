@@ -9,7 +9,15 @@ import {
   YAxis,
 } from "recharts";
 
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import {
+  Card,
+  CardAction,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
 import {
   ChartContainer,
   ChartLegend,
@@ -41,15 +49,17 @@ const formatUsd = (v: number) => `$${v.toLocaleString()}`;
 
 export function RevenueChart({ points }: Props) {
   return (
-    <Card className="gap-2">
-      <CardHeader className="flex flex-row items-center justify-between">
-        <CardTitle>Revenue</CardTitle>
-        <Link
-          href="/revenue"
-          className="text-xs text-muted-foreground hover:text-foreground"
-        >
-          View revenue detail
-        </Link>
+    <Card className="@container/card from-primary/5 to-card bg-gradient-to-t shadow-xs dark:bg-card">
+      <CardHeader>
+        <CardDescription>Revenue</CardDescription>
+        <CardTitle className="text-xl font-semibold">
+          NGN + USD across the selected window
+        </CardTitle>
+        <CardAction>
+          <Button asChild variant="ghost" size="sm">
+            <Link href="/revenue">View detail →</Link>
+          </Button>
+        </CardAction>
       </CardHeader>
       <CardContent>
         <ChartContainer config={config} className="h-[260px] w-full">

@@ -4,12 +4,12 @@ import { useState } from "react";
 
 import {
   Card,
+  CardAction,
   CardContent,
-  CardFooter,
+  CardDescription,
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 import type { DashboardData } from "@/lib/dummy/types";
@@ -27,18 +27,21 @@ export function OnboardingFunnel({ funnel }: Props) {
 
   return (
     <Card>
-      <CardHeader className="flex flex-row items-center justify-between">
+      <CardHeader>
+        <CardDescription>Acquisition</CardDescription>
         <CardTitle>Onboarding funnel</CardTitle>
-        <Tabs
-          value={localRegion}
-          onValueChange={(v) => setLocalRegion(v as LocalRegion)}
-        >
-          <TabsList>
-            <TabsTrigger value="all">All</TabsTrigger>
-            <TabsTrigger value="ng">NG</TabsTrigger>
-            <TabsTrigger value="intl">Int&apos;l</TabsTrigger>
-          </TabsList>
-        </Tabs>
+        <CardAction>
+          <Tabs
+            value={localRegion}
+            onValueChange={(v) => setLocalRegion(v as LocalRegion)}
+          >
+            <TabsList>
+              <TabsTrigger value="all">All</TabsTrigger>
+              <TabsTrigger value="ng">NG</TabsTrigger>
+              <TabsTrigger value="intl">Int&apos;l</TabsTrigger>
+            </TabsList>
+          </Tabs>
+        </CardAction>
       </CardHeader>
       <CardContent>
         <div className="space-y-3">
@@ -68,11 +71,6 @@ export function OnboardingFunnel({ funnel }: Props) {
           })}
         </div>
       </CardContent>
-      <CardFooter>
-        <Button variant="outline" size="sm" disabled>
-          Export funnel CSV (prototype)
-        </Button>
-      </CardFooter>
     </Card>
   );
 }

@@ -2,11 +2,13 @@ import Link from "next/link";
 
 import {
   Card,
+  CardAction,
   CardContent,
-  CardFooter,
+  CardDescription,
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
 
 import type { ActivityItem } from "@/lib/dummy/types";
 
@@ -18,7 +20,13 @@ export function RecentActivity({ items }: Props) {
   return (
     <Card>
       <CardHeader>
-        <CardTitle>Recent activity</CardTitle>
+        <CardDescription>Audit</CardDescription>
+        <CardTitle>Recent admin activity</CardTitle>
+        <CardAction>
+          <Button asChild variant="ghost" size="sm">
+            <Link href="/audit-log">Open audit log →</Link>
+          </Button>
+        </CardAction>
       </CardHeader>
       <CardContent>
         {items.length === 0 ? (
@@ -26,7 +34,10 @@ export function RecentActivity({ items }: Props) {
         ) : (
           <ul className="space-y-2 text-sm">
             {items.map((item) => (
-              <li key={item.id} className="flex items-baseline justify-between gap-3">
+              <li
+                key={item.id}
+                className="flex items-baseline justify-between gap-3"
+              >
                 <span>
                   <span className="font-medium">{item.actor}</span>{" "}
                   {item.action}{" "}
@@ -40,14 +51,6 @@ export function RecentActivity({ items }: Props) {
           </ul>
         )}
       </CardContent>
-      <CardFooter>
-        <Link
-          href="/audit-log"
-          className="text-xs text-muted-foreground hover:text-foreground"
-        >
-          Open audit log →
-        </Link>
-      </CardFooter>
     </Card>
   );
 }

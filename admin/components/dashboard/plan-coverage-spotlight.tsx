@@ -1,13 +1,13 @@
 import Link from "next/link";
+import { AlertTriangle } from "lucide-react";
 
 import {
-  Card,
-  CardContent,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
+  Alert,
+  AlertAction,
+  AlertDescription,
+  AlertTitle,
+} from "@/components/ui/alert";
+import { Button } from "@/components/ui/button";
 
 import type { PlanCoverageItem } from "@/lib/dummy/types";
 
@@ -18,39 +18,24 @@ type Props = {
 export function PlanCoverageSpotlight({ items }: Props) {
   if (items.length === 0) return null;
 
+  const summary = items
+    .map((i) => `${i.plan} · ${i.region} (need ${i.gap} more)`)
+    .join(" · ");
+
   return (
-    <Card className="border-amber-500/40 bg-amber-50/60 dark:bg-amber-950/20">
-      <CardHeader className="flex flex-row items-center justify-between">
-        <CardTitle>Plans need therapist coverage</CardTitle>
-        <Badge variant="secondary">{items.length}</Badge>
-      </CardHeader>
-      <CardContent>
-        <ul className="space-y-2">
-          {items.map((item) => (
-            <li
-              key={`${item.plan}-${item.region}`}
-              className="flex items-center justify-between text-sm"
-            >
-              <span>
-                <span className="font-medium">{item.plan}</span>
-                <span className="text-muted-foreground"> · {item.region}</span>
-              </span>
-              <span className="text-muted-foreground">
-                {item.therapists} therapist{item.therapists === 1 ? "" : "s"} · need{" "}
-                {item.gap} more
-              </span>
-            </li>
-          ))}
-        </ul>
-      </CardContent>
-      <CardFooter>
-        <Link
-          href="/plans/coverage"
-          className="text-xs text-muted-foreground hover:text-foreground"
-        >
-          Open coverage report →
-        </Link>
-      </CardFooter>
-    </Card>
+    <Alert className="border-amber-500/40 bg-amber-50/60 text-amber-900 dark:bg-amber-950/20 dark:text-amber-100 [&>svg]:text-amber-700 dark:[&>svg]:text-amber-300">
+      <AlertTriangle />
+      <AlertTitle>
+        {items.length} plan{items.length === 1 ? "" : "s"} need therapist coverage
+      </AlertTitle>
+      <AlertDescription className="text-amber-900/80 dark:text-amber-100/80">
+        {summary}
+      </AlertDescription>
+      <AlertAction>
+        <Button asChild size="sm" variant="outline">
+          <Link href="/plans/coverage">Open</Link>
+        </Button>
+      </AlertAction>
+    </Alert>
   );
 }
