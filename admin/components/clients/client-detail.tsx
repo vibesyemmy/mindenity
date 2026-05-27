@@ -41,6 +41,7 @@ import {
 
 import { RefundDialog } from "@/components/clients/refund-dialog";
 import { formatMoney } from "@/components/clients/client-list-columns";
+import { StatCard, StatCardGrid } from "@/components/stat-card";
 
 import type { AdminNote, Client, PaymentRecord } from "@/lib/dummy/clients";
 
@@ -200,31 +201,18 @@ export function ClientDetail({ client: c }: Props) {
         </div>
       </header>
 
-      <section
-        aria-label="Stats"
-        className="grid grid-cols-2 gap-3 lg:grid-cols-4"
-      >
-        {[
-          { label: "Lifetime sessions", value: c.lifetimeSessions.toLocaleString() },
-          { label: "Member since", value: formatDate(c.joinedAt) },
-          { label: "Last payment", value: c.lastPaymentAgo },
-          {
-            label: "Lifetime spend",
-            value: formatMoney(c.lifetimeSpend.amount, c.lifetimeSpend.currency),
-          },
-        ].map((s) => (
-          <Card key={s.label} className="gap-1 py-4">
-            <CardHeader className="p-0 px-5">
-              <p className="text-xs uppercase tracking-wide text-muted-foreground">
-                {s.label}
-              </p>
-            </CardHeader>
-            <CardContent className="px-5">
-              <p className="font-heading text-xl tabular-nums">{s.value}</p>
-            </CardContent>
-          </Card>
-        ))}
-      </section>
+      <StatCardGrid columns={4}>
+        <StatCard
+          label="Lifetime sessions"
+          value={c.lifetimeSessions.toLocaleString()}
+        />
+        <StatCard label="Member since" value={formatDate(c.joinedAt)} />
+        <StatCard label="Last payment" value={c.lastPaymentAgo} />
+        <StatCard
+          label="Lifetime spend"
+          value={formatMoney(c.lifetimeSpend.amount, c.lifetimeSpend.currency)}
+        />
+      </StatCardGrid>
 
       <Tabs defaultValue="overview">
         <TabsList>

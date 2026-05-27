@@ -10,6 +10,7 @@ import {
 
 import { AuditsTable } from "@/components/compliance/audits-table";
 import { ActionItemsList } from "@/components/compliance/action-items-list";
+import { StatCard, StatCardGrid } from "@/components/stat-card";
 
 import { getComplianceStats } from "@/lib/dummy/compliance";
 
@@ -36,58 +37,23 @@ export default function CompliancePage() {
         </div>
       </header>
 
-      <section
-        aria-label="KPIs"
-        className="grid grid-cols-1 gap-3 lg:grid-cols-3"
-      >
-        <Card className="gap-1 py-4">
-          <CardHeader className="p-0 px-5">
-            <p className="text-xs uppercase tracking-wide text-muted-foreground">
-              Subject requests
-            </p>
-          </CardHeader>
-          <CardContent className="px-5">
-            <p className="font-heading text-2xl tabular-nums">
-              {stats.openRequestCount}
-            </p>
-            <p className="text-xs text-muted-foreground">
-              {stats.overdueCount} overdue · NDPR + GDPR SLA 30 days
-            </p>
-          </CardContent>
-        </Card>
-
-        <Card className="gap-1 py-4">
-          <CardHeader className="p-0 px-5">
-            <p className="text-xs uppercase tracking-wide text-muted-foreground">
-              Consent records up to date
-            </p>
-          </CardHeader>
-          <CardContent className="px-5">
-            <p className="font-heading text-2xl tabular-nums">
-              {stats.consentFreshnessPct}%
-            </p>
-            <p className="text-xs text-muted-foreground">
-              Last refresh {stats.consentLastRefresh}
-            </p>
-          </CardContent>
-        </Card>
-
-        <Card className="gap-1 py-4">
-          <CardHeader className="p-0 px-5">
-            <p className="text-xs uppercase tracking-wide text-muted-foreground">
-              Residency status
-            </p>
-          </CardHeader>
-          <CardContent className="px-5">
-            <p className="font-heading text-2xl tabular-nums">
-              {stats.compliantRegions} / {stats.totalRegions}
-            </p>
-            <p className="text-xs text-muted-foreground">
-              regions in full compliance
-            </p>
-          </CardContent>
-        </Card>
-      </section>
+      <StatCardGrid columns={3}>
+        <StatCard
+          label="Subject requests"
+          value={stats.openRequestCount}
+          sub={`${stats.overdueCount} overdue · NDPR + GDPR SLA 30 days`}
+        />
+        <StatCard
+          label="Consent records up to date"
+          value={`${stats.consentFreshnessPct}%`}
+          sub={`Last refresh ${stats.consentLastRefresh}`}
+        />
+        <StatCard
+          label="Residency status"
+          value={`${stats.compliantRegions} / ${stats.totalRegions}`}
+          sub="regions in full compliance"
+        />
+      </StatCardGrid>
 
       <Card>
         <CardHeader>

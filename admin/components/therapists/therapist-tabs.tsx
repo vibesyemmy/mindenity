@@ -31,6 +31,7 @@ import {
   formatDate,
 } from "@/lib/dummy/commission";
 import { getAuditEntriesByTarget, formatRelative as fmtRelative } from "@/lib/dummy/settings";
+import { StatCard, StatCardGrid } from "@/components/stat-card";
 
 type Props = {
   therapist: Therapist;
@@ -165,27 +166,11 @@ export function SessionsTab({ therapist }: Props) {
 
   return (
     <div className="space-y-4">
-      <section
-        aria-label="Sessions KPIs"
-        className="grid grid-cols-3 gap-3"
-      >
-        {[
-          { label: "Total sessions (logged)", value: all.length.toString() },
-          { label: "Last 30 days", value: last30.toString() },
-          { label: "Red-flag sessions", value: redFlags.toString() },
-        ].map((s) => (
-          <Card key={s.label} className="gap-1 py-4">
-            <CardHeader className="p-0 px-5">
-              <p className="text-xs uppercase tracking-wide text-muted-foreground">
-                {s.label}
-              </p>
-            </CardHeader>
-            <CardContent className="px-5">
-              <p className="font-heading text-2xl tabular-nums">{s.value}</p>
-            </CardContent>
-          </Card>
-        ))}
-      </section>
+      <StatCardGrid columns={3}>
+        <StatCard label="Total sessions (logged)" value={all.length.toString()} />
+        <StatCard label="Last 30 days" value={last30.toString()} />
+        <StatCard label="Red-flag sessions" value={redFlags.toString()} />
+      </StatCardGrid>
 
       <Card>
         <CardHeader className="flex flex-row items-center justify-between">
@@ -270,27 +255,11 @@ export function RiskRecordTab({ therapist }: Props) {
 
   return (
     <div className="space-y-4">
-      <section
-        aria-label="Risk KPIs"
-        className="grid grid-cols-3 gap-3"
-      >
-        {[
-          { label: "Total forms filed", value: forms.length.toString() },
-          { label: "Red flags", value: redFlags.toString() },
-          { label: "Overdue follow-up", value: overdue.toString() },
-        ].map((s) => (
-          <Card key={s.label} className="gap-1 py-4">
-            <CardHeader className="p-0 px-5">
-              <p className="text-xs uppercase tracking-wide text-muted-foreground">
-                {s.label}
-              </p>
-            </CardHeader>
-            <CardContent className="px-5">
-              <p className="font-heading text-2xl tabular-nums">{s.value}</p>
-            </CardContent>
-          </Card>
-        ))}
-      </section>
+      <StatCardGrid columns={3}>
+        <StatCard label="Total forms filed" value={forms.length.toString()} />
+        <StatCard label="Red flags" value={redFlags.toString()} />
+        <StatCard label="Overdue follow-up" value={overdue.toString()} />
+      </StatCardGrid>
 
       <Card>
         <CardHeader className="flex flex-row items-center justify-between">
@@ -369,67 +338,33 @@ export function EarningsTab({ therapist }: Props) {
 
   return (
     <div className="space-y-4">
-      <section
-        aria-label="Earnings KPIs"
-        className="grid grid-cols-2 gap-3 lg:grid-cols-4"
-      >
-        <Card className="gap-1 py-4">
-          <CardHeader className="p-0 px-5">
-            <p className="text-xs uppercase tracking-wide text-muted-foreground">
-              Lifetime earnings (paid)
-            </p>
-          </CardHeader>
-          <CardContent className="px-5">
-            <p className="font-heading text-2xl tabular-nums">
-              {fmtMoney(earnings.lifetimeNet, earnings.lifetimeCurrency)}
-            </p>
-          </CardContent>
-        </Card>
-
-        <Card className="gap-1 py-4">
-          <CardHeader className="p-0 px-5">
-            <p className="text-xs uppercase tracking-wide text-muted-foreground">
-              Last payout
-            </p>
-          </CardHeader>
-          <CardContent className="px-5">
-            <p className="font-heading text-2xl tabular-nums">
-              {earnings.lastPayout
-                ? fmtMoney(earnings.lastPayout.net, earnings.lastPayout.currency)
-                : "—"}
-            </p>
-            <p className="text-xs text-muted-foreground">
-              {earnings.lastPayout ? formatDate(earnings.lastPayout.runDate) : ""}
-            </p>
-          </CardContent>
-        </Card>
-
-        <Card className="gap-1 py-4">
-          <CardHeader className="p-0 px-5">
-            <p className="text-xs uppercase tracking-wide text-muted-foreground">
-              Current tier
-            </p>
-          </CardHeader>
-          <CardContent className="px-5">
-            <p className="font-heading text-2xl tabular-nums">
-              {earnings.currentTier ?? "—"}
-            </p>
-          </CardContent>
-        </Card>
-
-        <Card className="gap-1 py-4">
-          <CardHeader className="p-0 px-5">
-            <p className="text-xs uppercase tracking-wide text-muted-foreground">
-              Tier+ status
-            </p>
-          </CardHeader>
-          <CardContent className="px-5">
-            <Badge variant={earnings.isTierPlus ? "secondary" : "outline"} className="font-normal">
+      <StatCardGrid columns={4}>
+        <StatCard
+          label="Lifetime earnings (paid)"
+          value={fmtMoney(earnings.lifetimeNet, earnings.lifetimeCurrency)}
+        />
+        <StatCard
+          label="Last payout"
+          value={
+            earnings.lastPayout
+              ? fmtMoney(earnings.lastPayout.net, earnings.lastPayout.currency)
+              : "—"
+          }
+          sub={earnings.lastPayout ? formatDate(earnings.lastPayout.runDate) : undefined}
+        />
+        <StatCard label="Current tier" value={earnings.currentTier ?? "—"} />
+        <StatCard
+          label="Tier+ status"
+          value={
+            <Badge
+              variant={earnings.isTierPlus ? "secondary" : "outline"}
+              className="font-normal"
+            >
               {earnings.isTierPlus ? "Active" : "Not active"}
             </Badge>
-          </CardContent>
-        </Card>
-      </section>
+          }
+        />
+      </StatCardGrid>
 
       <Card>
         <CardHeader className="flex flex-row items-center justify-between">

@@ -30,6 +30,7 @@ import {
   EarningsTab,
   ActivityLogTab,
 } from "@/components/therapists/therapist-tabs";
+import { StatCard, StatCardGrid } from "@/components/stat-card";
 
 import type { Therapist } from "@/lib/dummy/therapists";
 
@@ -103,28 +104,21 @@ export function TherapistDetail({ therapist: t }: Props) {
         </Button>
       </header>
 
-      <section
-        aria-label="Stats"
-        className="grid grid-cols-2 gap-3 lg:grid-cols-4"
-      >
-        {[
-          { label: "Sessions (lifetime)", value: (t.sessions30d * 14).toLocaleString() },
-          { label: "Active clients", value: Math.round(t.sessions30d / 4).toString() },
-          { label: "Earnings (30d)", value: formatEarnings(t.earnings30d) },
-          { label: "Avg rating", value: `${t.rating.toFixed(1)} ★` },
-        ].map((s) => (
-          <Card key={s.label} className="gap-1 py-4">
-            <CardHeader className="p-0 px-5">
-              <p className="text-xs uppercase tracking-wide text-muted-foreground">
-                {s.label}
-              </p>
-            </CardHeader>
-            <CardContent className="px-5">
-              <p className="font-heading text-2xl tabular-nums">{s.value}</p>
-            </CardContent>
-          </Card>
-        ))}
-      </section>
+      <StatCardGrid columns={4}>
+        <StatCard
+          label="Sessions (lifetime)"
+          value={(t.sessions30d * 14).toLocaleString()}
+        />
+        <StatCard
+          label="Active clients"
+          value={Math.round(t.sessions30d / 4).toString()}
+        />
+        <StatCard
+          label="Earnings (30d)"
+          value={formatEarnings(t.earnings30d)}
+        />
+        <StatCard label="Avg rating" value={`${t.rating.toFixed(1)} ★`} />
+      </StatCardGrid>
 
       <Tabs defaultValue="overview">
         <TabsList>

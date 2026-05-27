@@ -23,6 +23,7 @@ import {
   formatMoney,
   type PayoutRun,
 } from "@/lib/dummy/commission";
+import { StatCard, StatCardGrid } from "@/components/stat-card";
 
 const runStatusVariant: Record<
   PayoutRun["status"],
@@ -78,28 +79,21 @@ export function PayoutRunDetail({ run }: Props) {
         </Button>
       </header>
 
-      <section
-        aria-label="Summary"
-        className="grid grid-cols-2 gap-3 lg:grid-cols-4"
-      >
-        {[
-          { label: "Therapists", value: run.therapistsCount.toString() },
-          { label: "Total gross", value: formatMoney(run.totalGross, run.currency) },
-          { label: "Total platform fee", value: formatMoney(run.totalPlatformFee, run.currency) },
-          { label: "Total payout", value: formatMoney(run.totalNet, run.currency) },
-        ].map((s) => (
-          <Card key={s.label} className="gap-1 py-4">
-            <CardHeader className="p-0 px-5">
-              <p className="text-xs uppercase tracking-wide text-muted-foreground">
-                {s.label}
-              </p>
-            </CardHeader>
-            <CardContent className="px-5">
-              <p className="font-heading text-xl tabular-nums">{s.value}</p>
-            </CardContent>
-          </Card>
-        ))}
-      </section>
+      <StatCardGrid columns={4}>
+        <StatCard label="Therapists" value={run.therapistsCount.toString()} />
+        <StatCard
+          label="Total gross"
+          value={formatMoney(run.totalGross, run.currency)}
+        />
+        <StatCard
+          label="Total platform fee"
+          value={formatMoney(run.totalPlatformFee, run.currency)}
+        />
+        <StatCard
+          label="Total payout"
+          value={formatMoney(run.totalNet, run.currency)}
+        />
+      </StatCardGrid>
 
       <Card>
         <CardHeader>
