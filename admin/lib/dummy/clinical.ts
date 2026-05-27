@@ -25,6 +25,20 @@ export type Session = {
   hasRiskForm: boolean;
 };
 
+export type RiskTimelineEvent = {
+  id: string;
+  timestamp: string; // ISO
+  type:
+    | "form_submitted"
+    | "status_changed"
+    | "emergency_verified"
+    | "admin_note"
+    | "escalated_to_crisis"
+    | "resolved";
+  actor: string;
+  note: string;
+};
+
 export type RiskForm = {
   id: string;
   submittedAt: string; // ISO
@@ -40,6 +54,7 @@ export type RiskForm = {
   followUpDueAt: string; // ISO
   status: RiskFormStatus;
   emergencyVerify: EmergencyVerifyStatus;
+  timeline: RiskTimelineEvent[];
 };
 
 export type CrisisTimelineEvent = {
@@ -113,12 +128,130 @@ const SESSIONS: Session[] = [
 ];
 
 const RISK_FORMS: RiskForm[] = [
-  { id: "rf-001", submittedAt: "2026-05-26T14:00:00Z", sessionId: "se-002", clientId: "c-002", clientAlias: "Client-8842", therapistId: "t-002", therapistName: "Dr. Marcus Quinn", region: "Int'l", country: "United Kingdom", level: "red", actionPlan: "Crisis intervention triggered. Follow-up within 24h. Therapist on-call. Local emergency line shared with client.", followUpDueAt: "2026-05-27T14:00:00Z", status: "Open", emergencyVerify: "verified" },
-  { id: "rf-002", submittedAt: "2026-05-25T18:00:00Z", sessionId: "se-003", clientId: "c-008", clientAlias: "Client-2218", therapistId: "t-005", therapistName: "Dr. Priya Shah", region: "Int'l", country: "United States", level: "orange", actionPlan: "Eldest child showing signs of complicated grief. Recommended parallel individual sessions. Follow-up in 48h.", followUpDueAt: "2026-05-27T18:00:00Z", status: "In follow-up", emergencyVerify: "n/a" },
-  { id: "rf-003", submittedAt: "2026-05-22T17:00:00Z", sessionId: "se-007", clientId: "c-002", clientAlias: "Client-8842", therapistId: "t-002", therapistName: "Dr. Marcus Quinn", region: "Int'l", country: "United Kingdom", level: "red", actionPlan: "Client no-show after expressing distress in last session. Attempt phone outreach within 24h.", followUpDueAt: "2026-05-23T17:00:00Z", status: "Escalated", emergencyVerify: "verified" },
-  { id: "rf-004", submittedAt: "2026-05-18T15:00:00Z", sessionId: "se-011", clientId: "c-002", clientAlias: "Client-8842", therapistId: "t-002", therapistName: "Dr. Marcus Quinn", region: "Int'l", country: "United Kingdom", level: "orange", actionPlan: "Trauma flashbacks intensified. Agreed double-session frequency for 2 weeks.", followUpDueAt: "2026-05-20T15:00:00Z", status: "Resolved", emergencyVerify: "n/a" },
-  { id: "rf-005", submittedAt: "2026-05-26T09:00:00Z", sessionId: "se-001", clientId: "c-001", clientAlias: "Client-9128", therapistId: "t-001", therapistName: "Dr. Tola Adesina", region: "NG", country: "Nigeria", level: "green", actionPlan: "Continue CBT homework. Standard follow-up.", followUpDueAt: "2026-06-02T09:00:00Z", status: "Resolved", emergencyVerify: "n/a" },
-  { id: "rf-006", submittedAt: "2026-05-10T11:00:00Z", sessionId: "se-006", clientId: "c-001", clientAlias: "Client-9128", therapistId: "t-001", therapistName: "Dr. Tola Adesina", region: "NG", country: "Nigeria", level: "orange", actionPlan: "Elevated work stress. Agreed weekly check-ins for 1 month.", followUpDueAt: "2026-05-17T11:00:00Z", status: "Resolved", emergencyVerify: "n/a" },
+  {
+    id: "rf-001",
+    submittedAt: "2026-05-26T14:00:00Z",
+    sessionId: "se-002",
+    clientId: "c-002",
+    clientAlias: "Client-8842",
+    therapistId: "t-002",
+    therapistName: "Dr. Marcus Quinn",
+    region: "Int'l",
+    country: "United Kingdom",
+    level: "red",
+    actionPlan: "Crisis intervention triggered. Follow-up within 24h. Therapist on-call. Local emergency line shared with client.",
+    followUpDueAt: "2026-05-27T14:00:00Z",
+    status: "Open",
+    emergencyVerify: "verified",
+    timeline: [
+      { id: "rtl-001-1", timestamp: "2026-05-26T14:00:00Z", type: "form_submitted", actor: "Dr. Marcus Quinn", note: "Red-level risk form submitted after session se-002. Crisis intervention initiated." },
+      { id: "rtl-001-2", timestamp: "2026-05-26T14:02:00Z", type: "emergency_verified", actor: "System", note: "Local emergency line (Samaritans · 116 123) verified and shared with client via in-app message." },
+    ],
+  },
+  {
+    id: "rf-002",
+    submittedAt: "2026-05-25T18:00:00Z",
+    sessionId: "se-003",
+    clientId: "c-008",
+    clientAlias: "Client-2218",
+    therapistId: "t-005",
+    therapistName: "Dr. Priya Shah",
+    region: "Int'l",
+    country: "United States",
+    level: "orange",
+    actionPlan: "Eldest child showing signs of complicated grief. Recommended parallel individual sessions. Follow-up in 48h.",
+    followUpDueAt: "2026-05-27T18:00:00Z",
+    status: "In follow-up",
+    emergencyVerify: "n/a",
+    timeline: [
+      { id: "rtl-002-1", timestamp: "2026-05-25T18:00:00Z", type: "form_submitted", actor: "Dr. Priya Shah", note: "Orange-level risk form submitted after family session se-003." },
+      { id: "rtl-002-2", timestamp: "2026-05-26T09:30:00Z", type: "status_changed", actor: "Adaeze Nwosu", note: "Marked as in follow-up · individual sessions for eldest child scheduled." },
+    ],
+  },
+  {
+    id: "rf-003",
+    submittedAt: "2026-05-22T17:00:00Z",
+    sessionId: "se-007",
+    clientId: "c-002",
+    clientAlias: "Client-8842",
+    therapistId: "t-002",
+    therapistName: "Dr. Marcus Quinn",
+    region: "Int'l",
+    country: "United Kingdom",
+    level: "red",
+    actionPlan: "Client no-show after expressing distress in last session. Attempt phone outreach within 24h.",
+    followUpDueAt: "2026-05-23T17:00:00Z",
+    status: "Escalated",
+    emergencyVerify: "verified",
+    timeline: [
+      { id: "rtl-003-1", timestamp: "2026-05-22T17:00:00Z", type: "form_submitted", actor: "Dr. Marcus Quinn", note: "Red-level risk form submitted · client no-show after distressed last session." },
+      { id: "rtl-003-2", timestamp: "2026-05-22T17:05:00Z", type: "emergency_verified", actor: "System", note: "Local emergency line confirmed and shared with client via SMS." },
+      { id: "rtl-003-3", timestamp: "2026-05-23T17:01:00Z", type: "escalated_to_crisis", actor: "System", note: "Follow-up SLA breached (24h). Auto-escalated to crisis log as cr-003." },
+      { id: "rtl-003-4", timestamp: "2026-05-23T17:30:00Z", type: "admin_note", actor: "Adaeze Nwosu", note: "Confirmed client safe via SMS. Follow-up session booked for next week." },
+    ],
+  },
+  {
+    id: "rf-004",
+    submittedAt: "2026-05-18T15:00:00Z",
+    sessionId: "se-011",
+    clientId: "c-002",
+    clientAlias: "Client-8842",
+    therapistId: "t-002",
+    therapistName: "Dr. Marcus Quinn",
+    region: "Int'l",
+    country: "United Kingdom",
+    level: "orange",
+    actionPlan: "Trauma flashbacks intensified. Agreed double-session frequency for 2 weeks.",
+    followUpDueAt: "2026-05-20T15:00:00Z",
+    status: "Resolved",
+    emergencyVerify: "n/a",
+    timeline: [
+      { id: "rtl-004-1", timestamp: "2026-05-18T15:00:00Z", type: "form_submitted", actor: "Dr. Marcus Quinn", note: "Orange-level risk form submitted after session se-011." },
+      { id: "rtl-004-2", timestamp: "2026-05-19T10:00:00Z", type: "status_changed", actor: "Adaeze Nwosu", note: "Marked as in follow-up · double-session frequency scheduled." },
+      { id: "rtl-004-3", timestamp: "2026-05-20T14:30:00Z", type: "resolved", actor: "Dr. Marcus Quinn", note: "Resolved · client engaged in increased-frequency plan; no further escalation." },
+    ],
+  },
+  {
+    id: "rf-005",
+    submittedAt: "2026-05-26T09:00:00Z",
+    sessionId: "se-001",
+    clientId: "c-001",
+    clientAlias: "Client-9128",
+    therapistId: "t-001",
+    therapistName: "Dr. Tola Adesina",
+    region: "NG",
+    country: "Nigeria",
+    level: "green",
+    actionPlan: "Continue CBT homework. Standard follow-up.",
+    followUpDueAt: "2026-06-02T09:00:00Z",
+    status: "Resolved",
+    emergencyVerify: "n/a",
+    timeline: [
+      { id: "rtl-005-1", timestamp: "2026-05-26T09:00:00Z", type: "form_submitted", actor: "Dr. Tola Adesina", note: "Green-level risk form submitted · routine post-session check." },
+      { id: "rtl-005-2", timestamp: "2026-05-26T09:00:30Z", type: "resolved", actor: "System", note: "Auto-resolved · green level requires no admin follow-up." },
+    ],
+  },
+  {
+    id: "rf-006",
+    submittedAt: "2026-05-10T11:00:00Z",
+    sessionId: "se-006",
+    clientId: "c-001",
+    clientAlias: "Client-9128",
+    therapistId: "t-001",
+    therapistName: "Dr. Tola Adesina",
+    region: "NG",
+    country: "Nigeria",
+    level: "orange",
+    actionPlan: "Elevated work stress. Agreed weekly check-ins for 1 month.",
+    followUpDueAt: "2026-05-17T11:00:00Z",
+    status: "Resolved",
+    emergencyVerify: "n/a",
+    timeline: [
+      { id: "rtl-006-1", timestamp: "2026-05-10T11:00:00Z", type: "form_submitted", actor: "Dr. Tola Adesina", note: "Orange-level risk form submitted · elevated workplace stress reported." },
+      { id: "rtl-006-2", timestamp: "2026-05-11T08:00:00Z", type: "status_changed", actor: "Sarah Okeke", note: "Marked as in follow-up · weekly check-ins agreed." },
+      { id: "rtl-006-3", timestamp: "2026-05-17T11:00:00Z", type: "resolved", actor: "Dr. Tola Adesina", note: "Resolved · stress levels normalised; standard cadence resumed." },
+    ],
+  },
 ];
 
 const CRISIS_EVENTS: CrisisEvent[] = [
@@ -267,6 +400,10 @@ export function getRiskForms(filters: RiskFormFilters = {}): RiskForm[] {
     if (filters.client && r.clientId !== filters.client) return false;
     return true;
   });
+}
+
+export function getRiskForm(id: string): RiskForm | undefined {
+  return RISK_FORMS.find((r) => r.id === id);
 }
 
 export function getCrisisEvents(filters: CrisisFilters = {}): CrisisEvent[] {

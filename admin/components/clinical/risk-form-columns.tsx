@@ -15,6 +15,7 @@ import {
   TooltipContent,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
+import { Button } from "@/components/ui/button";
 
 import { formatRelative, formatCountdown } from "@/lib/dummy/clinical";
 import type { RiskForm } from "@/lib/dummy/clinical";
@@ -159,15 +160,12 @@ export const riskFormColumns: ColumnDef<RiskForm>[] = [
   {
     id: "open",
     header: "",
-    cell: () => (
-      <Tooltip>
-        <TooltipTrigger asChild>
-          <span className="inline-flex">
-            <ChevronRight className="size-4 text-muted-foreground/40" />
-          </span>
-        </TooltipTrigger>
-        <TooltipContent side="left">Detail view not built</TooltipContent>
-      </Tooltip>
+    cell: ({ row }) => (
+      <Button asChild variant="ghost" size="icon" className="size-7">
+        <Link href={`/risk-forms/${row.original.id}`} aria-label="Open risk form">
+          <ChevronRight className="size-4 text-muted-foreground" />
+        </Link>
+      </Button>
     ),
   },
 ];

@@ -8,6 +8,7 @@ import {
   UserCircle2,
   CalendarClock,
   AlertOctagon,
+  ClipboardList,
   BadgeDollarSign,
   Receipt,
   Megaphone,
@@ -59,6 +60,7 @@ const GROUPS: NavGroup[] = [
     label: "Operations",
     items: [
       { title: "Sessions", href: "/sessions", icon: CalendarClock },
+      { title: "Risk follow-ups", href: "/risk-forms", icon: ClipboardList },
       { title: "Crisis log", href: "/crisis", icon: AlertOctagon },
       { title: "Pricing approvals", href: "/pricing-approvals", icon: BadgeDollarSign },
     ],
