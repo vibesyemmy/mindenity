@@ -54,7 +54,7 @@ export function getDashboardData(window: Window, region: Region): DashboardData 
         label: "Active therapists",
         primary: "94",
         secondary: "Verified · accepting bookings",
-        delta: "+3 onboarded · 2 pending verif",
+        delta: "+3 new",
         deltaDirection: "up",
       },
       {
