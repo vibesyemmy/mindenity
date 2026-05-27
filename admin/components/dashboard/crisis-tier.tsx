@@ -43,7 +43,7 @@ export function CrisisTier({ state }: Props) {
     crisisCount > 0 ? "Crisis attention required" : "Queue items overdue";
 
   return (
-    <Alert variant="destructive">
+    <Alert variant="destructive" className="border-destructive/40 bg-destructive/10">
       <AlertOctagon />
       <AlertTitle>{title}</AlertTitle>
       <AlertDescription>{parts.join(" · ")}</AlertDescription>
