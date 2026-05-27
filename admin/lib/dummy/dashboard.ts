@@ -36,7 +36,7 @@ export function getDashboardData(window: Window, region: Region): DashboardData 
       {
         id: "mrr",
         label: "MRR",
-        primary: "₦4.2M\n$8,450",
+        primary: "₦4.2M · $8,450",
         secondary: "Region split",
         delta: "NGN +6.1% · USD +2.4%",
         deltaDirection: "up",
