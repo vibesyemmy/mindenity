@@ -1,5 +1,12 @@
 import Link from "next/link";
+import { AlertOctagon } from "lucide-react";
 
+import {
+  Alert,
+  AlertAction,
+  AlertDescription,
+  AlertTitle,
+} from "@/components/ui/alert";
 import { Button } from "@/components/ui/button";
 
 import type { CrisisTierState } from "@/lib/dummy/types";
@@ -25,7 +32,6 @@ export function CrisisTier({ state }: Props) {
       } overdue`
     );
 
-  // Priority routing: crisis > verifications > pricing
   const href =
     crisisCount > 0
       ? "/crisis"
@@ -33,20 +39,19 @@ export function CrisisTier({ state }: Props) {
         ? "/therapists/verifications"
         : "/pricing-approvals";
 
+  const title =
+    crisisCount > 0 ? "Crisis attention required" : "Queue items overdue";
+
   return (
-    <div
-      role="alert"
-      className="flex items-center justify-between gap-4 rounded-2xl border border-destructive/40 bg-destructive/10 px-4 py-3"
-    >
-      <p className="text-sm text-destructive">
-        <span aria-hidden className="mr-1.5">
-          🚨
-        </span>
-        {parts.join(" · ")}
-      </p>
-      <Button asChild size="sm" variant="destructive">
-        <Link href={href}>Open</Link>
-      </Button>
-    </div>
+    <Alert variant="destructive">
+      <AlertOctagon />
+      <AlertTitle>{title}</AlertTitle>
+      <AlertDescription>{parts.join(" · ")}</AlertDescription>
+      <AlertAction>
+        <Button asChild size="sm" variant="destructive">
+          <Link href={href}>Open</Link>
+        </Button>
+      </AlertAction>
+    </Alert>
   );
 }
