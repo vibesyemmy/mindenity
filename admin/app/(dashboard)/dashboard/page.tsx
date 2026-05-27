@@ -35,11 +35,15 @@ export default async function DashboardPage({
       <CrisisTier state={data.crisisTier} />
       <KpiStrip cards={data.kpis} />
       <RevenueChart points={data.revenue} />
-      <OperationsZone queues={data.queues} />
       <PlanCoverageSpotlight items={data.planCoverage} />
-      <ClinicalSafetyZone clinical={data.clinical} />
-      <OnboardingFunnel funnel={data.funnel} />
-      <RecentActivity items={data.activity} />
+      <div className="grid grid-cols-1 gap-4 lg:grid-cols-2">
+        <OperationsZone queues={data.queues} />
+        <ClinicalSafetyZone clinical={data.clinical} />
+      </div>
+      <div className="grid grid-cols-1 gap-4 lg:grid-cols-2">
+        <OnboardingFunnel funnel={data.funnel} />
+        <RecentActivity items={data.activity} />
+      </div>
     </div>
   );
 }
