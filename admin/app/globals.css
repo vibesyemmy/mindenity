@@ -127,4 +127,7 @@
   html {
     @apply font-sans;
   }
+  .font-heading {
+    font-weight: 600;
+  }
 }
