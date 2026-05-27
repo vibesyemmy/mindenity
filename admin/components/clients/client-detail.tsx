@@ -1,7 +1,13 @@
 "use client";
 
 import Link from "next/link";
-import { ArrowLeft, RotateCcw } from "lucide-react";
+import {
+  ArrowLeft,
+  RotateCcw,
+  ArrowRight,
+  Pin,
+  ExternalLink,
+} from "lucide-react";
 import { useState } from "react";
 import { toast } from "sonner";
 
@@ -36,7 +42,7 @@ import {
 import { RefundDialog } from "@/components/clients/refund-dialog";
 import { formatMoney } from "@/components/clients/client-list-columns";
 
-import type { Client, PaymentRecord } from "@/lib/dummy/clients";
+import type { AdminNote, Client, PaymentRecord } from "@/lib/dummy/clients";
 
 const statusVariant: Record<
   Client["status"],
@@ -72,6 +78,27 @@ function formatDate(iso: string) {
   });
 }
 
+function formatDateTime(iso: string) {
+  return new Date(iso).toLocaleString("en-GB", {
+    day: "numeric",
+    month: "short",
+    year: "numeric",
+    hour: "2-digit",
+    minute: "2-digit",
+  });
+}
+
+const planReasonVariant: Record<
+  "Signup" | "Upgrade" | "Downgrade" | "Cancellation" | "Reactivation",
+  "secondary" | "outline" | "destructive"
+> = {
+  Signup: "secondary",
+  Upgrade: "secondary",
+  Downgrade: "outline",
+  Cancellation: "destructive",
+  Reactivation: "secondary",
+};
+
 type Props = {
   client: Client;
 };
@@ -81,6 +108,27 @@ export function ClientDetail({ client: c }: Props) {
   const [suspendOpen, setSuspendOpen] = useState(false);
   const [suspendReason, setSuspendReason] = useState("");
   const [refundPayment, setRefundPayment] = useState<PaymentRecord | null>(null);
+  const [notes, setNotes] = useState<AdminNote[]>(c.notes);
+  const [noteDraft, setNoteDraft] = useState("");
+
+  const handleAddNote = () => {
+    const body = noteDraft.trim();
+    if (body.length < 3) {
+      toast.error("Note must be at least 3 characters.");
+      return;
+    }
+    setNotes((prev) => [
+      {
+        id: `n-local-${Date.now()}`,
+        date: new Date().toISOString(),
+        author: "Adaeze Nwosu",
+        body,
+      },
+      ...prev,
+    ]);
+    setNoteDraft("");
+    toast.success("Note added");
+  };
 
   const handlePause = () => {
     toast.success(`Plan paused for ${c.alias}`, {
@@ -380,28 +428,234 @@ export function ClientDetail({ client: c }: Props) {
           </Card>
         </TabsContent>
 
-        {(["planHistory", "sessions", "risk", "notes"] as const).map((key) => (
-          <TabsContent key={key} value={key} className="pt-4">
-            <Card>
-              <CardHeader>
-                <CardTitle className="capitalize">
-                  {key === "planHistory"
-                    ? "Plan history"
-                    : key === "risk"
-                      ? "Risk events"
-                      : key}
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
+        <TabsContent value="planHistory" className="pt-4">
+          <Card>
+            <CardHeader>
+              <CardTitle>Plan history</CardTitle>
+            </CardHeader>
+            <CardContent>
+              {c.planHistory.length === 0 ? (
                 <p className="text-sm text-muted-foreground">
-                  Full {key === "planHistory" ? "plan history" : key === "risk" ? "risk events" : key}{" "}
-                  view not built in this prototype. Wire when the parent module
-                  lands.
+                  No plan changes on record.
                 </p>
-              </CardContent>
-            </Card>
-          </TabsContent>
-        ))}
+              ) : (
+                <ol className="relative space-y-5 border-l border-border/60 pl-5">
+                  {c.planHistory.map((entry) => (
+                    <li key={entry.id} className="relative">
+                      <span
+                        aria-hidden
+                        className="absolute -left-[26px] top-1.5 inline-flex h-2.5 w-2.5 rounded-full bg-primary ring-4 ring-background"
+                      />
+                      <div className="flex flex-wrap items-center gap-2 text-sm">
+                        <span className="tabular-nums text-muted-foreground">
+                          {formatDate(entry.date)}
+                        </span>
+                        <Badge
+                          variant={planReasonVariant[entry.reason]}
+                          className="font-normal"
+                        >
+                          {entry.reason}
+                        </Badge>
+                      </div>
+                      <p className="mt-1.5 text-sm">
+                        {entry.from ? (
+                          <span className="inline-flex items-center gap-1.5">
+                            <span className="text-muted-foreground line-through">
+                              {entry.from}
+                            </span>
+                            <ArrowRight className="size-3 text-muted-foreground" />
+                            <span className="font-medium">{entry.to}</span>
+                          </span>
+                        ) : (
+                          <span className="font-medium">{entry.to}</span>
+                        )}
+                      </p>
+                    </li>
+                  ))}
+                </ol>
+              )}
+            </CardContent>
+          </Card>
+        </TabsContent>
+
+        <TabsContent value="sessions" className="pt-4">
+          <Card>
+            <CardHeader className="flex flex-row items-center justify-between">
+              <CardTitle>Sessions</CardTitle>
+              <span className="text-xs text-muted-foreground">
+                {c.sessions.length} recent · {c.lifetimeSessions} lifetime
+              </span>
+            </CardHeader>
+            <CardContent>
+              {c.sessions.length === 0 ? (
+                <p className="text-sm text-muted-foreground">
+                  No sessions on record.
+                </p>
+              ) : (
+                <Table>
+                  <TableHeader>
+                    <TableRow>
+                      <TableHead>Date</TableHead>
+                      <TableHead>Therapist</TableHead>
+                      <TableHead>Format</TableHead>
+                      <TableHead>Duration</TableHead>
+                      <TableHead>Risk</TableHead>
+                    </TableRow>
+                  </TableHeader>
+                  <TableBody>
+                    {c.sessions.map((s) => (
+                      <TableRow key={s.id}>
+                        <TableCell className="tabular-nums">
+                          {formatDateTime(s.date)}
+                        </TableCell>
+                        <TableCell>{s.therapist}</TableCell>
+                        <TableCell className="text-muted-foreground">
+                          {s.format}
+                        </TableCell>
+                        <TableCell className="tabular-nums">
+                          {s.durationMin}m
+                        </TableCell>
+                        <TableCell>
+                          <Badge
+                            variant={riskVariant[s.riskLevel]}
+                            className="font-normal"
+                          >
+                            {s.riskLevel}
+                          </Badge>
+                        </TableCell>
+                      </TableRow>
+                    ))}
+                  </TableBody>
+                </Table>
+              )}
+            </CardContent>
+          </Card>
+        </TabsContent>
+
+        <TabsContent value="risk" className="pt-4">
+          <Card>
+            <CardHeader className="flex flex-row items-center justify-between">
+              <CardTitle>Risk events</CardTitle>
+              <Button asChild variant="ghost" size="sm">
+                <Link href={`/risk-forms?client=${c.id}&status=all&severity=all`}>
+                  Open in risk queue
+                  <ExternalLink className="ml-1 size-3.5" />
+                </Link>
+              </Button>
+            </CardHeader>
+            <CardContent>
+              {c.riskEvents.length === 0 ? (
+                <p className="text-sm text-muted-foreground">
+                  No risk events recorded. Current overall risk:{" "}
+                  <Badge
+                    variant={riskVariant[c.riskLevel]}
+                    className="font-normal"
+                  >
+                    {c.riskLevel}
+                  </Badge>
+                </p>
+              ) : (
+                <ul className="space-y-3">
+                  {c.riskEvents.map((e) => (
+                    <li
+                      key={e.id}
+                      className="rounded-md border border-border/60 p-3"
+                    >
+                      <div className="flex flex-wrap items-center justify-between gap-2">
+                        <div className="flex items-center gap-2 text-sm">
+                          <Badge
+                            variant={riskVariant[e.level]}
+                            className="font-normal uppercase"
+                          >
+                            {e.level}
+                          </Badge>
+                          <span className="tabular-nums text-muted-foreground">
+                            {formatDate(e.date)}
+                          </span>
+                          <span className="text-muted-foreground">·</span>
+                          <span>{e.therapist}</span>
+                        </div>
+                        {e.riskFormId && (
+                          <Button asChild variant="ghost" size="sm">
+                            <Link href={`/risk-forms/${e.riskFormId}`}>
+                              View risk form
+                              <ExternalLink className="ml-1 size-3.5" />
+                            </Link>
+                          </Button>
+                        )}
+                      </div>
+                      <p className="mt-2 text-sm">{e.note}</p>
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </CardContent>
+          </Card>
+        </TabsContent>
+
+        <TabsContent value="notes" className="pt-4">
+          <Card>
+            <CardHeader>
+              <CardTitle>Admin notes</CardTitle>
+            </CardHeader>
+            <CardContent className="space-y-4">
+              <div className="space-y-2">
+                <Label htmlFor="note-draft" className="text-xs uppercase tracking-wide text-muted-foreground">
+                  Add note
+                </Label>
+                <Textarea
+                  id="note-draft"
+                  rows={3}
+                  value={noteDraft}
+                  onChange={(e) => setNoteDraft(e.target.value)}
+                  placeholder="Visible to all admins. Use for context other admins should see (matching preferences, payment notes, escalations)."
+                />
+                <div className="flex justify-end">
+                  <Button onClick={handleAddNote} disabled={noteDraft.trim().length < 3}>
+                    Add note
+                  </Button>
+                </div>
+              </div>
+
+              {notes.length === 0 ? (
+                <p className="text-sm text-muted-foreground">No notes yet.</p>
+              ) : (
+                <ul className="space-y-3">
+                  {notes
+                    .slice()
+                    .sort((a, b) => {
+                      if (!!a.pinned !== !!b.pinned) return a.pinned ? -1 : 1;
+                      return (
+                        new Date(b.date).getTime() - new Date(a.date).getTime()
+                      );
+                    })
+                    .map((n) => (
+                      <li
+                        key={n.id}
+                        className="rounded-md border border-border/60 p-3"
+                      >
+                        <div className="flex flex-wrap items-center justify-between gap-2 text-xs text-muted-foreground">
+                          <span className="flex items-center gap-1.5">
+                            {n.pinned && (
+                              <Pin className="size-3 text-primary" />
+                            )}
+                            <span className="font-medium text-foreground">
+                              {n.author}
+                            </span>
+                            <span>·</span>
+                            <span className="tabular-nums">
+                              {formatDateTime(n.date)}
+                            </span>
+                          </span>
+                        </div>
+                        <p className="mt-1.5 text-sm">{n.body}</p>
+                      </li>
+                    ))}
+                </ul>
+              )}
+            </CardContent>
+          </Card>
+        </TabsContent>
       </Tabs>
 
       <Dialog open={pauseOpen} onOpenChange={setPauseOpen}>

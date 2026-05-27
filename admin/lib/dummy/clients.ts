@@ -48,6 +48,15 @@ export type RiskEvent = {
   therapist: string;
   level: RiskLevel;
   note: string;
+  riskFormId?: string;
+};
+
+export type AdminNote = {
+  id: string;
+  date: string;
+  author: string;
+  body: string;
+  pinned?: boolean;
 };
 
 export type Client = {
@@ -76,6 +85,7 @@ export type Client = {
   payments: PaymentRecord[];
   planHistory: PlanHistoryEntry[];
   riskEvents: RiskEvent[];
+  notes: AdminNote[];
 };
 
 export type ClientFilters = {
@@ -137,6 +147,10 @@ const CLIENTS: Client[] = [
     riskEvents: [
       { id: "re-001-1", date: "2026-05-10", therapist: "Dr. Tola Adesina", level: "orange", note: "Reported elevated work stress; agreed weekly check-ins for 1 month." },
     ],
+    notes: [
+      { id: "n-001-1", date: "2026-05-14T11:00:00Z", author: "Adaeze Nwosu", body: "Client requested a male therapist next cycle — flagged for matching team.", pinned: true },
+      { id: "n-001-2", date: "2026-03-13T09:20:00Z", author: "Sarah Okeke", body: "Upgrade to Balance plan processed manually after Paystack hiccup; account reconciled." },
+    ],
   },
   {
     id: "c-002",
@@ -174,8 +188,12 @@ const CLIENTS: Client[] = [
       { id: "ph-002-2", date: "2024-11-08", from: null, to: "Harmony", reason: "Signup" },
     ],
     riskEvents: [
-      { id: "re-002-1", date: "2026-05-25", therapist: "Dr. Marcus Quinn", level: "red", note: "Crisis escalation triggered Crisis Support; therapist responded within 4m, follow-up scheduled in 24h." },
-      { id: "re-002-2", date: "2026-04-18", therapist: "Dr. Marcus Quinn", level: "orange", note: "Trauma flashbacks intensified; agreed double-session frequency for 2 weeks." },
+      { id: "re-002-1", date: "2026-05-25", therapist: "Dr. Marcus Quinn", level: "red", note: "Crisis escalation triggered Crisis Support; therapist responded within 4m, follow-up scheduled in 24h.", riskFormId: "rf-001" },
+      { id: "re-002-2", date: "2026-04-18", therapist: "Dr. Marcus Quinn", level: "orange", note: "Trauma flashbacks intensified; agreed double-session frequency for 2 weeks.", riskFormId: "rf-003" },
+    ],
+    notes: [
+      { id: "n-002-1", date: "2026-05-25T15:00:00Z", author: "Adaeze Nwosu", body: "Post-crisis review: therapist response time within target. Follow-up due in 24h.", pinned: true },
+      { id: "n-002-2", date: "2026-02-10T10:00:00Z", author: "Sarah Okeke", body: "Plan switched from Harmony to Restore at client's request after intake review." },
     ],
   },
   {
@@ -212,6 +230,9 @@ const CLIENTS: Client[] = [
       { id: "ph-003-1", date: "2025-08-20", from: null, to: "Essential", reason: "Signup" },
     ],
     riskEvents: [],
+    notes: [
+      { id: "n-003-1", date: "2025-08-20T09:00:00Z", author: "Adaeze Nwosu", body: "First-time client. Onboarded via referral campaign — keep on PAYG until they pick a plan." },
+    ],
   },
   {
     id: "c-004",
@@ -246,6 +267,9 @@ const CLIENTS: Client[] = [
       { id: "ph-004-1", date: "2025-04-02", from: null, to: "Together", reason: "Signup" },
     ],
     riskEvents: [],
+    notes: [
+      { id: "n-004-1", date: "2026-05-22T09:30:00Z", author: "Sarah Okeke", body: "Stripe charge failed; outreach email sent. Awaiting card update.", pinned: true },
+    ],
   },
   {
     id: "c-005",
@@ -280,6 +304,7 @@ const CLIENTS: Client[] = [
       { id: "ph-005-1", date: "2025-01-04", from: null, to: "Harmony", reason: "Signup" },
     ],
     riskEvents: [],
+    notes: [],
   },
   {
     id: "c-006",
@@ -312,6 +337,9 @@ const CLIENTS: Client[] = [
       { id: "ph-006-2", date: "2024-07-15", from: null, to: "Thrive", reason: "Signup" },
     ],
     riskEvents: [],
+    notes: [
+      { id: "n-006-1", date: "2026-03-25T14:00:00Z", author: "Adaeze Nwosu", body: "Cancellation reason: recovery milestone reached. Offered re-engagement path; client declined." },
+    ],
   },
   {
     id: "c-007",
@@ -343,6 +371,9 @@ const CLIENTS: Client[] = [
       { id: "ph-007-1", date: "2024-09-30", from: null, to: "Home", reason: "Signup" },
     ],
     riskEvents: [],
+    notes: [
+      { id: "n-007-1", date: "2026-02-22T11:00:00Z", author: "Sarah Okeke", body: "No session booked in 3 months; sent re-engagement email. No response yet." },
+    ],
   },
   {
     id: "c-008",
@@ -376,7 +407,10 @@ const CLIENTS: Client[] = [
       { id: "ph-008-1", date: "2025-06-18", from: null, to: "Family Thrive", reason: "Signup" },
     ],
     riskEvents: [
-      { id: "re-008-1", date: "2026-05-25", therapist: "Dr. Priya Shah", level: "orange", note: "Eldest child showing signs of complicated grief; individual sessions recommended in parallel." },
+      { id: "re-008-1", date: "2026-05-25", therapist: "Dr. Priya Shah", level: "orange", note: "Eldest child showing signs of complicated grief; individual sessions recommended in parallel.", riskFormId: "rf-002" },
+    ],
+    notes: [
+      { id: "n-008-1", date: "2026-05-26T09:00:00Z", author: "Adaeze Nwosu", body: "Family unit (4 members) on shared account. Therapist requested 90-min slots going forward.", pinned: true },
     ],
   },
 ];
