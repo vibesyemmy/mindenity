@@ -121,28 +121,23 @@ export function ProfilePage({ admin, activity, capabilities }: Props) {
 
   return (
     <div className="space-y-6">
-      <header className="flex flex-col gap-4 lg:flex-row lg:items-start lg:justify-between">
-        <div className="flex items-start gap-4">
-          <span
-            aria-hidden
-            className="inline-flex h-14 w-14 items-center justify-center rounded-full bg-muted text-base font-semibold"
-          >
-            {admin.initials}
-          </span>
-          <div className="space-y-1.5">
-            <h1 className="font-heading text-3xl tracking-tight">My profile</h1>
-            <p className="text-sm text-muted-foreground">
-              Signed in as {admin.name} · {admin.email}
-            </p>
-            <div className="flex flex-wrap items-center gap-2 text-sm pt-1">
-              <Badge variant={roleVariant[admin.role]}>{admin.role}</Badge>
-              <Badge variant="secondary">{admin.status}</Badge>
-            </div>
+      <header className="flex items-start gap-4">
+        <span
+          aria-hidden
+          className="inline-flex h-14 w-14 items-center justify-center rounded-full bg-muted text-base font-semibold"
+        >
+          {admin.initials}
+        </span>
+        <div className="space-y-1.5">
+          <h1 className="font-heading text-3xl tracking-tight">My profile</h1>
+          <p className="text-sm text-muted-foreground">
+            Signed in as {admin.name} · {admin.email}
+          </p>
+          <div className="flex flex-wrap items-center gap-2 text-sm pt-1">
+            <Badge variant={roleVariant[admin.role]}>{admin.role}</Badge>
+            <Badge variant="secondary">{admin.status}</Badge>
           </div>
         </div>
-        <Button asChild variant="outline">
-          <Link href="/login">Sign out</Link>
-        </Button>
       </header>
 
       <StatCardGrid columns={4}>
