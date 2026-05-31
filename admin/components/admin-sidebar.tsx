@@ -142,19 +142,21 @@ export function AdminSidebar() {
       <SidebarFooter>
         <SidebarMenu>
           <SidebarMenuItem>
-            <SidebarMenuButton size="lg" tooltip="Adaeze · Super-admin">
-              <span
-                aria-hidden
-                className="inline-flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-muted text-foreground text-xs font-semibold"
-              >
-                AN
-              </span>
-              <span className="flex flex-col leading-tight">
-                <span className="text-sm font-medium">Adaeze Nwosu</span>
-                <span className="text-[10px] text-muted-foreground">
-                  Super-admin
+            <SidebarMenuButton asChild size="lg" tooltip="Adaeze · Super-admin">
+              <Link href="/profile">
+                <span
+                  aria-hidden
+                  className="inline-flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-muted text-foreground text-xs font-semibold"
+                >
+                  AN
                 </span>
-              </span>
+                <span className="flex flex-col leading-tight">
+                  <span className="text-sm font-medium">Adaeze Nwosu</span>
+                  <span className="text-[10px] text-muted-foreground">
+                    Super-admin
+                  </span>
+                </span>
+              </Link>
             </SidebarMenuButton>
           </SidebarMenuItem>
           <SidebarMenuItem>

@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { Bell } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
@@ -17,13 +18,13 @@ export function AdminTopBar() {
         <Button variant="ghost" size="icon" aria-label="Notifications">
           <Bell className="size-4" />
         </Button>
-        <button
-          type="button"
-          aria-label="Account menu"
+        <Link
+          href="/profile"
+          aria-label="My profile"
           className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-muted text-xs font-semibold hover:bg-muted/70"
         >
           AN
-        </button>
+        </Link>
       </div>
     </header>
   );
