@@ -30,6 +30,7 @@ import {
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Switch } from "@/components/ui/switch";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { StatCard, StatCardGrid } from "@/components/stat-card";
 
 import {
@@ -155,6 +156,15 @@ export function ProfilePage({ admin, activity, capabilities }: Props) {
         />
       </StatCardGrid>
 
+      <Tabs defaultValue="profile">
+        <TabsList>
+          <TabsTrigger value="profile">Profile</TabsTrigger>
+          <TabsTrigger value="security">Security</TabsTrigger>
+          <TabsTrigger value="notifications">Notifications</TabsTrigger>
+          <TabsTrigger value="activity">Activity</TabsTrigger>
+        </TabsList>
+
+        <TabsContent value="profile" className="pt-4">
       <Card>
         <CardHeader>
           <CardTitle>Profile</CardTitle>
@@ -207,7 +217,9 @@ export function ProfilePage({ admin, activity, capabilities }: Props) {
           </div>
         </CardContent>
       </Card>
+        </TabsContent>
 
+        <TabsContent value="security" className="pt-4">
       <Card>
         <CardHeader>
           <CardTitle>Security</CardTitle>
@@ -287,7 +299,9 @@ export function ProfilePage({ admin, activity, capabilities }: Props) {
           </div>
         </CardContent>
       </Card>
+        </TabsContent>
 
+        <TabsContent value="notifications" className="pt-4">
       <Card>
         <CardHeader>
           <CardTitle>Notifications</CardTitle>
@@ -328,7 +342,9 @@ export function ProfilePage({ admin, activity, capabilities }: Props) {
           </div>
         </CardContent>
       </Card>
+        </TabsContent>
 
+        <TabsContent value="activity" className="pt-4">
       <Card>
         <CardHeader className="flex flex-row items-center justify-between">
           <CardTitle>Recent activity</CardTitle>
@@ -370,6 +386,8 @@ export function ProfilePage({ admin, activity, capabilities }: Props) {
           )}
         </CardContent>
       </Card>
+        </TabsContent>
+      </Tabs>
 
       <Dialog open={pwOpen} onOpenChange={setPwOpen}>
         <DialogContent>
