@@ -13,6 +13,8 @@ import {
   type AuditFilters as AuditFilterShape,
 } from "@/lib/dummy/settings";
 
+export const dynamic = "force-static";
+
 type SearchParams = Promise<{
   q?: string;
   adminId?: string;

@@ -1,7 +1,11 @@
 import { notFound } from "next/navigation";
 
 import { RiskFormDetail } from "@/components/clinical/risk-form-detail";
-import { getRiskForm } from "@/lib/dummy/clinical";
+import { getRiskForm, getRiskForms } from "@/lib/dummy/clinical";
+
+export function generateStaticParams() {
+  return getRiskForms().map((r) => ({ id: r.id }));
+}
 
 type Params = Promise<{ id: string }>;
 

@@ -1,7 +1,11 @@
 import { notFound } from "next/navigation";
 
 import { ClientDetail } from "@/components/clients/client-detail";
-import { getClient } from "@/lib/dummy/clients";
+import { getClient, getClients } from "@/lib/dummy/clients";
+
+export function generateStaticParams() {
+  return getClients().map((c) => ({ id: c.id }));
+}
 
 type Params = Promise<{ id: string }>;
 

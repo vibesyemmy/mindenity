@@ -9,6 +9,8 @@ import {
   type TherapistFilters,
 } from "@/lib/dummy/therapists";
 
+export const dynamic = "force-static";
+
 type SearchParams = Promise<{
   q?: string;
   region?: string;

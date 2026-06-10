@@ -12,6 +12,8 @@ import {
   type ApprovalFilters,
 } from "@/lib/dummy/pricing-approvals";
 
+export const dynamic = "force-static";
+
 type SearchParams = Promise<{
   status?: string;
   region?: string;

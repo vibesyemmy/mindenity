@@ -10,6 +10,8 @@ import {
   type SessionFilters as SessionFilterShape,
 } from "@/lib/dummy/clinical";
 
+export const dynamic = "force-static";
+
 type SearchParams = Promise<{
   q?: string;
   range?: string;

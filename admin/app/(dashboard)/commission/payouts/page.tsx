@@ -13,6 +13,8 @@ import {
   type PayoutRunFilters,
 } from "@/lib/dummy/commission";
 
+export const dynamic = "force-static";
+
 type SearchParams = Promise<{
   status?: string;
   region?: string;

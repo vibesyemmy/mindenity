@@ -11,6 +11,8 @@ import {
   type RequestFilters as RequestFilterShape,
 } from "@/lib/dummy/compliance";
 
+export const dynamic = "force-static";
+
 type SearchParams = Promise<{
   status?: string;
   type?: string;

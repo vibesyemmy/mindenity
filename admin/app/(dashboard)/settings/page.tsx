@@ -9,6 +9,8 @@ import {
   type AdminFilters as AdminFilterShape,
 } from "@/lib/dummy/settings";
 
+export const dynamic = "force-static";
+
 type SearchParams = Promise<{
   q?: string;
   role?: string;

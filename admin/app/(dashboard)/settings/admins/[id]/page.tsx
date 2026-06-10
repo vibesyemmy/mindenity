@@ -3,9 +3,14 @@ import { notFound } from "next/navigation";
 import { AdminProfile } from "@/components/settings/admin-profile";
 import {
   getAdminUser,
+  getAdminUsers,
   getAuditEntriesByAdmin,
   getCapabilities,
 } from "@/lib/dummy/settings";
+
+export function generateStaticParams() {
+  return getAdminUsers().map((a) => ({ id: a.id }));
+}
 
 type Params = Promise<{ id: string }>;
 

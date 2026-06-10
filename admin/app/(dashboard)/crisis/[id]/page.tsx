@@ -1,7 +1,11 @@
 import { notFound } from "next/navigation";
 
 import { CrisisDetail } from "@/components/clinical/crisis-detail";
-import { getCrisisEvent } from "@/lib/dummy/clinical";
+import { getCrisisEvent, getCrisisEvents } from "@/lib/dummy/clinical";
+
+export function generateStaticParams() {
+  return getCrisisEvents().map((c) => ({ id: c.id }));
+}
 
 type Params = Promise<{ id: string }>;
 

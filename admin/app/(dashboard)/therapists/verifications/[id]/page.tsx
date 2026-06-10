@@ -1,7 +1,11 @@
 import { notFound } from "next/navigation";
 
 import { ApplicationReview } from "@/components/therapists/application-review";
-import { getVerification } from "@/lib/dummy/therapists";
+import { getVerification, getVerifications } from "@/lib/dummy/therapists";
+
+export function generateStaticParams() {
+  return getVerifications().map((v) => ({ id: v.id }));
+}
 
 type Params = Promise<{ id: string }>;
 

@@ -10,6 +10,8 @@ import {
   type CrisisFilters as CrisisFilterShape,
 } from "@/lib/dummy/clinical";
 
+export const dynamic = "force-static";
+
 type SearchParams = Promise<{
   status?: string;
   region?: string;

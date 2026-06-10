@@ -1,7 +1,11 @@
 import { notFound } from "next/navigation";
 
 import { ApprovalReview } from "@/components/pricing-approvals/approval-review";
-import { getApproval } from "@/lib/dummy/pricing-approvals";
+import { getApproval, getApprovals } from "@/lib/dummy/pricing-approvals";
+
+export function generateStaticParams() {
+  return getApprovals().map((a) => ({ id: a.id }));
+}
 
 type Params = Promise<{ id: string }>;
 

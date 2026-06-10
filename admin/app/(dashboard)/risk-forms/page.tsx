@@ -9,6 +9,8 @@ import {
   type RiskFormFilters as RiskFormFilterShape,
 } from "@/lib/dummy/clinical";
 
+export const dynamic = "force-static";
+
 type SearchParams = Promise<{
   status?: string;
   severity?: string;

@@ -1,7 +1,11 @@
 import { notFound } from "next/navigation";
 
 import { PromoEditor } from "@/components/promotions/promo-editor";
-import { getPromotion } from "@/lib/dummy/promotions";
+import { getPromotion, getPromotions } from "@/lib/dummy/promotions";
+
+export function generateStaticParams() {
+  return getPromotions().map((p) => ({ id: p.id }));
+}
 
 type Params = Promise<{ id: string }>;
 

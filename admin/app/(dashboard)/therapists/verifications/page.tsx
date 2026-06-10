@@ -11,6 +11,8 @@ import {
   type VerificationFilters,
 } from "@/lib/dummy/therapists";
 
+export const dynamic = "force-static";
+
 type SearchParams = Promise<{
   q?: string;
   region?: string;

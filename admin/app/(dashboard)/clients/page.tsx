@@ -10,6 +10,8 @@ import {
   type ClientFilters,
 } from "@/lib/dummy/clients";
 
+export const dynamic = "force-static";
+
 type SearchParams = Promise<{
   q?: string;
   region?: string;

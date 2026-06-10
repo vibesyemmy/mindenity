@@ -13,6 +13,8 @@ import {
   type PromoFilters as PromoFilterShape,
 } from "@/lib/dummy/promotions";
 
+export const dynamic = "force-static";
+
 type SearchParams = Promise<{
   status?: string;
   region?: string;

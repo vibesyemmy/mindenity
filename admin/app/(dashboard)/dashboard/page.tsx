@@ -10,6 +10,8 @@ import { ClinicalSafetyZone } from "@/components/dashboard/clinical-safety-zone"
 import { OnboardingFunnel } from "@/components/dashboard/onboarding-funnel";
 import { RecentActivity } from "@/components/dashboard/recent-activity";
 
+export const dynamic = "force-static";
+
 type SearchParams = Promise<{ window?: string; region?: string }>;
 
 function asWindow(v?: string): Window {
