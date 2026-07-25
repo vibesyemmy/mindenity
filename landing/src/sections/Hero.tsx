@@ -1,77 +1,136 @@
-import { Badge, Em, GhostButton, PrimaryButton } from "../components/ui";
+import { Badge, Em, GhostButton, ProductSection, SolidButton } from "../components/ui";
 
-function PhoneCard({
-  label,
-  value,
-  sub,
+function PhoneMockup({
+  src,
   featured = false,
-  dark = false,
+  zIndex = 0,
 }: {
-  label: string;
-  value: string;
-  sub: string;
+  src: string;
   featured?: boolean;
-  dark?: boolean;
+  zIndex?: number;
 }) {
   return (
     <div
-      className={`w-56 shrink-0 rounded-[2rem] border-8 p-5 shadow-xl ${
-        dark
-          ? "border-navy-90 bg-navy-80 text-white"
-          : "border-navy-90 bg-white text-ink"
-      } ${featured ? "z-10 scale-110" : "opacity-90"}`}
+      className={`relative shrink-0 ${featured ? "z-10 -mt-4" : "opacity-90"}`}
+      style={{ zIndex }}
     >
-      <p className={`text-xs font-medium ${dark ? "text-white/60" : "text-ink-soft"}`}>{label}</p>
-      <p className="mt-1 text-2xl font-bold tabular-nums">{value}</p>
-      <p className={`mt-1 text-xs ${dark ? "text-white/60" : "text-ink-soft"}`}>{sub}</p>
-      <div className="mt-4 flex h-24 items-end gap-1.5">
-        {[34, 52, 40, 68, 55, 80, 62, 92].map((h, i) => (
-          <div
-            key={i}
-            style={{ height: `${h}%` }}
-            className={`flex-1 rounded-t ${
-              featured ? "bg-navy-60" : dark ? "bg-white/25" : "bg-navy-20"
-            } ${i === 7 ? "!bg-magenta-60" : ""}`}
-          />
-        ))}
-      </div>
-      <div className={`mt-4 rounded-xl px-3 py-2 text-xs ${dark ? "bg-white/10" : "bg-navy-5"}`}>
-        <p className="font-semibold">Mood check-in</p>
-        <p className={dark ? "text-white/60" : "text-ink-soft"}>{featured ? "Feeling steadier 4 weeks in" : "Weekly reflection ready"}</p>
+      <div
+        className={`overflow-hidden rounded-[2.5rem] border-[6px] ${
+          featured
+            ? "border-white/20 shadow-2xl shadow-purple-3/20"
+            : "border-white/10 shadow-xl"
+        }`}
+        style={{ width: 260, aspectRatio: "390/700" }}
+      >
+        <div className="flex h-full items-center justify-center bg-[#1a1a2e]">
+          <span className="text-sm text-white/30">App preview</span>
+        </div>
       </div>
     </div>
   );
 }
 
+/* ── Product card (for the "Markets" style row) ────────────── */
+
+function ProductCard({
+  kicker,
+  name,
+  desc,
+}: {
+  kicker: string;
+  name: string;
+  desc: string;
+}) {
+  return (
+    <div className="rounded-3xl border border-white/[0.08] bg-white/[0.04] p-6 backdrop-blur transition-colors hover:bg-white/[0.06]">
+      <p className="text-xs font-semibold uppercase tracking-wide text-white/40">{kicker}</p>
+      <h4 className="mt-2 text-xl font-bold">{name}</h4>
+      <p className="mt-2 text-sm leading-relaxed text-white/50">{desc}</p>
+    </div>
+  );
+}
+
+/* ── Hero section (Aave App pattern) ───────────────────────── */
+
+const PROGRAM_CARDS = [
+  {
+    kicker: "Individual",
+    name: "Balance",
+    desc: "Weekly therapy plus mood tracking, CBT exercises, and AI companion check-ins for anxiety, stress, and everyday well-being.",
+  },
+  {
+    kicker: "Couples & Family",
+    name: "Together",
+    desc: "Communication frameworks, cross-cultural counseling, and grief support for couples and families navigating life together.",
+  },
+  {
+    kicker: "Clinical Track",
+    name: "Restore",
+    desc: "High-need programs led by clinical specialists — EMDR, CPTSD, and complex trauma recovery with structured progress plans.",
+  },
+];
+
 export function Hero() {
   return (
-    <section className="bg-gradient-to-b from-navy-5 via-navy-10/60 to-white">
-      <div className="mx-auto max-w-6xl px-6 pb-0 pt-16 text-center">
+    <ProductSection product="Mindenity App" theme="purple">
+      <div className="text-center">
+        {/* Badge */}
         <div className="flex justify-center">
           <Badge>Mindenity App</Badge>
         </div>
-        <h1 className="mx-auto mt-6 max-w-3xl text-5xl font-bold tracking-tight text-ink md:text-6xl">
-          Care for <Em>Everyone</Em>
+
+        {/* Heading */}
+        <h1 className="mx-auto mt-6 max-w-4xl text-5xl font-bold leading-[1.1] tracking-tight md:text-7xl">
+          Care for{" "}
+          <span
+            className="bg-gradient-to-r from-purple-3 via-purple-1 to-purple-5 bg-clip-text text-transparent"
+          >
+            Everyone
+          </span>
         </h1>
-        <p className="mx-auto mt-4 max-w-md text-lg text-ink-soft">
-          Put mental wellness within reach, every day of the year.
+        <p className="mx-auto mt-5 max-w-lg text-lg leading-relaxed text-white/60">
+          Put mental wellness within reach, every single day of the year.
         </p>
+
+        {/* CTAs */}
         <div className="mt-8 flex items-center justify-center gap-3">
-          <PrimaryButton>Download on iOS</PrimaryButton>
-          <GhostButton>Learn More</GhostButton>
+          <SolidButton color="purple" large>
+            <svg width="16" height="20" viewBox="0 0 16 20" fill="currentColor">
+              <path d="M13.36 10.64c.02-1.55.84-3 2.13-3.82-.81-1.18-2.18-1.93-3.6-1.98-1.52-.16-2.99.92-3.76.92-.79 0-1.98-.9-3.26-.88-1.67.06-3.23 1.02-4.04 2.5C.92 10.47 2.22 15 3.9 17.48c.83 1.22 1.81 2.58 3.09 2.53 1.25-.05 1.72-.81 3.23-.81 1.5 0 1.94.81 3.25.78 1.34-.02 2.19-1.22 3-2.45.6-.87 1.06-1.83 1.37-2.84-1.58-.68-2.63-2.3-2.64-4.04Z" />
+              <path d="M10.9 3.2c.73-.9 1.09-2.05 1-3.2-1.12.12-2.15.66-2.9 1.52-.72.84-1.1 1.97-1.03 3.09 1.12.01 2.22-.52 2.93-1.4Z" />
+            </svg>
+            Download on iOS
+          </SolidButton>
+          <GhostButton large>Learn More</GhostButton>
         </div>
 
-        <div className="relative mt-14 flex items-end justify-center gap-4 overflow-hidden pb-0">
-          <PhoneCard label="This month" value="12 sessions" sub="Balance · weekly therapy" />
-          <PhoneCard
-            label="Wellness score"
-            value="82 / 100"
-            sub="Up 18 points since intake"
-            featured
-          />
-          <PhoneCard label="Streak" value="34 days" sub="Daily mood check-ins" dark />
+        {/* Phone mockups */}
+        <div className="relative mt-16 flex items-end justify-center gap-6 overflow-visible">
+          <PhoneMockup src="/images/hero-left.png" zIndex={1} />
+          <PhoneMockup src="/images/hero-center.png" featured zIndex={2} />
+          <PhoneMockup src="/images/hero-right.png" zIndex={1} />
+        </div>
+
+        {/* Program cards — like Aave's market cards */}
+        <div className="mt-16 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
+          <div className="text-left">
+            <h3 className="text-2xl font-bold tracking-tight md:text-3xl">
+              Programs <Em>for every need.</Em>
+            </h3>
+            <p className="mt-2 max-w-xl text-white/50">
+              From individual therapy for anxiety to family programs for grief — choose the program
+              that matches your journey.
+            </p>
+          </div>
+          <GhostButton className="shrink-0">View all programs</GhostButton>
+        </div>
+
+        <div className="mt-8 grid gap-4 text-left md:grid-cols-3">
+          {PROGRAM_CARDS.map((p) => (
+            <ProductCard key={p.name} {...p} />
+          ))}
         </div>
       </div>
-    </section>
+    </ProductSection>
   );
 }

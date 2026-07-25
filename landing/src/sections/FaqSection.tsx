@@ -23,51 +23,36 @@ export function FaqSection() {
   const [open, setOpen] = useState<number | null>(0);
 
   return (
-    <section id="resources" className="py-20">
-      <div className="mx-auto grid max-w-6xl gap-10 px-6 md:grid-cols-[1fr_2fr]">
-        <h2 className="text-4xl font-bold tracking-tight">FAQs</h2>
-        <div className="divide-y divide-navy-10">
+    <section className="bg-[#0f0f10] py-24 text-white">
+      <div className="mx-auto grid max-w-7xl gap-10 px-6 md:grid-cols-[1fr_2fr]">
+        <h2 className="text-4xl font-bold tracking-tight md:text-6xl">
+          FAQs
+        </h2>
+        <div className="divide-y divide-white/[0.06]">
           {FAQS.map((f, i) => (
-            <div key={f.q} className="py-5">
+            <div key={i} className="py-5">
               <button
                 onClick={() => setOpen(open === i ? null : i)}
-                className="flex w-full items-center justify-between text-left"
+                className="flex w-full items-center justify-between text-left gap-4"
               >
                 <span className="text-lg font-semibold">{f.q}</span>
-                <span className="text-2xl text-navy-40">{open === i ? "−" : "+"}</span>
+                <span className="shrink-0 text-2xl text-white/40 transition-transform duration-200"
+                  style={{ transform: open === i ? "rotate(45deg)" : "rotate(0deg)" }}
+                >
+                  +
+                </span>
               </button>
-              {open === i && <p className="mt-3 max-w-2xl text-ink-soft">{f.a}</p>}
+              {open === i && (
+                <p className="mt-3 max-w-2xl text-white/50 leading-relaxed">{f.a}</p>
+              )}
             </div>
           ))}
           <div className="py-5">
-            <a href="#" className="text-sm font-semibold text-navy-60 hover:underline">
-              Learn More About Mindenity →
+            <a href="#" className="text-sm font-semibold text-purple-3 hover:text-purple-1 transition-colors">
+              Learn more about Mindenity →
             </a>
           </div>
         </div>
-      </div>
-
-      <div className="mx-auto mt-20 max-w-xl px-6 text-center">
-        <h3 className="text-2xl font-bold tracking-tight">Stay in the loop</h3>
-        <p className="mt-2 text-ink-soft">
-          Be first to hear when new programs and features go live.
-        </p>
-        <form
-          className="mt-6 flex gap-2"
-          onSubmit={(e) => e.preventDefault()}
-        >
-          <input
-            type="email"
-            placeholder="Email"
-            className="h-12 flex-1 rounded-full border border-navy-10 bg-white px-5 text-sm outline-none placeholder:text-ink-soft/60 focus:border-navy-60"
-          />
-          <button
-            type="submit"
-            className="h-12 rounded-full bg-navy-60 px-6 text-sm font-semibold text-white hover:bg-navy-70"
-          >
-            Notify Me
-          </button>
-        </form>
       </div>
     </section>
   );

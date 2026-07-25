@@ -1,87 +1,80 @@
-import { Badge, Em, GhostButton, PrimaryButton, Tag } from "../components/ui";
+import { Badge, Em, GhostButton, ProductSection, SolidButton } from "../components/ui";
 
-const PROGRAMS = [
+function ProCard({
+  kicker,
+  name,
+  desc,
+}: {
+  kicker: string;
+  name: string;
+  desc: string;
+}) {
+  return (
+    <div className="rounded-3xl border border-white/[0.08] bg-white/[0.04] p-6 backdrop-blur transition-colors hover:bg-white/[0.06]">
+      <p className="text-xs font-semibold uppercase tracking-wide text-white/40">{kicker}</p>
+      <h4 className="mt-2 text-xl font-bold">{name}</h4>
+      <p className="mt-2 text-sm leading-relaxed text-white/50">{desc}</p>
+    </div>
+  );
+}
+
+const MARKETS = [
   {
-    kicker: "Individual Care",
-    name: "Balance",
-    desc: "The core program for anxiety, stress, and everyday well-being. Weekly therapy plus mood tools.",
-    tags: ["Anxiety", "Sleep", "CBT", "Stress", "Focus", "+4 More"],
+    kicker: "Individual",
+    name: "Essential",
+    desc: "Affordable talk therapy. Weekly 50-minute sessions with licensed therapists, plus mood tracking and AI companion check-ins.",
   },
   {
-    kicker: "Couples & Family",
-    name: "Together",
-    desc: "Programs for couples and families. Communication, cross-cultural, and grief-focused work.",
-    tags: ["Couples", "Grief", "Family", "Cultural"],
+    kicker: "Couples",
+    name: "Harmony",
+    desc: "Dedicated couples counseling. Communication tools, conflict resolution frameworks, and cross-cultural relationship support.",
   },
   {
-    kicker: "Clinical Track",
-    name: "Restore",
-    desc: "High-need programs led by clinical therapists. EMDR, CPTSD, and complex trauma recovery.",
-    tags: ["EMDR", "CPTSD", "Trauma", "Recovery"],
+    kicker: "Clinical",
+    name: "Thrive",
+    desc: "Specialist-led programs for complex needs. EMDR, CPTSD recovery, and psychiatric coordination with medication management.",
   },
 ];
 
 export function ProSection() {
   return (
-    <section id="products" className="px-4 py-6">
-      <div className="mx-auto max-w-[88rem] rounded-[2.5rem] bg-navy-90 px-6 py-16 text-white md:px-14">
-        <div className="text-center">
-          <div className="flex justify-center">
-            <Badge dark>Mindenity Pro</Badge>
-          </div>
-          <h2 className="mt-6 text-4xl font-bold tracking-tight md:text-5xl">
-            The <Em>Full Power</Em> of Therapy
-          </h2>
-          <p className="mt-3 text-white/70">
-            Personalised care with licensed therapists. Backed by AI wellness tools.
-          </p>
-          <div className="mt-7 flex items-center justify-center gap-3">
-            <PrimaryButton magenta>Get Started</PrimaryButton>
-            <GhostButton dark>Learn More</GhostButton>
-          </div>
+    <ProductSection product="Mindenity Pro" theme="dark">
+      <div className="text-center">
+        <div className="flex justify-center">
+          <Badge>Mindenity Pro</Badge>
+        </div>
+        <h2 className="mx-auto mt-6 max-w-4xl text-4xl font-bold leading-[1.15] tracking-tight md:text-6xl">
+          The full power of <Em>therapy</Em>
+        </h2>
+        <p className="mx-auto mt-5 max-w-lg text-lg leading-relaxed text-white/60">
+          Earn, borrow, and swap across curated markets. Built on Mindenity v4.
+        </p>
+        <div className="mt-8 flex items-center justify-center gap-3">
+          <SolidButton color="white" large>
+            Get Started
+          </SolidButton>
+          <GhostButton large>Learn More</GhostButton>
         </div>
 
-        <div className="mt-12 flex h-[420px] items-center justify-center rounded-3xl border border-white/10 bg-navy-80/60">
-          <div className="text-center">
-            <p className="text-6xl">🧠</p>
-            <p className="mt-3 text-sm text-white/50">Session experience preview</p>
-          </div>
-        </div>
-
-        <div id="programs" className="mt-16 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
-          <div>
-            <h3 className="text-3xl font-bold tracking-tight md:text-4xl">
-              Programs <Em>for every need.</Em>
+        {/* Markets grid — like Aave Pro's market cards */}
+        <div className="mt-16 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
+          <div className="text-left">
+            <h3 className="text-2xl font-bold tracking-tight md:text-3xl">
+              Plans <Em>for every stage.</Em>
             </h3>
-            <p className="mt-3 max-w-xl text-white/70">
-              From individual therapy for anxiety to family programs for grief, choose the program
-              that matches your journey.
+            <p className="mt-2 max-w-xl text-white/50">
+              Nine plans across three tracks. Flexible pricing, subscription or pay-as-you-go.
             </p>
           </div>
-          <GhostButton dark className="shrink-0">
-            Learn More
-          </GhostButton>
+          <GhostButton className="shrink-0">Compare plans</GhostButton>
         </div>
 
-        <div className="mt-8 grid gap-4 md:grid-cols-3">
-          {PROGRAMS.map((p) => (
-            <div key={p.name} className="rounded-3xl border border-white/10 bg-navy-80/60 p-6">
-              <p className="text-xs font-semibold uppercase tracking-wide text-white/50">
-                {p.kicker}
-              </p>
-              <h4 className="mt-2 text-2xl font-bold">{p.name}</h4>
-              <p className="mt-3 min-h-20 text-sm text-white/70">{p.desc}</p>
-              <div className="mt-5 flex flex-wrap gap-2">
-                {p.tags.map((t) => (
-                  <Tag key={t} dark>
-                    {t}
-                  </Tag>
-                ))}
-              </div>
-            </div>
+        <div className="mt-8 grid gap-4 text-left md:grid-cols-3">
+          {MARKETS.map((m) => (
+            <ProCard key={m.name} {...m} />
           ))}
         </div>
       </div>
-    </section>
+    </ProductSection>
   );
 }
