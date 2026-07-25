@@ -1,8 +1,18 @@
+import { useEffect, useState } from "react";
+
 export default function Header() {
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 8);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
   return (
 <>
-<header className="styles_header__fpulf 
-         ">
+<header className={`styles_header__fpulf ${scrolled ? "styles_scrolled__p_MGt" : ""}`}>
 <div className="styles_headerContent__gYxXy">
 <div className="styles_headerLogoContainer__Y2Zyw">
 <div style={{position:"relative"}}>
