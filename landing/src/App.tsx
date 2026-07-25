@@ -1,23 +1,46 @@
-import { Header } from "./sections/Header";
-import { Hero } from "./sections/Hero";
-import { ProSection } from "./sections/ProSection";
-import { CareSection } from "./sections/CareSection";
-import { TrustSection } from "./sections/TrustSection";
-import { FaqSection } from "./sections/FaqSection";
-import { Footer } from "./sections/Footer";
+import Header from "./sections/Header";
+import Hero from "./sections/Hero";
+import MarketsSection from "./sections/MarketsSection";
+import KitSection from "./sections/KitSection";
+import TrustedSection from "./sections/TrustedSection";
+import FaqSection from "./sections/FaqSection";
+import NewsletterSection from "./sections/NewsletterSection";
+import Footer from "./sections/Footer";
 
 export default function App() {
   return (
-    <>
-      <Header />
-      <main>
-        <Hero />
-        <ProSection />
-        <CareSection />
-        <TrustSection />
-        <FaqSection />
-      </main>
-      <Footer />
-    </>
+<div id="__next"><Header /><div style={{opacity:"1"}}>
+<main className="styles_main__XsB95">
+<div className="styles_container__KfcyI" data-theme="purple" data-product="Mindenity App">
+<div className="styles_bgWrap__Zd6Bj">
+<div className="styles_bg__Bg0d3">
+<canvas className="styles_canvas__fjpJS">
+</canvas>
+</div><Hero /></div>
+</div>
+<div className="styles_container__KfcyI" data-theme="dark" data-product="Mindenity Pro" data-theme-dark="true">
+<div className="styles_bgWrap__Zd6Bj">
+<div className="styles_bg__Bg0d3">
+<canvas className="styles_canvas__fjpJS">
+</canvas>
+</div><MarketsSection /></div>
+</div>
+<div className="styles_container__KfcyI" data-theme="purple" data-product="Mindenity Kit">
+<div className="styles_bgWrap__Zd6Bj">
+<div className="styles_bg__Bg0d3">
+<canvas className="styles_canvas__fjpJS">
+</canvas>
+</div><KitSection /></div>
+</div>
+<div className="styles_container__KfcyI" data-theme="light" data-product="Mindenity">
+<div className="styles_bgWrap__Zd6Bj">
+<div className="styles_bg__Bg0d3">
+<canvas className="styles_canvas__fjpJS">
+</canvas>
+</div><TrustedSection /></div>
+</div><FaqSection /><NewsletterSection /><Footer /></main>
+</div>
+</div>
+
   );
 }
