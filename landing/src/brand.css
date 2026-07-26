@@ -13,6 +13,30 @@
 :root {
   --mindenity-primary: #1b2452;
   --mindenity-primary-hover: #2a3568;
+
+  /*
+   * Accent. #9BB167 is the brand swatch, but at 55% lightness it only reaches
+   * 2.37:1 on white — it reads well as a fill or on the dark sections (6.25:1
+   * on navy) and fails as text on light ones. So the accent is a small family
+   * rather than a single value:
+   *
+   *   --mindenity-accent       the swatch: fills, tints, on-dark text
+   *   --mindenity-accent-text  accent used AS text, whatever is legible here
+   *
+   * accent-text defaults to a darkened sibling on the same hue (78deg, 32%
+   * sat, lightness 55% -> 37%), which clears AA at 4.60:1 on white and 4.11:1
+   * on the hero tint. Inside a dark container it flips back to the swatch.
+   */
+  --mindenity-accent: #9bb167;
+  --mindenity-accent-text: #6a7c40;
+  --mindenity-accent-tint: rgb(155 177 103 / 0.14);
+  --mindenity-accent-soft: #e4ecd2;
+}
+
+/* On dark surfaces the light swatch is the legible one. Scoped to the
+   container so it cascades to every accent descendant automatically. */
+.styles_container__KfcyI[data-theme="dark"] {
+  --mindenity-accent-text: var(--mindenity-accent);
 }
 
 /*
@@ -56,4 +80,75 @@
 
 .styles_container__KfcyI[data-product="Mindenity App"] .styles_bgWrap__Zd6Bj {
   background: linear-gradient(180deg, #fff 20%, var(--mindenity-hero-tint)), #fff;
+}
+
+/*
+ * Dark section backdrop.
+ *
+ * Same failure as the hero: this container nests bgWrap > bg > canvas, and the
+ * canvas painted its dark background from JS. Without it the container computes
+ * transparent, so a section whose every descendant rule assumes a dark backdrop
+ * (#1a1a1b cards, white titles, translucent-white tags) renders light-on-white
+ * and reads as blank. Pre-existing — the original accent here was --purple-8,
+ * near-white, and was invisible for the same reason.
+ *
+ * Uses the brand navy so the dark section is on-brand rather than the scrape's
+ * neutral near-black.
+ */
+.styles_container__KfcyI[data-theme="dark"] .styles_bgWrap__Zd6Bj {
+  background: var(--mindenity-primary);
+}
+
+/*
+ * Accent surfaces.
+ *
+ * replica.css routes all of these through --purple-3/-4, which the recolor
+ * turned navy — that made accent and primary the same hue and left nothing
+ * carrying emphasis. These hand them to the accent family instead.
+ *
+ * Each selector matches replica.css's own specificity exactly and wins on
+ * import order; the highlight's dark variant is (0,4,0) and needs the full
+ * container prefix to beat it.
+ */
+
+/* Section headline italic — the main accent moment. 2.1:1 -> 4.60:1. */
+.styles_title__G9AAz .styles_highlight__dzRbM {
+  color: var(--mindenity-accent-text);
+}
+
+/* On dark the highlight is a clipped gradient, not a flat colour. Keep the
+   sweep, move it onto the accent hue: pale at the ends, swatch through mid. */
+.styles_container__KfcyI[data-theme="dark"] .styles_title__G9AAz .styles_highlight__dzRbM,
+.styles_container__KfcyI[data-theme="dark"] .styles_title__G9AAz .styles_highlight__dzRbM span {
+  background: linear-gradient(
+    134deg,
+    var(--mindenity-accent-soft) 0,
+    var(--mindenity-accent) 49.47%,
+    var(--mindenity-accent-soft) 91.25%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+/* Inline and notify links. */
+.styles_a__ryst4,
+.styles_notifyLink__qRJsW {
+  color: var(--mindenity-accent-text);
+}
+
+.styles_notifyLink__qRJsW {
+  -webkit-text-decoration-color: var(--mindenity-accent-tint);
+  text-decoration-color: var(--mindenity-accent-tint);
+}
+
+/* Primary tag — accent tint behind accent text. */
+.styles_tag__iQmVx.styles_primary__Ea0oR {
+  background-color: var(--mindenity-accent-tint);
+  color: var(--mindenity-accent-text);
+}
+
+/* Menu group labels. These sit outside every themed container, on the white
+   menu sheet, so they take the light-safe default. */
+.styles_navTitle__vbCUj {
+  color: var(--mindenity-accent-text);
 }
