@@ -1,0 +1,35 @@
+/*
+ * Mindenity brand primary.
+ *
+ * replica.css has been re-hued onto the navy family, but that transform
+ * preserves lightness — it can't turn a light accent tint into a filled
+ * brand surface. This file carries the intent the transform can't express:
+ * where "primary" means a solid, branded surface, it is the true #1B2452.
+ *
+ * Kept separate from replica.css so brand decisions stay legible rather
+ * than buried in 116KB of generated output.
+ */
+
+:root {
+  --mindenity-primary: #1b2452;
+  --mindenity-primary-hover: #2a3568;
+}
+
+/*
+ * The solid button. Its background pointed at --purple-3, an accent tint
+ * meant for text, so pairing it with white text gave ~1.9:1. The brand navy
+ * takes it to ~14.8:1 (WCAG AAA). Verified to appear only on light sections,
+ * so a dark fill is safe here.
+ *
+ * Selector is compound to match replica.css's own `.styles_button__dr0t2
+ * .styles_color-purple__eIlhQ` specificity — a single class loses to it no
+ * matter the import order.
+ */
+.styles_button__dr0t2.styles_color-purple__eIlhQ {
+  --solid-background-color: var(--mindenity-primary);
+  --solid-hover-background-color: var(--mindenity-primary-hover);
+  --solid-text-color: #fff;
+  --soft-background-color: rgb(27 36 82 / 0.08);
+  --soft-hover-background-color: rgb(27 36 82 / 0.14);
+  --soft-text-color: var(--mindenity-primary);
+}
