@@ -1,46 +1,55 @@
-# Store badges — official assets required
+# Store badges
 
-The hero renders two store badges. The artwork is **not** in this repo and must
-not be recreated: Apple and Google both supply official files and require them
-unmodified. Drawing a lookalike, recolouring, adding a shadow or a corner radius,
-or rebuilding the marks as inline SVG all breach their brand terms.
+The hero renders two store badges. Live files:
 
-## Files this page expects
+| Path | Natural size | Rendered |
+|---|---|---|
+| `public/app-store-apple.png` | 672×227 (2.96:1) | 142×48 |
+| `public/google-play-button.png` | 704×227 (3.10:1) | 149×48 |
 
-| Path | Source |
-|---|---|
-| `public/images/badges/app-store.svg` | Apple — "Download on the App Store" |
-| `public/images/badges/google-play.png` | Google — "Get it on Google Play" |
+Both carry a real alpha channel and are cropped tight to the artwork, so
+`height: 48px; width: auto` gives each its correct width.
 
-Until both exist the hero shows a dashed placeholder instead of a broken image.
+## Rules the CSS enforces
 
-## Where to get them
+- **Equal visual weight** — both at 48px height. Apple requires its badge be no
+  smaller than any store badge shown beside it.
+- **Minimum size** — 48px height clears Apple's 40px floor; the resulting Google
+  Play width (149px) clears its 60px floor.
+- **Clear space** — 14px row gap, above the 1/4-badge-height minimum.
+- **No modification** — verified in-browser: `filter: none`, `border-radius: 0px`,
+  `box-shadow: none`. The rounded corners come from the artwork itself.
 
-**Apple** — Apple Marketing Resources / "App Store Marketing Guidelines". Choose
-the black badge, download the localised SVG, use it unmodified.
+## ⚠️ Outstanding: the Apple badge is the retired version
 
-**Google** — the Google Play badge generator in the Play Console brand pages.
-Pick the language, download the PNG. The file ships with transparent bleed
-around the artwork, which is part of the required clear space.
+`app-store-apple.png` reads **"Available on the App Store"**. Apple retired that
+wording; the current badge reads **"Download on the App Store"**. Both files also
+appear to be third-party/clipart derivatives rather than vendor originals — the
+supplied versions arrived with a checkerboard flattened into the pixels, which no
+official download has.
 
-## Rules the CSS already enforces
+Apple's marketing guidelines require the current badge, obtained from Apple.
+Before this site goes live, replace both with official downloads:
 
-- **Equal visual weight.** Both badges render at the same 48px height. Apple
-  requires its badge be no smaller than any other store badge shown alongside it.
-- **Minimum size.** 48px height clears Apple's 40px floor; the resulting Google
-  Play width clears its 60px floor.
-- **Clear space.** At least 1/4 of badge height on all sides — the 14px row gap
-  plus surrounding margin.
-- **No modification.** No `filter`, `box-shadow`, `border-radius` or recolour is
-  applied to the badge images.
+- **Apple** — Apple Marketing Resources → App Store badge → black, correct locale, SVG
+- **Google** — Play Console brand pages → badge generator → correct language, PNG
 
-## Still needed
+Swapping them is a two-line change in `src/sections/Hero.tsx`; the CSS needs no
+edit, and SVG is preferable to PNG for crispness at any density.
 
-The `href`s in `src/sections/Hero.tsx` are placeholders (`#`). Replace with the
-real listings once the apps are published:
+## ⚠️ Outstanding: the links go nowhere
 
-- iOS: `https://apps.apple.com/app/id<APP_ID>`
-- Android: `https://play.google.com/store/apps/details?id=<PACKAGE_NAME>`
+`href` is `#` on both. Apple's and Google's terms require the badge to link to the
+real listing:
 
-If the apps are not published yet, consider a waitlist CTA instead of dead
-badges — a badge that links nowhere is worse than no badge.
+- iOS — `https://apps.apple.com/app/id<APP_ID>`
+- Android — `https://play.google.com/store/apps/details?id=<PACKAGE_NAME>`
+
+If the apps are not published yet, use a waitlist CTA instead. A badge that links
+nowhere breaches the guidelines and frustrates visitors.
+
+## Missing-asset behaviour
+
+`StoreBadge` in `Hero.tsx` falls back to a dashed placeholder carrying the badge
+wording if an image fails to load, so a bad path never leaves a broken-image glyph
+in the hero.

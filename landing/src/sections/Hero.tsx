@@ -52,8 +52,8 @@ export default function Hero() {
 {/* TODO: real store listings once published —
     https://apps.apple.com/app/id<APP_ID>
     https://play.google.com/store/apps/details?id=<PACKAGE_NAME> */}
-<StoreBadge href="#" src="/images/badges/app-store.svg" label="Download on the App Store" />
-<StoreBadge href="#" src="/images/badges/google-play.png" label="Get it on Google Play" />
+<StoreBadge href="#" src="/app-store-apple.png" label="Available on the App Store" />
+<StoreBadge href="#" src="/google-play-button.png" label="Get it on Google Play" />
 </div>
 <div className="styles_heroImagesSection__b7UJZ">
 <div className="styles_heroImagesWrapper__tIcFe" style={{opacity:"1"}}>
