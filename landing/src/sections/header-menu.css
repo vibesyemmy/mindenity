@@ -1,0 +1,38 @@
+/*
+ * Mobile menu additions.
+ *
+ * The scraped page rendered its menu client-side, so replica.css ships the
+ * class definitions but the markup and the JS that drove them were never in
+ * the HTML. These rules supply only what the scrape lost — replica.css stays
+ * verbatim.
+ */
+
+/* The nav animates between 0 and its measured content height. */
+.styles_navigation__LrkPB {
+  transition: height 0.25s ease-out;
+}
+
+/*
+ * replica.css carries this selector as an empty `{}` — the declaration was
+ * malformed in the source and dropped during conversion, so the icon's top
+ * bar never rotated. Both bars meet at the 32x32 viewBox centre (y=16): the
+ * top path sits at y=11, the bottom at y=21, hence the 5px offsets.
+ */
+.styles_headerMobileButtonIcon__TqSuL.styles_open__X9ppk
+  .styles_headerMobileButtonIconTop__KbUaZ {
+  transform: translateY(5px) rotate(45deg);
+}
+
+.styles_headerMobileButtonIconTop__KbUaZ,
+.styles_headerMobileButtonIconBottom__K8wIJ {
+  transform-origin: center;
+  transition: transform 0.2s ease-out;
+}
+
+.header-menu-group + .header-menu-group {
+  margin-top: 24px;
+}
+
+.header-menu-group > .styles_navTitle__vbCUj {
+  margin-bottom: 12px;
+}
