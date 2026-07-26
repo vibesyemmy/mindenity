@@ -1,3 +1,31 @@
+import { useState } from "react";
+import "./store-badges.css";
+
+/**
+ * A store badge.
+ *
+ * The artwork is an official vendor file served from public/images/badges/ —
+ * see BADGES.md there. It is deliberately not inlined or redrawn: Apple and
+ * Google both require their badges unmodified, so the only correct source is
+ * their own download.
+ *
+ * Until those files are added the image 404s, and rather than leave a broken
+ * image in the hero we fall back to a dashed placeholder carrying the badge's
+ * own wording.
+ */
+function StoreBadge({ href, src, label }: { href: string; src: string; label: string }) {
+  const [missing, setMissing] = useState(false);
+  return (
+    <a
+      className={`store-badge${missing ? " store-badge--placeholder" : ""}`}
+      href={href}
+      aria-label={label}
+    >
+      {missing ? label : <img src={src} alt={label} onError={() => setMissing(true)} />}
+    </a>
+  );
+}
+
 export default function Hero() {
   return (
 <>
@@ -20,9 +48,12 @@ export default function Hero() {
 </h1>
 <p className="styles_description__5Hvnp" style={{opacity:"1"}}>Licensed therapists, an AI companion that listens between sessions, and tools for your mood, sleep and stress &mdash; priced for where you live.</p>
 </div>
-<div className="styles_buttons__I2eai" style={{opacity:"1"}}>
-<a className="styles_button__dr0t2 styles_variant-solid__XVs0U styles_size-large__hWtuW styles_color-purple__eIlhQ" href="/get-started">Get started</a>
-<a className="styles_button__dr0t2 styles_variant-soft__KmN8b styles_size-large__hWtuW styles_color-purple__eIlhQ" href="/find-my-plan">Find my plan</a>
+<div className="styles_buttons__I2eai store-badges" style={{opacity:"1"}}>
+{/* TODO: real store listings once published —
+    https://apps.apple.com/app/id<APP_ID>
+    https://play.google.com/store/apps/details?id=<PACKAGE_NAME> */}
+<StoreBadge href="#" src="/images/badges/app-store.svg" label="Download on the App Store" />
+<StoreBadge href="#" src="/images/badges/google-play.png" label="Get it on Google Play" />
 </div>
 <div className="styles_heroImagesSection__b7UJZ">
 <div className="styles_heroImagesWrapper__tIcFe" style={{opacity:"1"}}>

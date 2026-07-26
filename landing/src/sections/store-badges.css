@@ -1,0 +1,70 @@
+/*
+ * App Store / Google Play badge row.
+ *
+ * The badge artwork is NOT authored here. Both vendors require the official,
+ * unmodified files — recreating or restyling the marks breaches their brand
+ * terms. Drop the downloads into public/images/badges/ (see BADGES.md) and
+ * these rules size and space them correctly.
+ *
+ * Guideline constraints encoded below:
+ *  - Equal visual weight when shown together, so both get the same height.
+ *  - Clear space of at least 1/4 badge height on every side — the gap and the
+ *    row's own margin cover this.
+ *  - No filters, shadows, radii or recolouring on the badge images.
+ */
+
+.store-badges {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 14px; /* >= 1/4 of badge height */
+  margin-top: 8px;
+}
+
+.store-badge {
+  display: inline-flex;
+  align-items: center;
+  /* Height drives both badges equally; width follows each badge's own ratio.
+     48px clears Apple's 40px minimum and Google's 60px-wide minimum. */
+  height: 48px;
+  transition: opacity 0.15s ease-out;
+}
+
+.store-badge:hover {
+  opacity: 0.85;
+}
+
+.store-badge:focus-visible {
+  outline: 2px solid var(--mindenity-primary);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+.store-badge img {
+  height: 100%;
+  width: auto;
+  display: block;
+}
+
+/*
+ * Missing-asset state. Until the official files are added the <img> 404s and
+ * the browser falls back to alt text — this makes that legible and obviously
+ * unfinished rather than a broken-image glyph in the hero.
+ */
+.store-badge--placeholder {
+  padding: 0 16px;
+  border: 1px dashed rgb(27 36 82 / 0.35);
+  border-radius: 8px;
+  font-family: var(--font-sans);
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--mindenity-primary);
+  background: rgb(27 36 82 / 0.04);
+  text-decoration: none;
+}
+
+@media (max-width: 520px) {
+  .store-badges {
+    justify-content: center;
+  }
+}
