@@ -33,3 +33,27 @@
   --soft-hover-background-color: rgb(27 36 82 / 0.14);
   --soft-text-color: var(--mindenity-primary);
 }
+
+/*
+ * Hero background.
+ *
+ * The original painted this into a <canvas> from JS, so the scrape captured
+ * an undrawn 300x150 element and the section renders flat white. replica.css
+ * does carry gradients for it, but only inside @media (prefers-reduced-motion:
+ * reduce) — the static fallback for the animation that no longer exists.
+ *
+ * This restores a gradient in the shape that fallback uses: white held to 20%
+ * so the header and headline sit on clean white, then easing into the tint.
+ *
+ * Scoped to the hero via data-product rather than [data-theme=purple], which
+ * would also catch the Mindenity Kit section. The extra class in the selector
+ * puts it at (0,3,0) so it wins over the reduced-motion rule too — this
+ * gradient is static, so it is safe in both motion preferences.
+ */
+:root {
+  --mindenity-hero-tint: #f0f2f8;
+}
+
+.styles_container__KfcyI[data-product="Mindenity App"] .styles_bgWrap__Zd6Bj {
+  background: linear-gradient(180deg, #fff 20%, var(--mindenity-hero-tint)), #fff;
+}
