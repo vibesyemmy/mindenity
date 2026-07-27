@@ -34,22 +34,7 @@ export default function Hero() {
 <img alt="" width="323.34096" height="512.954485926" decoding="async" data-nimg="1" style={{color:"transparent"}} src="/images/app/hero/row/hero-1.png"/>
 <div className="styles_centerPhone__2Ld1v">
 <img alt="" width="323.34096" height="552.873122963" decoding="async" data-nimg="1" className="styles_centerPhoneImg__XZM7s" style={{color:"transparent"}} src="/images/app/hero/row/hero-2.png"/>
-<div className="earning-indicator_overlay__OuLaH" aria-hidden="true">
-<span className="earning-indicator_dot__X23H0 earning-indicator_dotPaused__yweRn">
-</span>
-<span className="earning-indicator_amount__2X0N4">
-<span className="earning-indicator_odometer__ohzAq">
-<span className="earning-indicator_odometerStatic__i5hiy">7</span>
-<span className="earning-indicator_odometerDecimal__53VcZ">.</span>
-<span className="earning-indicator_odometerStatic__i5hiy">2</span>
-</span>
-<span> Mood</span>
-</span>
-<span className="earning-indicator_date__Hnn65">Past week</span>
-</div>
-<span className="earning-indicator_axisDate__OtLEN" aria-hidden="true">
-</span>
-<span className="earning-indicator_axisEnd__AfkNy" aria-hidden="true">Today</span>
+
 </div>
 <img alt="" width="323.34096" height="512.954485926" decoding="async" data-nimg="1" style={{color:"transparent"}} src="/images/app/hero/row/hero-3.png"/>
 </div>
