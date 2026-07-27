@@ -1,3 +1,5 @@
+import StoreBadge from "./StoreBadge";
+
 export default function KitSection() {
   return (
 <>
@@ -20,9 +22,11 @@ export default function KitSection() {
 </h1>
 <p className="styles_description__5Hvnp" style={{opacity:"1"}}>Set your own availability, choose the plans you accept, and reach clients in Nigeria and abroad.</p>
 </div>
-<div className="styles_buttons__I2eai" style={{opacity:"1"}}>
-<a className="styles_button__dr0t2 styles_variant-solid__XVs0U styles_size-large__hWtuW styles_color-purple__eIlhQ" href="/therapists/apply">Apply to join</a>
-<a className="styles_button__dr0t2 styles_variant-soft__KmN8b styles_size-large__hWtuW styles_color-purple__eIlhQ" href="/therapists/verification">How verification works</a>
+<div className="styles_buttons__I2eai store-badges" style={{opacity:"1"}}>
+{/* TODO: therapist-app store listings once published - these will be a
+    separate listing from the client app */}
+<StoreBadge href="#" src="/app-store-apple.png" label="Available on the App Store" />
+<StoreBadge href="#" src="/google-play-button.png" label="Get it on Google Play" />
 </div>
 <div className="styles_stack__h0Pv4">
 <div className="styles_illustration__6o5HA">

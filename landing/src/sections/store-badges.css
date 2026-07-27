@@ -21,9 +21,14 @@
   margin-top: 8px;
 }
 
-.store-badge {
+.store-badges .store-badge {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
+  /* replica.css stacks CTA-row children at 300px wide on narrow viewports
+     (.styles_buttons__I2eai>*). A badge must hug its artwork — a wider
+     anchor is invisible clickable whitespace. (0,2,0) beats its (0,1,0). */
+  width: auto;
   /* Height drives both badges equally; width follows each badge's own ratio.
      48px clears Apple's 40px minimum and Google's 60px-wide minimum. */
   height: 48px;

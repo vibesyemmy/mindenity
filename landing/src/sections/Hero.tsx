@@ -1,30 +1,4 @@
-import { useState } from "react";
-import "./store-badges.css";
-
-/**
- * A store badge.
- *
- * The artwork is an official vendor file served from public/images/badges/ —
- * see BADGES.md there. It is deliberately not inlined or redrawn: Apple and
- * Google both require their badges unmodified, so the only correct source is
- * their own download.
- *
- * Until those files are added the image 404s, and rather than leave a broken
- * image in the hero we fall back to a dashed placeholder carrying the badge's
- * own wording.
- */
-function StoreBadge({ href, src, label }: { href: string; src: string; label: string }) {
-  const [missing, setMissing] = useState(false);
-  return (
-    <a
-      className={`store-badge${missing ? " store-badge--placeholder" : ""}`}
-      href={href}
-      aria-label={label}
-    >
-      {missing ? label : <img src={src} alt={label} onError={() => setMissing(true)} />}
-    </a>
-  );
-}
+import StoreBadge from "./StoreBadge";
 
 export default function Hero() {
   return (
