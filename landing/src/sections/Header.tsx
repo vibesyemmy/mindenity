@@ -7,27 +7,27 @@ type MenuLink = { title: string; description: string; href: string };
 
 const MENU_GROUPS: { label: string; links: MenuLink[] }[] = [
   {
-    label: "Products",
+    label: "Product",
     links: [
-      { title: "Mindenity App", description: "Therapy, mood tracking, and AI check-ins.", href: "/app" },
-      { title: "Mindenity Pro", description: "Specialist-led clinical programs.", href: "/pro" },
-      { title: "Mindenity Kit", description: "Embed care into your own product.", href: "/build" },
+      { title: "The app", description: "Therapy, mood, sleep and an AI companion.", href: "/app" },
+      { title: "Plans & pricing", description: "Nine plans in naira and dollars.", href: "/plans" },
+      { title: "Find my plan", description: "Answer a few questions, get a match.", href: "/find-my-plan" },
     ],
   },
   {
-    label: "Programs",
+    label: "Plans",
     links: [
-      { title: "Individual", description: "Anxiety, stress, and everyday well-being.", href: "/programs/individual" },
-      { title: "Couples & Family", description: "Communication, grief, and family work.", href: "/programs/together" },
-      { title: "Clinical Track", description: "EMDR, CPTSD, and trauma recovery.", href: "/programs/restore" },
+      { title: "Individual", description: "One-to-one therapy, from a single session.", href: "/plans#individual" },
+      { title: "Couple", description: "Two people, one room.", href: "/plans#couple" },
+      { title: "Family", description: "Up to five people, one household.", href: "/plans#family" },
     ],
   },
   {
     label: "Company",
     links: [
+      { title: "For therapists", description: "Practise with Mindenity.", href: "/therapists" },
       { title: "About", description: "Our mission and clinical standards.", href: "/about" },
-      { title: "Careers", description: "Join the team building better care.", href: "/careers" },
-      { title: "Help & Support", description: "Answers, contact, and crisis resources.", href: "/help" },
+      { title: "Help & support", description: "Answers, contact and crisis resources.", href: "/help" },
     ],
   },
 ];
@@ -88,11 +88,9 @@ export default function Header() {
 </div>
 </div>
 <div className="styles_headerNavigationButtonsContainer__Ti3NP" style={{opacity:"1"}}>
-<button className="styles_headerNavigationButton__gzr6Z " type="button">Products</button>
-<button className="styles_headerNavigationButton__gzr6Z " type="button">Solutions</button>
-<button className="styles_headerNavigationButton__gzr6Z " type="button">Developers</button>
-<button className="styles_headerNavigationButton__gzr6Z " type="button">Resources</button>
-<button className="styles_headerNavigationButton__gzr6Z " type="button">About</button>
+<button className="styles_headerNavigationButton__gzr6Z " type="button">Product</button>
+<button className="styles_headerNavigationButton__gzr6Z " type="button">Plans</button>
+<button className="styles_headerNavigationButton__gzr6Z " type="button">Company</button>
 </div>
 <div className="styles_headerButtonContainer__EYWrL">
 <button className="styles_button__dr0t2 styles_variant-solid__XVs0U styles_size-small__RFuhw styles_color-black__vSVW0 styles_headerButton__ZWBgI" type="button">Get the app</button>
