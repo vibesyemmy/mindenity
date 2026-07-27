@@ -104,9 +104,9 @@ export default function TrustedSection() {
 </div>
 <hr className="styles_divider__Q0Hcm" data-variant="tertiary" data-full-width="false"/>
 <div className="styles_stablecoins__zg1AE">
+<img src="/sad.svg" alt="Illustration of a pensive person at a window, the sun breaking through clouds outside" width="1273" height="840" style={{width:"70%",maxWidth:"448px",height:"auto",display:"block",margin:"0 auto 2rem"}}/>
 <h2>When it's urgent, you're not alone.</h2>
 <p>Crisis Support Access connects you straight to your therapist or a support line. Flag something urgent at intake and you get priority matching, with a therapist responding within 30 minutes.</p>
-<img src="/sad.svg" alt="Illustration of a pensive person at a window, the sun breaking through clouds outside" width="1273" height="840" style={{width:"100%",maxWidth:"640px",height:"auto",display:"block",margin:"2rem auto 0"}}/>
 </div>
 </div>
 </div>
