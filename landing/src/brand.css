@@ -98,6 +98,18 @@
 }
 
 /*
+ * Navbar logo size.
+ *
+ * replica.css sizes every .styles_logo__EKrVz at 96px wide, and that class is
+ * shared with the Trusted section's eyebrow mark — so this is scoped to the
+ * header wrapper to leave that one alone. Height stays auto, so the logo keeps
+ * its 4.66 aspect (120px wide renders ~26px tall).
+ */
+.styles_headerLogoWrapper__ehVoY .styles_headerLogo___xqC_ {
+  width: 120px;
+}
+
+/*
  * Dark section backdrop.
  *
  * Same failure as the hero: this container nests bgWrap > bg > canvas, and the
