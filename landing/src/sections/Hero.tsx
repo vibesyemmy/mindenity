@@ -6,8 +6,6 @@ export default function Hero() {
 <section className="styles_section__ZlvVq styles_section__DYAms styles_flushBottom__CxTdt" data-alternate-styling="false">
 <div className="styles_inner__mnNbL">
 <div className="styles_content__aHSjq">
-<div className="styles_product__Ntvbx " style={{opacity:"1"}}>
-<img src="/images/icon-aave-app.png" alt="" width="28" height="28"/>Mindenity</div>
 <div className="styles_headingGroup__0n2Zi">
 <h1 className="styles_heading__VB3wz styles_level1Large__bDeUm styles_title__G9AAz">
 <span>

@@ -7,7 +7,7 @@ export default function KitSection() {
 <div className="styles_inner__mnNbL">
 <div className="styles_content__aHSjq">
 <div className="styles_product__Ntvbx " style={{opacity:"1"}}>
-<img src="/images/icon-aave-kit.png" alt="" width="28" height="28"/>For therapists</div>
+For therapists</div>
 <div className="styles_headingGroup__0n2Zi">
 <h1 className="styles_heading__VB3wz styles_level1Large__bDeUm styles_title__G9AAz">
 <span>
