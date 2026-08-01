@@ -3,6 +3,7 @@
 
 # Build + cache
 node-compile-cache/
+v8-compile-cache-*/
 admin/.next/
 admin/node_modules/
 admin/.turbo/
