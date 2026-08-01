@@ -9,45 +9,13 @@
           font-display: swap;
         }
 
-        @font-face {
-          font-family: "Mindenity Repro";
-          src: url("/fonts/AaveReproVariable.woff") format("woff"),url("/fonts/AaveReproVariable.woff2") format("woff2");
-          font-weight: 400 500 900;
-          font-style: normal;
-          font-display: swap;
-        }
-
-        @font-face {
-          font-family: "Mindenity Repro Mono";
-          src: url("/fonts/AaveReproMonoVariable.woff") format("woff"),url("/fonts/AaveReproMonoVariable.woff2") format("woff2");
-          font-weight: 400 900;
-          font-style: normal;
-          font-display: swap;
-        }
-
-        @font-face {
-          font-family: "Mindenity Aguzzo";
-          src: url("/fonts/AaveAguzzo.woff2") format("woff2");
-          font-weight: 100 800;
-          font-style: normal;
-          font-display: swap;
-        }
-
-        @font-face {
-          font-family: "FT Regola Neue";
-          src: url("/fonts/FTRegolaNeue-Semibold.otf") format("opentype");
-          font-weight: 600;
-          font-style: normal;
-          font-display: swap;
-        }
-
-        @font-face {
-          font-family: "FT Regola Neue";
-          src: url("/fonts/FTRegolaNeue-Bold.otf") format("opentype");
-          font-weight: 700;
-          font-style: normal;
-          font-display: swap;
-        }
+      /*
+       * The scrape's other five @font-face rules are gone. They declared the
+       * licensed faces the original site shipped (its custom sans/serif/mono
+       * and FT Regola Neue), whose files were removed in 0db3ad7 — so every
+       * page load fired five 404s for fonts we neither have nor may serve.
+       * Typography is Urbanist now, declared in brand.css.
+       */
 
       :root {
         --font-app: "Inter Variable", "Inter", sans-serif;
