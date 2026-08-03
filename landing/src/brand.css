@@ -130,7 +130,117 @@
 }
 
 .styles_container__KfcyI[data-product="Mindenity App"] .styles_bgWrap__Zd6Bj {
-  background: linear-gradient(180deg, #fff 20%, var(--mindenity-hero-tint)), #fff;
+  /*
+   * Calm-reference hero (user-picked from Mobbin): full-bleed gradient,
+   * white copy left, phone fan right cropped by the section edge. The ramp
+   * stays in the navy family — periwinkle from the re-hued purple scale down
+   * to brand navy — rather than Calm's blue/violet.
+   */
+  background: linear-gradient(165deg, #8399d9 0%, #4c58a0 55%, #222b5e 100%);
+}
+
+.hero-calm-section {
+  overflow: hidden;
+  padding-bottom: 0;
+}
+
+.hero-calm {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  min-height: 560px;
+  padding-top: 24px;
+}
+
+.hero-calm .hero-copy {
+  flex: 1 1 46%;
+  max-width: 520px;
+  text-align: left;
+}
+
+.hero-calm h1 {
+  color: #fff;
+  /* The scrape's level1Large display size wraps one word per line in a
+     46%-wide column; Calm runs its hero headline much smaller. */
+  font-size: clamp(34px, 3.4vw, 50px);
+  line-height: 1.14;
+  letter-spacing: -0.01em;
+  margin-bottom: 14px;
+  text-align: left;
+}
+
+/* Keep the italic accent device, but lifted to the light sage so it reads
+   on the gradient. */
+.hero-calm .styles_title__G9AAz .styles_highlight__dzRbM {
+  color: var(--mindenity-accent-soft);
+}
+
+.hero-calm .styles_description__5Hvnp {
+  color: rgb(255 255 255 / 0.82);
+  margin-bottom: 28px;
+  text-align: left;
+  margin-left: 0;
+}
+
+.hero-calm .store-badges {
+  justify-content: flex-start;
+}
+
+.hero-calm .hero-trust-strip {
+  justify-content: flex-start;
+  margin-top: 16px;
+  color: rgb(255 255 255 / 0.65);
+}
+
+.hero-calm .hero-trust-strip span + span::before {
+  color: rgb(255 255 255 / 0.35);
+}
+
+/* Phone fan: centre phone front, sides tucked behind, all cropped by the
+   section's bottom edge (Calm's treatment). */
+.hero-calm .hero-phones {
+  flex: 1 1 54%;
+  position: relative;
+  height: 500px;
+  align-self: flex-end;
+}
+
+.hero-calm .hero-phones img {
+  position: absolute;
+  border-radius: 6.5% / 4.2%;
+  box-shadow: 0 30px 80px rgb(13 17 41 / 0.45);
+}
+
+.hero-calm .ph-l  { left: 0;    bottom: -110px; width: 47%; z-index: 1; }
+.hero-calm .ph-c  { left: 25%;  bottom: -40px;  width: 51%; z-index: 2; }
+.hero-calm .ph-r  { right: 0;   bottom: -110px; width: 47%; z-index: 1; }
+
+@media (max-width: 900px) {
+  .hero-calm {
+    flex-direction: column;
+    min-height: 0;
+    gap: 8px;
+    padding-top: 40px;
+  }
+  .hero-calm .hero-copy {
+    text-align: center;
+    max-width: 560px;
+  }
+  .hero-calm .store-badges,
+  .hero-calm .hero-trust-strip {
+    justify-content: center;
+  }
+  .hero-calm .hero-phones {
+    /* In the column layout the main axis is vertical, so the desktop
+       `flex: 1 1 54%` makes 54% the BASIS FOR HEIGHT and overrides the
+       height property — resolving to 0 against the indefinite column.
+       Reset the basis so height applies. */
+    flex: 0 0 auto;
+    width: 100%;
+    max-width: 560px;
+    height: 320px;
+    align-self: center;
+  }
 }
 
 /*
