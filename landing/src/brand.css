@@ -200,6 +200,14 @@ main {
 .hero-calm .ph-c  { left: 25%;  bottom: -40px;  width: 51%; z-index: 2; }
 .hero-calm .ph-r  { right: 0;   bottom: -110px; width: 47%; z-index: 1; }
 
+/* Desktop only: run the fan larger. Mobile keeps the base sizes. */
+@media (min-width: 901px) {
+  .hero-calm .hero-phones { height: 540px; }
+  .hero-calm .ph-l { width: 52%; bottom: -125px; }
+  .hero-calm .ph-c { width: 56%; left: 23%; bottom: -45px; }
+  .hero-calm .ph-r { width: 52%; bottom: -125px; }
+}
+
 @media (max-width: 900px) {
   .hero-calm {
     flex-direction: column;
