@@ -61,23 +61,7 @@
   gap: 18px;
 }
 
-.hero-trust-strip {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 6px 10px;
-  margin: 0;
-  font-family: var(--font-sans);
-  font-size: 13.5px;
-  font-weight: 500;
-  color: rgb(27 36 82 / 0.55);
-}
 
-.hero-trust-strip span + span::before {
-  content: "·";
-  margin-right: 10px;
-  color: rgb(27 36 82 / 0.3);
-}
 
 /* On dark surfaces the light swatch is the legible one. Scoped to the
    container so it cascades to every accent descendant automatically. */
@@ -195,15 +179,7 @@ main {
   justify-content: flex-start;
 }
 
-.hero-calm .hero-trust-strip {
-  justify-content: flex-start;
-  margin-top: 16px;
-  color: rgb(255 255 255 / 0.65);
-}
 
-.hero-calm .hero-trust-strip span + span::before {
-  color: rgb(255 255 255 / 0.35);
-}
 
 /* Phone fan: centre phone front, sides tucked behind, all cropped by the
    section's bottom edge (Calm's treatment). */
@@ -235,8 +211,7 @@ main {
     text-align: center;
     max-width: 560px;
   }
-  .hero-calm .store-badges,
-  .hero-calm .hero-trust-strip {
+  .hero-calm .store-badges {
     justify-content: center;
   }
   .hero-calm .hero-phones {

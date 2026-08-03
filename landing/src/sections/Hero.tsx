@@ -24,11 +24,6 @@ export default function Hero() {
 <StoreBadge href="#" src="/app-store-apple.png" label="Available on the App Store" />
 <StoreBadge href="#" src="/google-play-button.png" label="Get it on Google Play" />
 </div>
-<p className="hero-trust-strip">
-<span>Verified, licensed therapists</span>
-<span>NDPR &amp; GDPR compliant</span>
-<span>From &#8358;30,000 / $55 a session</span>
-</p>
 </div>
 <div className="hero-phones">
 <img className="ph-l" src="/images/app/hero/row/hero-1.png" alt="" width="972" height="1545"/>
