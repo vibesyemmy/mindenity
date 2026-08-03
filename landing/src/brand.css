@@ -230,7 +230,12 @@ main {
     flex: 0 0 auto;
     width: 100%;
     max-width: 560px;
-    height: 320px;
+    /* The images are percentage-width, so a fixed height only fits one
+       viewport: at tablet width they outgrow the box and spill over the
+       copy above. Scale the box with its own width instead — the centre
+       phone's visible height is ~0.87x the container width at every size. */
+    height: auto;
+    aspect-ratio: 100 / 87;
     align-self: center;
   }
 }
