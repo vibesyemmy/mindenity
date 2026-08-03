@@ -144,6 +144,15 @@
   padding-bottom: 0;
 }
 
+/*
+ * Keep the navbar outside the hero: the fixed header used to overlay the
+ * gradient's top edge; pushing the page down by the header's height leaves
+ * it sitting on its own white band above the hero container.
+ */
+main {
+  padding-top: 64px;
+}
+
 .hero-calm {
   display: flex;
   align-items: center;
