@@ -48,6 +48,37 @@
   --mindenity-accent-soft: #e4ecd2;
 }
 
+/*
+ * Hero CTA stack (Mobbin research, DESIGN-GUIDELINES.md §1).
+ *
+ * References (Headspace, Hims) all lead with ONE filled action; store badges
+ * are secondary. Ours had two equal badges and no action for web visitors.
+ * Stack: primary button -> badges -> trust strip.
+ */
+.hero-cta-stack {
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+}
+
+.hero-trust-strip {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 6px 10px;
+  margin: 0;
+  font-family: var(--font-sans);
+  font-size: 13.5px;
+  font-weight: 500;
+  color: rgb(27 36 82 / 0.55);
+}
+
+.hero-trust-strip span + span::before {
+  content: "·";
+  margin-right: 10px;
+  color: rgb(27 36 82 / 0.3);
+}
+
 /* On dark surfaces the light swatch is the legible one. Scoped to the
    container so it cascades to every accent descendant automatically. */
 .styles_container__KfcyI[data-theme="dark"] {
@@ -90,7 +121,12 @@
  * gradient is static, so it is safe in both motion preferences.
  */
 :root {
-  --mindenity-hero-tint: #f0f2f8;
+  /*
+   * Was #f0f2f8, a cool blue-grey. The reference health products (Headspace,
+   * Function, Maxima) all sit their heroes on warm cream/blush tints — the
+   * cool tint read clinical. Warm paper with a faint sage cast instead.
+   */
+  --mindenity-hero-tint: #f4f2ea;
 }
 
 .styles_container__KfcyI[data-product="Mindenity App"] .styles_bgWrap__Zd6Bj {

@@ -9,23 +9,31 @@ export default function Hero() {
 <div className="styles_headingGroup__0n2Zi">
 <h1 className="styles_heading__VB3wz styles_level1Large__bDeUm styles_title__G9AAz">
 <span>
-<span style={{display:"inline-block",position:"relative",opacity:"1"}}>Care</span> <span style={{display:"inline-block",position:"relative",opacity:"1"}}>that</span>
+<span style={{display:"inline-block",position:"relative",opacity:"1"}}>Your</span> <span style={{display:"inline-block",position:"relative",opacity:"1"}}>therapist,</span> <span style={{display:"inline-block",position:"relative",opacity:"1"}}>your</span> <span style={{display:"inline-block",position:"relative",opacity:"1"}}>tools,</span>
 </span> <span className="styles_highlight__dzRbM">
 <span>
-<span style={{display:"inline-block",position:"relative",opacity:"1"}}>fits</span> <span style={{display:"inline-block",position:"relative",opacity:"1"}}>your</span> <span style={{display:"inline-block",position:"relative",opacity:"1"}}>life</span>
+<span style={{display:"inline-block",position:"relative",opacity:"1"}}>your</span> <span style={{display:"inline-block",position:"relative",opacity:"1"}}>pace.</span>
 </span>
 </span>
 <span>
 </span>
 </h1>
-<p className="styles_description__5Hvnp" style={{opacity:"1"}}>Licensed therapists, an AI companion that listens between sessions, and tools for your mood, sleep and stress &mdash; priced for where you live.</p>
+<p className="styles_description__5Hvnp" style={{opacity:"1"}}>Therapy that works around you, an AI companion that listens between sessions, and tools for your mood, sleep and stress.</p>
 </div>
-<div className="styles_buttons__I2eai store-badges" style={{opacity:"1"}}>
+<div className="styles_buttons__I2eai hero-cta-stack" style={{opacity:"1"}}>
+<a className="styles_button__dr0t2 styles_variant-solid__XVs0U styles_size-large__hWtuW styles_color-purple__eIlhQ" href="/find-my-plan">Find my plan</a>
+<div className="store-badges">
 {/* TODO: real store listings once published —
     https://apps.apple.com/app/id<APP_ID>
     https://play.google.com/store/apps/details?id=<PACKAGE_NAME> */}
 <StoreBadge href="#" src="/app-store-apple.png" label="Available on the App Store" />
 <StoreBadge href="#" src="/google-play-button.png" label="Get it on Google Play" />
+</div>
+<p className="hero-trust-strip">
+<span>Verified, licensed therapists</span>
+<span>NDPR &amp; GDPR compliant</span>
+<span>From &#8358;30,000 / $55 a session</span>
+</p>
 </div>
 <div className="styles_heroImagesSection__b7UJZ">
 <div className="styles_heroImagesWrapper__tIcFe" style={{opacity:"1"}}>
