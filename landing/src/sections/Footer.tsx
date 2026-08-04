@@ -1,57 +1,6 @@
 import type { JSX } from "react";
 
-const COLUMNS: { title: string; links: { label: string; href: string }[] }[] = [
-  {
-    title: "Product",
-    links: [
-      { label: "The app", href: "/app" },
-      { label: "Plans & pricing", href: "/plans" },
-      { label: "Find my plan", href: "/find-my-plan" },
-    ],
-  },
-  {
-    title: "Plans",
-    links: [
-      { label: "Individual", href: "/plans#individual" },
-      { label: "Couple", href: "/plans#couple" },
-      { label: "Family", href: "/plans#family" },
-    ],
-  },
-  {
-    title: "For therapists",
-    links: [
-      { label: "Apply to join", href: "/therapists/apply" },
-      { label: "Verification", href: "/therapists/verification" },
-      { label: "Earnings", href: "/therapists/earnings" },
-    ],
-  },
-  {
-    title: "Support",
-    links: [
-      { label: "Help centre", href: "/help" },
-      { label: "Crisis Support Access", href: "/crisis-support" },
-      { label: "FAQ", href: "/faq" },
-      { label: "Contact", href: "/contact" },
-    ],
-  },
-  {
-    title: "Company",
-    links: [
-      { label: "About", href: "/about" },
-      { label: "Careers", href: "/careers" },
-      { label: "Press", href: "/press" },
-    ],
-  },
-  {
-    title: "Legal & privacy",
-    links: [
-      { label: "Terms", href: "/legal/terms" },
-      { label: "Privacy (NDPR)", href: "/legal/privacy-ndpr" },
-      { label: "Privacy (GDPR)", href: "/legal/privacy-gdpr" },
-      { label: "Data requests", href: "/legal/data-requests" },
-    ],
-  },
-];
+
 
 /* TODO: real profiles. Handles unknown at time of writing — '#' rather than
    inheriting the scrape's aave.com accounts. */
@@ -103,24 +52,7 @@ export default function Footer() {
 </canvas>
 </div>
 <footer className="styles_footer__1cZ8q undefined">
-<div className="styles_footerBody__uG7Oo">
-<nav>
-<ul className="styles_navLists__ag4hz">
-{COLUMNS.map((col) => (
-<li key={col.title}>
-<p className="styles_navTitle__vbCUj">{col.title}</p>
-<ul className="styles_navList__2u0oo">
-{col.links.map((link) => (
-<li key={link.label} className="styles_navListItem__7RBIL">
-<a className="styles_navLink__Of9Og" href={link.href}>{link.label}</a>
-</li>
-))}
-</ul>
-</li>
-))}
-</ul>
-</nav>
-</div>
+
 <div className="styles_footerBottom__NC5WI">
 <a className="styles_logoWrapper__yZsX7" href="/">
 <img className="styles_logo__bl3eo" src="/mindenity-Logo.svg" alt="Mindenity" width="149" height="32"/>
