@@ -3,6 +3,7 @@ import StoreBadge from "./StoreBadge";
 export default function Hero() {
   return (
 <>
+
 <section className="styles_section__ZlvVq styles_section__DYAms styles_flushBottom__CxTdt hero-calm-section" data-alternate-styling="false">
 <div className="styles_inner__mnNbL">
 <div className="hero-calm">
@@ -33,6 +34,7 @@ export default function Hero() {
 </div>
 </div>
 </section>
+
 </>
   );
 }

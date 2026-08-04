@@ -196,9 +196,10 @@ main {
   box-shadow: 0 30px 80px rgb(13 17 41 / 0.45);
 }
 
-.hero-calm .ph-l  { left: 0;    bottom: -110px; width: 47%; z-index: 1; }
+/* Lifts accepted in impeccable live (levelled variants; right slider at 96) */
+.hero-calm .ph-l  { left: 0;    bottom: -110px; width: 47%; z-index: 1; transform: translateY(-80px); }
 .hero-calm .ph-c  { left: 25%;  bottom: -40px;  width: 51%; z-index: 2; }
-.hero-calm .ph-r  { right: 0;   bottom: -110px; width: 47%; z-index: 1; }
+.hero-calm .ph-r  { right: 0;   bottom: -110px; width: 47%; z-index: 1; transform: translateY(-96px); }
 
 /* Desktop only: run the fan larger. Mobile keeps the base sizes. */
 @media (min-width: 901px) {
