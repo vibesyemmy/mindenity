@@ -1,6 +1,7 @@
 import Header from "./sections/Header";
 import Hero from "./sections/Hero";
 import FeaturesSection from "./sections/FeaturesSection";
+import WhoSection from "./sections/WhoSection";
 import MarketsSection from "./sections/MarketsSection";
 import KitSection from "./sections/KitSection";
 import TrustedSection from "./sections/TrustedSection";
@@ -21,6 +22,9 @@ export default function App() {
 </div>
 <div className="styles_container__KfcyI" data-theme="light" data-product="Mindenity Features">
 <div className="styles_bgWrap__Zd6Bj features-wrap"><FeaturesSection /></div>
+</div>
+<div className="styles_container__KfcyI" data-theme="light" data-product="Mindenity Who">
+<div className="styles_bgWrap__Zd6Bj"><WhoSection /></div>
 </div>
 <div className="styles_container__KfcyI" data-theme="dark" data-product="Mindenity Pro" data-theme-dark="true">
 <div className="styles_bgWrap__Zd6Bj">

@@ -1,0 +1,144 @@
+/*
+ * "Who it's for" — Maze-reference cards + concern chips. Sits on the default
+ * white bgWrap so the page alternates: hero gradient / features paper /
+ * white / plans navy.
+ */
+
+.who {
+  padding: 88px 6% 96px;
+  text-align: center;
+  font-family: var(--font-sans);
+  color: var(--mindenity-primary);
+}
+
+.who-title {
+  font-size: clamp(32px, 4vw, 54px);
+  font-weight: 700;
+  line-height: 1.08;
+  letter-spacing: -0.015em;
+  margin: 0 auto;
+}
+
+.who-title em {
+  font-style: italic;
+  font-weight: 500;
+  color: var(--mindenity-accent-text);
+}
+
+.who-sub {
+  margin: 18px auto 56px;
+  font-size: 17px;
+  color: rgb(27 36 82 / 0.65);
+}
+
+.who-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  max-width: 1160px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.w-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 30px 26px 60px;
+  border-radius: 16px;
+  text-decoration: none;
+  transition: transform 0.18s ease-out, box-shadow 0.18s ease-out;
+}
+
+.w-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 34px rgb(27 36 82 / 0.12);
+}
+
+/* Soft tints of the card palette used in the features grid above, so the
+   two sections read as one family. Text stays navy on all three. */
+.w-self   { background: #e9edf9; color: var(--mindenity-primary); }
+.w-two    { background: #fbe7f2; color: var(--mindenity-primary); }
+.w-family { background: var(--mindenity-accent-soft); color: var(--mindenity-primary); }
+
+/* Mark colours echo the parent fills at full strength. */
+.w-self svg   { color: var(--mindenity-primary); }
+.w-two svg    { color: #d62a93; }
+.w-family svg { color: var(--mindenity-accent-text); }
+
+.w-title {
+  font-size: 22px;
+  font-weight: 600;
+  margin: 6px 0 0;
+}
+
+.w-body {
+  font-size: 15.5px;
+  line-height: 1.5;
+  margin: 0;
+  color: rgb(27 36 82 / 0.75);
+}
+
+.w-arrow {
+  position: absolute;
+  right: 22px;
+  bottom: 18px;
+  font-size: 22px;
+  transition: transform 0.18s ease-out;
+}
+
+.w-card:hover .w-arrow {
+  transform: translateX(4px);
+}
+
+/* Concern chips */
+.who-chips {
+  margin-top: 56px;
+}
+
+.who-chips-label {
+  font-size: 16px;
+  font-weight: 600;
+  color: rgb(27 36 82 / 0.7);
+  margin: 0 0 18px;
+}
+
+.who-chips-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+.who-chip {
+  display: inline-block;
+  padding: 9px 18px;
+  border: 1px solid rgb(27 36 82 / 0.2);
+  border-radius: 999px;
+  font-size: 14.5px;
+  font-weight: 500;
+  color: rgb(27 36 82 / 0.8);
+  text-decoration: none;
+  transition: background 0.15s ease-out, border-color 0.15s ease-out;
+}
+
+.who-chip:hover {
+  background: var(--mindenity-accent-tint);
+  border-color: var(--mindenity-accent-text);
+}
+
+.who-chip-more {
+  border-style: dashed;
+  color: rgb(27 36 82 / 0.55);
+}
+
+@media (max-width: 1024px) {
+  .who-grid {
+    grid-template-columns: 1fr;
+    max-width: 560px;
+  }
+}
