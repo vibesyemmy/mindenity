@@ -2,7 +2,6 @@ import Header from "./sections/Header";
 import Hero from "./sections/Hero";
 import FeaturesSection from "./sections/FeaturesSection";
 import WhoSection from "./sections/WhoSection";
-import MarketsSection from "./sections/MarketsSection";
 import KitSection from "./sections/KitSection";
 import TrustedSection from "./sections/TrustedSection";
 import FaqSection from "./sections/FaqSection";
@@ -25,13 +24,6 @@ export default function App() {
 </div>
 <div className="styles_container__KfcyI" data-theme="light" data-product="Mindenity Who">
 <div className="styles_bgWrap__Zd6Bj"><WhoSection /></div>
-</div>
-<div className="styles_container__KfcyI" data-theme="dark" data-product="Mindenity Pro" data-theme-dark="true">
-<div className="styles_bgWrap__Zd6Bj">
-<div className="styles_bg__Bg0d3">
-<canvas className="styles_canvas__fjpJS">
-</canvas>
-</div><MarketsSection /></div>
 </div>
 <div className="styles_container__KfcyI" data-theme="purple" data-product="Mindenity Kit">
 <div className="styles_bgWrap__Zd6Bj">
