@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "./faq.css";
 
 const FAQS = [
   {
@@ -20,66 +21,33 @@ const FAQS = [
 ];
 
 export default function FaqSection() {
-  // The scrape shipped the accordion frozen shut — the JS that measured and
-  // set wrapper heights never survived, so every answer sat at height:0.
   const [open, setOpen] = useState<number | null>(null);
   return (
-<>
-<section className="styles_section__ZlvVq styles_section__SyNeT" data-alternate-styling="false">
-<div className="styles_inner__mnNbL">
-<div className="styles_container__JttJK">
-<h2 className="styles_heading__VB3wz styles_level2__ilE9d ">
-<span>
-<span style={{display:"inline-block",position:"relative"}}>FAQs</span>
-</span>
-</h2>
-<div className="styles_content__PgRgh">
-<div className="styles_body__PbHUL">
-<div className="">
+<section className="faq">
+<h2 className="faq-title">Questions, <em>answered</em></h2>
+<p className="faq-sub">The things people ask before they start.</p>
+<div className="faq-list">
 {FAQS.map((faq, i) => (
-<div key={faq.q} className="styles_collapsibleContainer__6ElmP" style={{opacity:"1"}}>
-<div className="styles_collapsible__aqKSz " data-show-number="false" data-is-open={open === i} data-color="purple">
+<div key={faq.q} className="faq-item" data-open={open === i}>
 <button
-  className="styles_collapsibleButton__MlK3f"
+  className="faq-q"
   type="button"
   aria-expanded={open === i}
   onClick={() => setOpen(open === i ? null : i)}
 >
-<div className="styles_headerLeft__2ckOK">
-<h3 className="styles_collapsibleTitle__nQ5wa">{faq.q}</h3>
-</div>
-<svg className="styles_collapsibleIcon__WuJte styles_purple__KqAAT" width="52" height="52" viewBox="0 0 52 52" xmlns="http://www.w3.org/2000/svg">
-<path d="M19 25.5H26L33 25.5" strokeWidth="2" strokeLinecap="round" style={{transform:"none",transformOrigin:"50% 50%",transformBox:"fill-box"}}>
-</path>
-<path d="M26 18.5L26 25.5L26 32.5" strokeWidth="2" strokeLinecap="round" style={{transform:open === i ? "rotate(90deg)" : "none",transformOrigin:"50% 50%",transformBox:"fill-box",transition:"transform 0.2s ease-out"}}>
-</path>
+<span>{faq.q}</span>
+<svg className="faq-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+<path d="M3 10h14" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
+<path d="M10 3v14" stroke="currentColor" strokeWidth="2" strokeLinecap="round"
+  style={{transform: open === i ? "rotate(90deg)" : "none", transformOrigin: "50% 50%", transition: "transform 0.2s ease-out"}}/>
 </svg>
 </button>
-<div className="styles_collapsibleContentWrapper__gWHrn" itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer" tabIndex={-1} style={{height: open === i ? "auto" : "0px", overflow: "hidden"}}>
-<div className="styles_collapsibleContent__g9P4z" style={{opacity:"1"}}>
+<div className="faq-a" style={{height: open === i ? "auto" : "0px", overflow: "hidden"}}>
 <p>{faq.a}</p>
-</div>
-</div>
 </div>
 </div>
 ))}
 </div>
-</div>
-<div className="styles_footer__ed8ng">
-<a className="styles_link__3GG_T styles_purple__8oM7m styles_circle__hlCLg " href="/faq">
-<span>More about Mindenity</span>
-<span className="styles_iconCircle__kK_7C">
-<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
-<path d="M3 8.5H12.5M12.5 8.5L8.5 4.5M12.5 8.5L8.5 12.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-</path>
-</svg>
-</span>
-</a>
-</div>
-</div>
-</div>
-</div>
 </section>
-</>
   );
 }

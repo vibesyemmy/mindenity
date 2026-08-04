@@ -1,0 +1,77 @@
+/*
+ * FAQ, cleaned up to the new sections' language: centred title with italic
+ * accent, one narrow column, quiet hairline accordion. Replaces the scrape's
+ * left-heading grid and its class soup.
+ */
+
+.faq {
+  padding: 88px 6% 96px;
+  text-align: center;
+  font-family: var(--font-sans);
+  color: var(--mindenity-primary);
+}
+
+.faq-title {
+  font-size: clamp(32px, 4vw, 54px);
+  font-weight: 700;
+  line-height: 1.08;
+  letter-spacing: -0.015em;
+  margin: 0 auto;
+}
+
+.faq-title em {
+  font-style: italic;
+  font-weight: 500;
+  color: var(--mindenity-accent-text);
+}
+
+.faq-sub {
+  margin: 18px auto 48px;
+  font-size: 17px;
+  color: rgb(27 36 82 / 0.65);
+}
+
+.faq-list {
+  max-width: 760px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.faq-item {
+  border-bottom: 1px solid rgb(27 36 82 / 0.12);
+}
+
+.faq-item:first-child {
+  border-top: 1px solid rgb(27 36 82 / 0.12);
+}
+
+.faq-q {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  width: 100%;
+  padding: 22px 4px;
+  background: none;
+  border: 0;
+  cursor: pointer;
+  font-family: var(--font-sans);
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--mindenity-primary);
+  text-align: left;
+}
+
+.faq-icon {
+  flex: 0 0 auto;
+  color: var(--mindenity-accent-text);
+}
+
+.faq-a p {
+  margin: 0;
+  padding: 0 4px 22px;
+  font-size: 15.5px;
+  line-height: 1.6;
+  color: rgb(27 36 82 / 0.75);
+  max-width: 640px;
+}
