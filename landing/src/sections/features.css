@@ -1,0 +1,115 @@
+/*
+ * Feature grid (Ada reference). Lives in its own container between the hero
+ * and Plans; .features-wrap tints the shared bgWrap shell so the section
+ * keeps the same rounded-inset geometry as its siblings.
+ */
+
+.styles_bgWrap__Zd6Bj.features-wrap {
+  background: #f7f6f1;
+}
+
+.features {
+  padding: 88px 6% 96px;
+  text-align: center;
+  font-family: var(--font-sans);
+  color: var(--mindenity-primary);
+}
+
+.features-title {
+  font-size: clamp(32px, 4vw, 54px);
+  font-weight: 700;
+  line-height: 1.08;
+  letter-spacing: -0.015em;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.features-title em {
+  font-style: italic;
+  font-weight: 500;
+  color: var(--mindenity-accent-text);
+}
+
+.features-sub {
+  margin: 18px auto 60px;
+  font-size: 17px;
+  color: rgb(27 36 82 / 0.65);
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  max-width: 1160px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.f-card {
+  display: flex;
+  flex-direction: column;
+  min-height: 400px;
+  padding: 28px 24px;
+  border-radius: 16px;
+}
+
+.f-card svg {
+  display: block;
+}
+
+.f-spacer {
+  flex: 1 1 auto;
+  min-height: 48px;
+}
+
+.f-title {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.25;
+  margin: 0 0 10px;
+}
+
+.f-body {
+  font-size: 15.5px;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Card palette. Text colours all clear AA on their fills:
+   white on navy 14.8:1, white on #6a7c40 4.6:1 (large/600 weight),
+   white on #d62a93 4.7:1, navy on the pale sage 12+:1. */
+.f-navy    { background: var(--mindenity-primary); color: #fff; }
+.f-sage    { background: var(--mindenity-accent-text); color: #fff; }
+.f-magenta { background: #d62a93; color: #fff; }
+.f-soft    { background: var(--mindenity-accent-soft); color: var(--mindenity-primary); }
+
+.f-navy .f-body { color: rgb(255 255 255 / 0.88); }
+/* Sage and magenta fills sit at ~4.6-4.7:1 against pure white — dimming to
+   88% would drop body text below AA, so these stay full white. */
+.f-sage .f-body,
+.f-magenta .f-body { color: #fff; }
+.f-soft .f-body    { color: rgb(27 36 82 / 0.8); }
+
+@media (max-width: 1024px) {
+  .features-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .f-card {
+    min-height: 320px;
+  }
+}
+
+@media (max-width: 560px) {
+  .features {
+    padding: 64px 6% 72px;
+  }
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+  .f-card {
+    min-height: 0;
+  }
+  .f-spacer {
+    min-height: 28px;
+  }
+}
