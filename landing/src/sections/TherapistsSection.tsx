@@ -1,10 +1,13 @@
 import "./therapists.css";
 
 /*
- * For-therapists section on the Kajabi reference (user-picked from Mobbin):
- * near-black ground, giant uppercase headline left, numbered benefits column
- * right. Deliberately the loudest, most asymmetric section on an otherwise
- * light, centred, card-based page.
+ * For-therapists section: Kajabi's structure (midnight ground, giant
+ * uppercase headline, numbered benefits) with Miro's photo treatment — the
+ * user-picked therapist photograph as a full-height panel on the right edge.
+ *
+ * Photo: pexels.com/photo/5699469 (Pexels, free commercial use) — a
+ * psychotherapist taking notes; the sage cardigan happens to sit exactly on
+ * the brand accent.
  *
  * Benefits are the epics' real substance: availability (Epic 2), plan
  * preferences and verification (Epic 8), dual-region + commission (Epics 12
@@ -35,9 +38,10 @@ const BENEFITS = [
 export default function TherapistsSection() {
   return (
 <section className="therapists">
-<div className="th-left">
+<div className="th-content">
 <p className="th-eyebrow">For therapists</p>
 <h2 className="th-headline">Why practise with Mindenity?</h2>
+<div className="th-actions">
 <a className="th-cta" href="/therapists/apply">Apply to join</a>
 <a className="th-link" href="/therapists/verification">How verification works &rarr;</a>
 </div>
@@ -52,6 +56,10 @@ export default function TherapistsSection() {
   </li>
 ))}
 </ol>
+</div>
+<figure className="th-photo">
+<img src="/images/therapist-bg.jpg" alt="A therapist taking notes on a clipboard during a session" loading="lazy"/>
+</figure>
 </section>
   );
 }

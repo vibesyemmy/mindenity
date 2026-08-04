@@ -1,64 +1,29 @@
 /*
- * For-therapists (Kajabi reference): midnight ground, giant uppercase
- * headline left, numbered benefits right. Imported after brand.css, so the
- * equal-specificity background below beats the generic dark-container navy.
+ * For-therapists: Kajabi structure (midnight ground, giant uppercase
+ * headline, numbered benefits) with Miro's photo treatment — the therapist
+ * photograph as a full-height panel on the section's right edge. The bright
+ * interior photo cannot blend into the dark ground the way the earlier
+ * low-key portraits did, so it gets a hard panel instead of a fade.
  */
 
 .styles_container__KfcyI[data-theme="dark"] .styles_bgWrap__Zd6Bj.therapists-wrap {
   background: #0d1129;
-  position: relative;
-}
-
-/*
- * Low-key portrait as background (user direction): rendered in a masked
- * layer so it fades in from the ground with no visible edge — the photo's
- * own black is not exactly our navy, so a plain background-image showed a
- * seam at its left boundary. Photo: pexels.com/photo/9592866 (Pexels,
- * free commercial use).
- */
-.styles_container__KfcyI[data-theme="dark"] .styles_bgWrap__Zd6Bj.therapists-wrap::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  /* Sized to the portrait itself so the fade is in the image's own
-     coordinates — it starts at the photo's left edge at every viewport. */
-  width: min(46%, 520px);
-  background: url("/images/therapist-bg.jpg") center right / cover no-repeat;
-  /* The subject's light coat sits behind the benefit text - keep the layer
-     quiet enough that white body copy stays comfortably readable. */
-  opacity: 0.32;
-  -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 65%);
-  mask-image: linear-gradient(90deg, transparent 0%, #000 65%);
-  pointer-events: none;
-}
-
-@media (max-width: 900px) {
-  .styles_container__KfcyI[data-theme="dark"] .styles_bgWrap__Zd6Bj.therapists-wrap::before {
-    /* Stacked layout puts text everywhere — drop the portrait, keep the ground. */
-    content: none;
-  }
+  overflow: hidden; /* clip the photo panel to the rounded corners */
 }
 
 .therapists {
-  position: relative;
-  z-index: 1;
   display: flex;
-  gap: 64px;
-  align-items: flex-start;
-  max-width: 1160px;
-  margin: 0 auto;
-  padding: 104px 6%;
+  align-items: stretch;
   font-family: var(--font-sans);
   color: #fff;
   text-align: left;
 }
 
-.th-left {
-  flex: 1 1 46%;
-  position: sticky;
-  top: 96px;
+.th-content {
+  flex: 1 1 58%;
+  max-width: 720px;
+  margin-left: auto;
+  padding: 88px 56px 88px 6%;
 }
 
 .th-eyebrow {
@@ -71,12 +36,16 @@
 }
 
 .th-headline {
-  font-size: clamp(40px, 4.6vw, 64px);
+  font-size: clamp(36px, 3.8vw, 56px);
   font-weight: 800;
   line-height: 0.98;
   letter-spacing: -0.01em;
   text-transform: uppercase;
-  margin: 0 0 34px;
+  margin: 0 0 30px;
+}
+
+.th-actions {
+  margin-bottom: 44px;
 }
 
 .th-cta {
@@ -97,8 +66,8 @@
 }
 
 .th-link {
-  display: block;
-  margin-top: 18px;
+  display: inline-block;
+  margin-left: 20px;
   font-size: 15px;
   color: rgb(255 255 255 / 0.65);
   text-decoration: none;
@@ -109,7 +78,6 @@
 }
 
 .th-benefits {
-  flex: 1 1 54%;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -117,9 +85,9 @@
 
 .th-benefit {
   display: flex;
-  gap: 26px;
+  gap: 24px;
   align-items: flex-start;
-  padding: 30px 0;
+  padding: 24px 0;
 }
 
 .th-benefit + .th-benefit {
@@ -127,10 +95,10 @@
 }
 
 .th-num {
-  font-size: 52px;
+  font-size: 44px;
   font-weight: 800;
   line-height: 1;
-  min-width: 44px;
+  min-width: 38px;
 }
 
 .t-magenta { color: #e4569f; }
@@ -138,9 +106,9 @@
 .t-peri    { color: #8fa5e0; }
 
 .th-title {
-  font-size: 21px;
+  font-size: 20px;
   font-weight: 700;
-  margin: 6px 0 8px;
+  margin: 4px 0 8px;
 }
 
 .th-body {
@@ -150,16 +118,30 @@
   color: rgb(255 255 255 / 0.75);
 }
 
+/* Full-height photo panel on the right edge (Miro treatment). */
+.th-photo {
+  flex: 1 1 42%;
+  margin: 0;
+}
+
+.th-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
 @media (max-width: 900px) {
   .therapists {
     flex-direction: column;
-    gap: 40px;
-    padding: 72px 6%;
   }
-  .th-left {
-    position: static;
+  .th-content {
+    max-width: none;
+    margin: 0;
+    padding: 64px 6%;
   }
-  .th-headline {
-    margin-bottom: 26px;
+  .th-photo {
+    flex: none;
+    height: 300px;
   }
 }
