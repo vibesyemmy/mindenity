@@ -1,0 +1,130 @@
+/*
+ * For-therapists (Kajabi reference): midnight ground, giant uppercase
+ * headline left, numbered benefits right. Imported after brand.css, so the
+ * equal-specificity background below beats the generic dark-container navy.
+ */
+
+.styles_container__KfcyI[data-theme="dark"] .styles_bgWrap__Zd6Bj.therapists-wrap {
+  background: #0d1129;
+}
+
+.therapists {
+  display: flex;
+  gap: 64px;
+  align-items: flex-start;
+  max-width: 1160px;
+  margin: 0 auto;
+  padding: 104px 6%;
+  font-family: var(--font-sans);
+  color: #fff;
+  text-align: left;
+}
+
+.th-left {
+  flex: 1 1 46%;
+  position: sticky;
+  top: 96px;
+}
+
+.th-eyebrow {
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--mindenity-accent);
+  margin: 0 0 18px;
+}
+
+.th-headline {
+  font-size: clamp(40px, 4.6vw, 64px);
+  font-weight: 800;
+  line-height: 0.98;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+  margin: 0 0 34px;
+}
+
+.th-cta {
+  display: inline-block;
+  background: var(--mindenity-accent);
+  color: #14331b;
+  font-size: 16px;
+  font-weight: 700;
+  padding: 14px 30px;
+  border-radius: 999px;
+  text-decoration: none;
+  transition: transform 0.15s ease-out, background 0.15s ease-out;
+}
+
+.th-cta:hover {
+  background: #a9bd7c;
+  transform: translateY(-2px);
+}
+
+.th-link {
+  display: block;
+  margin-top: 18px;
+  font-size: 15px;
+  color: rgb(255 255 255 / 0.65);
+  text-decoration: none;
+}
+
+.th-link:hover {
+  color: #fff;
+}
+
+.th-benefits {
+  flex: 1 1 54%;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.th-benefit {
+  display: flex;
+  gap: 26px;
+  align-items: flex-start;
+  padding: 30px 0;
+}
+
+.th-benefit + .th-benefit {
+  border-top: 1px solid rgb(255 255 255 / 0.12);
+}
+
+.th-num {
+  font-size: 52px;
+  font-weight: 800;
+  line-height: 1;
+  min-width: 44px;
+}
+
+.t-magenta { color: #e4569f; }
+.t-sage    { color: var(--mindenity-accent); }
+.t-peri    { color: #8fa5e0; }
+
+.th-title {
+  font-size: 21px;
+  font-weight: 700;
+  margin: 6px 0 8px;
+}
+
+.th-body {
+  font-size: 15.5px;
+  line-height: 1.55;
+  margin: 0;
+  color: rgb(255 255 255 / 0.75);
+}
+
+@media (max-width: 900px) {
+  .therapists {
+    flex-direction: column;
+    gap: 40px;
+    padding: 72px 6%;
+  }
+  .th-left {
+    position: static;
+  }
+  .th-headline {
+    margin-bottom: 26px;
+  }
+}
