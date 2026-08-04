@@ -1,0 +1,36 @@
+/*
+ * Footer bottom row. With the nav columns gone, the scrape's stacked
+ * logo-then-socials layout left a mostly empty band — logo left, socials
+ * right on one row instead.
+ */
+
+.styles_footerBottom__NC5WI {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.styles_footerBottom__NC5WI .styles_logoWrapper__yZsX7 {
+  margin: 0;
+}
+
+/* replica.css stacks this row below 1000px — sized for its old six-column
+   footer. With just a logo and four icons a row fits almost anywhere, so
+   this (imported later, same specificity) keeps the row until phones. */
+@media (max-width: 1000px) {
+  .styles_footerBottom__NC5WI {
+    flex-direction: row;
+    align-items: center;
+    gap: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .styles_footerBottom__NC5WI {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 18px;
+  }
+}
