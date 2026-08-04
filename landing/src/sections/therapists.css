@@ -13,7 +13,7 @@
  * Low-key portrait as background (user direction): rendered in a masked
  * layer so it fades in from the ground with no visible edge — the photo's
  * own black is not exactly our navy, so a plain background-image showed a
- * seam at its left boundary. Photo: pexels.com/photo/4828266 (Pexels,
+ * seam at its left boundary. Photo: pexels.com/photo/9592866 (Pexels,
  * free commercial use).
  */
 .styles_container__KfcyI[data-theme="dark"] .styles_bgWrap__Zd6Bj.therapists-wrap::before {
@@ -26,9 +26,11 @@
      coordinates — it starts at the photo's left edge at every viewport. */
   width: min(46%, 520px);
   background: url("/images/therapist-bg.jpg") center right / cover no-repeat;
-  opacity: 0.6;
-  -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 55%);
-  mask-image: linear-gradient(90deg, transparent 0%, #000 55%);
+  /* The subject's light coat sits behind the benefit text - keep the layer
+     quiet enough that white body copy stays comfortably readable. */
+  opacity: 0.32;
+  -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 65%);
+  mask-image: linear-gradient(90deg, transparent 0%, #000 65%);
   pointer-events: none;
 }
 
