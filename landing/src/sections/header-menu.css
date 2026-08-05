@@ -7,9 +7,29 @@
  * verbatim.
  */
 
-/* The nav animates between 0 and its measured content height. */
+/* The nav animates open via grid rows (0fr -> 1fr) rather than height:
+   compositor-friendly, and needs no JS measurement of content height. */
 .styles_navigation__LrkPB {
-  transition: height 0.25s ease-out;
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.25s ease-out;
+}
+
+.styles_navigation__LrkPB.styles_open__X9ppk {
+  grid-template-rows: 1fr;
+}
+
+.styles_navigation__LrkPB > .styles_navigationLinksContainerWrapper__SZrco {
+  min-height: 0;
+  overflow: hidden;
+  /* replica.css puts padding-bottom:20px here; padding cannot compress, so it
+     held the collapsed row open by 20px. The spacing moves inside the clipped
+     region instead. */
+  padding-bottom: 0;
+}
+
+.styles_navigation__LrkPB .header-menu-group:last-child {
+  padding-bottom: 20px;
 }
 
 /*

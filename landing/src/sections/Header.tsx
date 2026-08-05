@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import "./header-menu.css";
 
 const OPEN = "styles_open__X9ppk";
@@ -35,8 +35,6 @@ const MENU_GROUPS: { label: string; links: MenuLink[] }[] = [
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
-  const navRef = useRef<HTMLElement>(null);
-  const [navHeight, setNavHeight] = useState(0);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 8);
@@ -44,21 +42,6 @@ export default function Header() {
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
-
-  // Measure the menu so the header can animate to its natural height.
-  useEffect(() => {
-    if (!open) {
-      setNavHeight(0);
-      return;
-    }
-    const measure = () => {
-      const inner = navRef.current?.firstElementChild as HTMLElement | undefined;
-      if (inner) setNavHeight(inner.offsetHeight);
-    };
-    measure();
-    window.addEventListener("resize", measure);
-    return () => window.removeEventListener("resize", measure);
-  }, [open]);
 
   // Close on Escape, and when the viewport grows back to desktop.
   useEffect(() => {
@@ -115,9 +98,7 @@ export default function Header() {
 </div>
 <nav
   id="header-mobile-nav"
-  ref={navRef}
   className={`styles_navigation__LrkPB ${open ? OPEN : ""}`}
-  style={{ height: navHeight }}
   aria-hidden={!open}
 >
 <div className="styles_navigationLinksContainerWrapper__SZrco">
