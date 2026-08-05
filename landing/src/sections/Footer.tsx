@@ -56,7 +56,7 @@ export default function Footer() {
 
 <div className="styles_footerBottom__NC5WI">
 <a className="styles_logoWrapper__yZsX7" href="/">
-<img className="styles_logo__bl3eo" src="/mindenity-Logo.svg" alt="Mindenity" width="149" height="32"/>
+<img className="styles_logo__bl3eo footer-logo" src="/mindenity-logo-main.png" alt="Mindenity" width="420" height="100"/>
 </a>
 <div className="styles_footerBottomTrailing__XP8pk">
 <div className="styles_allLinksContainer__4cVXF">

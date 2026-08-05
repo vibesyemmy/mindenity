@@ -34,3 +34,9 @@
     gap: 18px;
   }
 }
+
+/* New lockup is a raster; size it explicitly. */
+.footer-logo {
+  width: 150px;
+  height: auto;
+}
