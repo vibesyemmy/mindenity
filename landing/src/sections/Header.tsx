@@ -83,7 +83,7 @@ export default function Header() {
 <div className="styles_headerLogoContainer__Y2Zyw">
 <div style={{position:"relative"}}>
 <a className="styles_headerLogoWrapper__ehVoY" href="/">
-<img className="styles_logo__EKrVz styles_headerLogo___xqC_" src="/mindenity-Logo.svg" alt="Mindenity" width="149" height="32"/>
+<img className="styles_logo__EKrVz styles_headerLogo___xqC_" src="/mindenity-logo-main.png" alt="Mindenity" width="420" height="100"/>
 </a>
 </div>
 </div>
