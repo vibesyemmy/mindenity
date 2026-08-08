@@ -70,8 +70,11 @@ def convert(path):
     return blocks
 
 
+DRAFT_BANNER = re.compile(r"this is a draft,? not legal advice", re.I)
+
+
 def strip_internal(blocks):
-    """Remove the Word TOC block and the trailing confirmation annex."""
+    """Remove the Word TOC, the draft banner and the confirmation annex."""
     out, skipping_toc, dropped = [], False, []
 
     for i, b in enumerate(blocks):
@@ -83,6 +86,14 @@ def strip_internal(blocks):
         ):
             dropped.append(("confirmation-annex", len(blocks) - i))
             break
+
+        # The "this is a draft, not legal advice" callout the documents open
+        # with. Removed at the client's request.
+        if b["kind"] == "table" and any(
+            DRAFT_BANNER.search(cell) for row in b["rows"] for cell in row
+        ):
+            dropped.append(("draft-banner", 1))
+            continue
 
         # Word's generated table of contents.
         if b["kind"] in ("h2", "h3") and text.strip().lower() == "contents":

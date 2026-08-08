@@ -59,14 +59,6 @@ const BLOCKS: LegalBlock[] = [
     ]
   },
   {
-    "kind": "table",
-    "rows": [
-      [
-        "This is a draft, not legal advice This policy has been drafted from Mindenity’s product design, infrastructure plan and clinical safeguards, and is structured to meet the Nigeria Data Protection Act 2023, the EU and UK GDPR, and United States federal and state privacy requirements. It has not been reviewed by a lawyer. Items marked [CONFIRM] depend on decisions not yet made or on positions that must be settled by counsel. Annex D lists them."
-      ]
-    ]
-  },
-  {
     "kind": "h2",
     "text": "1. Who we are and how to reach us"
   },

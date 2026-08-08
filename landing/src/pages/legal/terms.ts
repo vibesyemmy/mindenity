@@ -59,14 +59,6 @@ const BLOCKS: LegalBlock[] = [
     ]
   },
   {
-    "kind": "table",
-    "rows": [
-      [
-        "This is a draft, not legal advice This document has been prepared from Mindenity’s product documentation, pricing model, commission structure and clinical safeguards. It is written to be close to publishable, but it is not legal advice and it has not been reviewed by a lawyer. Sections marked [CONFIRM] depend on decisions that have not yet been made internally, or on regulatory positions that must be settled by counsel qualified in Nigeria, the EU/UK and the relevant United States jurisdictions. Annex 1 lists them together."
-      ]
-    ]
-  },
-  {
     "kind": "h2",
     "text": "1. About these terms"
   },
