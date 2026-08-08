@@ -1,4 +1,4 @@
-import { Fragment, useMemo } from "react";
+import { Fragment, useEffect, useMemo, useState } from "react";
 import Header from "../../sections/Header";
 import Footer from "../../sections/Footer";
 import type { LegalBlock } from "./types";
@@ -64,6 +64,31 @@ export default function LegalPage({
     () => blocks.filter((b) => b.kind === "h2").map((b) => (b as { text: string }).text),
     [blocks]
   );
+  const [active, setActive] = useState("");
+
+  /* Highlight whichever section is currently being read. The bottom margin
+     keeps the trigger band near the top of the viewport, so the active entry
+     changes as a heading reaches the top rather than the middle. */
+  useEffect(() => {
+    const headings = contents
+      .map((heading) => document.getElementById(slug(heading)))
+      .filter((el): el is HTMLElement => el !== null);
+    if (!headings.length) return;
+
+    const observer = new IntersectionObserver(
+      () => {
+        const onscreen = headings.filter(
+          (el) => el.getBoundingClientRect().top <= 140
+        );
+        const current = onscreen.length ? onscreen[onscreen.length - 1] : headings[0];
+        setActive(current.id);
+      },
+      { rootMargin: "-88px 0px -65% 0px", threshold: [0, 1] }
+    );
+
+    headings.forEach((el) => observer.observe(el));
+    return () => observer.disconnect();
+  }, [contents]);
 
   return (
     <div id="__next">
@@ -76,14 +101,24 @@ export default function LegalPage({
             <p className="lg-standfirst">{standfirst}</p>
           </header>
 
+          <div className="lg-layout">
           <nav className="lg-toc" aria-label="Contents">
             <p className="lg-toc-label">Contents</p>
             <ol>
-              {contents.map((heading) => (
-                <li key={heading}>
-                  <a href={`#${slug(heading)}`}>{heading}</a>
-                </li>
-              ))}
+              {contents.map((heading) => {
+                const id = slug(heading);
+                return (
+                  <li key={heading}>
+                    <a
+                      href={`#${id}`}
+                      className={active === id ? "is-active" : undefined}
+                      aria-current={active === id ? "location" : undefined}
+                    >
+                      {heading}
+                    </a>
+                  </li>
+                );
+              })}
             </ol>
           </nav>
 
@@ -127,6 +162,7 @@ export default function LegalPage({
 
               return <p key={i}>{withPlaceholders(block.text)}</p>;
             })}
+          </div>
           </div>
         </article>
         <Footer />

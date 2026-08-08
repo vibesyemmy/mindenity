@@ -10,22 +10,6 @@ import type { LegalBlock } from "./types";
 
 const BLOCKS: LegalBlock[] = [
   {
-    "kind": "p",
-    "text": "MINDENITY"
-  },
-  {
-    "kind": "p",
-    "text": "Health & Wellness Technology"
-  },
-  {
-    "kind": "p",
-    "text": "Privacy Policy"
-  },
-  {
-    "kind": "p",
-    "text": "How Mindenity collects, uses and protects your information, including your health information"
-  },
-  {
     "kind": "table",
     "rows": [
       [

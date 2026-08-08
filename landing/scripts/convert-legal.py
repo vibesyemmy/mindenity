@@ -107,6 +107,16 @@ def strip_internal(blocks):
 
         out.append(b)
 
+    # Word cover-page lines ("MINDENITY", the document title, the standfirst)
+    # run before the first table. The page renders its own header from those,
+    # so keeping them would print the title twice.
+    lead = 0
+    while lead < len(out) and out[lead]["kind"] == "p":
+        lead += 1
+    if lead:
+        dropped.append(("cover-lines", lead))
+        out = out[lead:]
+
     return out, dropped
 
 
