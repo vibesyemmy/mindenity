@@ -3,8 +3,8 @@ import "./footer.css";
 
 
 
-/* TODO: LinkedIn profile URL still unknown — '#' rather than inheriting the
-   scrape's aave.com account. The other three are Mindenity's own. */
+/* Mindenity's own accounts. LinkedIn was dropped rather than left pointing
+   nowhere — add it back here once there is a profile to link to. */
 const SOCIALS: { label: string; href: string; icon: JSX.Element }[] = [
   {
     label: "X",
@@ -33,15 +33,6 @@ const SOCIALS: { label: string; href: string; icon: JSX.Element }[] = [
       </svg>
     ),
   },
-  {
-    label: "LinkedIn",
-    href: "#",
-    icon: (
-      <svg className="styles_socialIcon__QGAbm" width="18" height="18" viewBox="0 0 18 18">
-        <path d="M16.65 0H1.35A1.35 1.35 0 0 0 0 1.35v15.3A1.35 1.35 0 0 0 1.35 18h15.3A1.35 1.35 0 0 0 18 16.65V1.35A1.35 1.35 0 0 0 16.65 0M5.4 15.3H2.7V7.2h2.7zM4.05 5.62A1.57 1.57 0 1 1 5.67 4.05a1.6 1.6 0 0 1-1.62 1.57M15.3 15.3h-2.7v-4.27c0-1.28-.54-1.74-1.24-1.74A1.57 1.57 0 0 0 9.9 10.97a.6.6 0 0 0 0 .126V15.3H7.2V7.2h2.61v1.17a2.8 2.8 0 0 1 2.43-1.26c1.4 0 3.02.774 3.02 3.29z" />
-      </svg>
-    ),
-  },
 ];
 
 export default function Footer() {
@@ -66,20 +57,18 @@ export default function Footer() {
 </nav>
 <div className="styles_allLinksContainer__4cVXF">
 <div className="styles_socialsContainer__iETG5">
-{SOCIALS.map((social) => {
-const external = social.href.startsWith("http");
-return (
+{SOCIALS.map((social) => (
 <a
   key={social.label}
   className="styles_socialIconWrapper__IOQPi"
   href={social.href}
   aria-label={social.label}
-  {...(external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+  target="_blank"
+  rel="noopener noreferrer"
 >
 {social.icon}
 </a>
-);
-})}
+))}
 </div>
 </div>
 </div>
