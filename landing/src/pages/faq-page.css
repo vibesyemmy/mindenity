@@ -1,0 +1,235 @@
+/*
+ * Dedicated FAQ page. Same language as the landing FAQ section — centred title
+ * with the italic accent, hairline accordion — extended with the group labels,
+ * search filter and price rows the full copy needs.
+ */
+
+.fp {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 88px 24px 96px;
+  font-family: var(--font-sans);
+  color: var(--mindenity-primary);
+}
+
+.fp-head {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.fp-title {
+  font-size: clamp(34px, 6.2vw, 54px);
+  font-weight: 700;
+  line-height: 1.08;
+  letter-spacing: -0.015em;
+  margin: 0 0 14px;
+}
+
+.fp-title em {
+  font-style: italic;
+  font-weight: 500;
+  color: var(--mindenity-accent-text);
+}
+
+.fp-sub {
+  margin: 0;
+  font-size: clamp(15px, 2.6vw, 19px);
+  color: rgb(27 36 82 / 0.65);
+}
+
+/* ---- Search ---- */
+
+.fp-filter {
+  position: relative;
+  max-width: 420px;
+  margin: 34px auto 0;
+}
+
+.fp-filter input {
+  width: 100%;
+  border: 0;
+  border-bottom: 1px solid rgb(27 36 82 / 0.12);
+  background: transparent;
+  font-family: var(--font-sans);
+  font-size: 15px;
+  color: var(--mindenity-primary);
+  padding: 10px 4px 12px 26px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.fp-filter input::placeholder {
+  color: rgb(27 36 82 / 0.4);
+}
+
+.fp-filter input:focus {
+  border-bottom-color: var(--mindenity-accent-text);
+}
+
+.fp-filter svg {
+  position: absolute;
+  left: 2px;
+  top: 11px;
+  stroke: rgb(27 36 82 / 0.4);
+  fill: none;
+  stroke-width: 1.6;
+}
+
+/* ---- Groups ---- */
+
+.fp-group {
+  margin-top: 52px;
+}
+
+.fp-group:first-of-type {
+  margin-top: 40px;
+}
+
+.fp-group-label {
+  font-size: 11.5px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--mindenity-accent-text);
+  margin: 0 0 6px;
+}
+
+/* ---- Accordion ---- */
+
+.fp-item {
+  border-top: 1px solid rgb(27 36 82 / 0.12);
+}
+
+.fp-group .fp-item:last-child {
+  border-bottom: 1px solid rgb(27 36 82 / 0.12);
+}
+
+.fp-q {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  width: 100%;
+  padding: 24px 4px;
+  background: none;
+  border: 0;
+  cursor: pointer;
+  font-family: var(--font-sans);
+  font-size: clamp(16px, 2.9vw, 19px);
+  font-weight: 600;
+  line-height: 1.35;
+  color: var(--mindenity-primary);
+  text-align: left;
+  transition: color 0.18s;
+}
+
+.fp-q:hover,
+.fp-item[data-open="true"] .fp-q {
+  color: var(--mindenity-accent-text);
+}
+
+.fp-icon {
+  flex: 0 0 20px;
+  color: var(--mindenity-accent-text);
+}
+
+.fp-a {
+  padding: 0 68px 28px 4px;
+}
+
+.fp-a p,
+.fp-a li {
+  font-size: clamp(14.5px, 2.6vw, 16px);
+  line-height: 1.72;
+  color: rgb(27 36 82 / 0.75);
+}
+
+.fp-a p {
+  margin: 0 0 14px;
+}
+
+.fp-a p:last-child {
+  margin-bottom: 0;
+}
+
+.fp-a strong {
+  font-weight: 600;
+  color: var(--mindenity-primary);
+}
+
+.fp-a ul {
+  margin: 0 0 14px;
+  padding-left: 18px;
+}
+
+.fp-a li {
+  margin-bottom: 5px;
+}
+
+.fp-a li::marker {
+  color: var(--mindenity-accent-text);
+}
+
+/* ---- Price rows inside an answer ---- */
+
+.fp-prices {
+  border-top: 1px solid rgb(27 36 82 / 0.12);
+  margin: 4px 0 16px;
+}
+
+.fp-prices div {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 9px 0;
+  border-bottom: 1px solid rgb(27 36 82 / 0.12);
+  font-size: 14.5px;
+  color: rgb(27 36 82 / 0.75);
+}
+
+.fp-prices span:first-child {
+  color: var(--mindenity-primary);
+}
+
+/* ---- Crisis note ---- */
+
+.fp-urgent {
+  margin-top: 56px;
+  background: var(--mindenity-hero-tint);
+  border-left: 2px solid var(--mindenity-accent);
+  padding: 26px 28px;
+  border-radius: 2px;
+}
+
+.fp-urgent h2 {
+  margin: 0 0 8px;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--mindenity-primary);
+}
+
+.fp-urgent p {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.7;
+  color: rgb(27 36 82 / 0.75);
+}
+
+.fp-empty {
+  padding: 36px 4px;
+  font-size: 15px;
+  color: rgb(27 36 82 / 0.65);
+}
+
+@media (max-width: 620px) {
+  .fp {
+    padding: 60px 20px 72px;
+  }
+  .fp-a {
+    padding-right: 36px;
+  }
+  .fp-q {
+    padding: 22px 2px;
+    gap: 16px;
+  }
+}

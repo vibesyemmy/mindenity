@@ -1,22 +1,27 @@
 import { useState } from "react";
 import "./faq.css";
 
+/* The five most-asked, in the client's own wording. The full set lives on /faq. */
 const FAQS = [
   {
     q: "What is Mindenity?",
-    a: "A mental wellness platform pairing licensed therapists with an app that supports you between sessions — mood, sleep, journaling, guided breathing and an AI companion.",
+    a: "A mental health and wellness platform that connects you with licensed therapists, counsellors and wellness coaches by voice or video, from your phone. Alongside sessions you get a guided wellness check-in, a private AI companion for the hours between appointments, and plans for individuals, couples and families.",
+  },
+  {
+    q: "Do I need a diagnosis or a referral to start?",
+    a: "No. You do not need a referral, a diagnosis, or a reason that sounds serious enough. The check-in you complete when you sign up asks about your mood, stress, sleep and what is on your mind, then points you toward the kind of support that fits.",
   },
   {
     q: "How do I find the right therapist?",
-    a: "A short intake asks what you're facing, how urgent it feels and how you'd like to meet. You get three matched therapists and a suggested plan. You can ignore both and browse freely.",
+    a: "Your check-in produces a short profile of what you are dealing with, and the app recommends professionals whose training matches. You see each person's specialisms, approach, languages and availability before you book. Nobody is assigned to you without your say-so.",
   },
   {
     q: "What does it cost?",
-    a: "In Nigeria, individual therapy starts at ₦30,000 for a single session, with monthly plans at ₦120,000 for four sessions and ₦350,000 for eight. Couple and family plans are priced separately. International pricing is in US dollars, set around 30% below the global standard.",
+    a: "You can pay per session or subscribe monthly. In Nigeria that starts at ₦30,000 for a single individual session, ₦120,000 for four a month and ₦350,000 for eight. Outside Nigeria you pay in US dollars, from $55 a session — roughly 30% below comparable Western platforms.",
   },
   {
     q: "What if I need help urgently?",
-    a: "Crisis Support Access connects you to your therapist or a support line. If you flag a crisis at intake, you're matched with priority and a therapist responds within 30 minutes. Mindenity is not an emergency service — if you are in immediate danger, contact your local emergency number.",
+    a: "Mindenity is not an emergency service. If you or someone near you is in immediate danger, contact your local emergency services or go to the nearest hospital now. Inside the app, crisis support is one tap away on subscription plans and reaches your professional directly.",
   },
 ];
 
@@ -48,6 +53,12 @@ export default function FaqSection() {
 </div>
 ))}
 </div>
+<a className="faq-cta" href="/faq">
+See all questions
+<svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+<path d="M3 8.5h9.5M12.5 8.5l-4-4M12.5 8.5l-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+</svg>
+</a>
 </section>
   );
 }

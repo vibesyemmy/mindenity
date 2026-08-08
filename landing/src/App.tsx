@@ -6,8 +6,11 @@ import TherapistsSection from "./sections/TherapistsSection";
 import FaqSection from "./sections/FaqSection";
 import NewsletterSection from "./sections/NewsletterSection";
 import Footer from "./sections/Footer";
+import FaqPage from "./pages/FaqPage";
 
 export default function App() {
+  if (window.location.pathname.replace(/\/+$/, "") === "/faq") return <FaqPage />;
+
   return (
 <div id="__next"><Header /><div style={{opacity:"1"}}>
 <main className="styles_main__XsB95">
