@@ -40,3 +40,40 @@
   width: 150px;
   height: auto;
 }
+
+/* Legal links sit beside the socials in the trailing group. */
+.styles_footerBottomTrailing__XP8pk {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+
+.footer-legal {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.footer-legal a {
+  font-size: 14.5px;
+  color: rgb(27 36 82 / 0.7);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.footer-legal a:hover {
+  color: var(--mindenity-primary);
+  text-decoration: underline;
+}
+
+@media (max-width: 640px) {
+  .styles_footerBottomTrailing__XP8pk {
+    align-items: flex-start;
+    gap: 18px;
+  }
+  .footer-legal {
+    gap: 16px;
+  }
+}

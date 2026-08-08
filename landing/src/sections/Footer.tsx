@@ -59,6 +59,11 @@ export default function Footer() {
 <img className="styles_logo__bl3eo footer-logo" src="/mindenity-logo-main.png" alt="Mindenity" width="420" height="100"/>
 </a>
 <div className="styles_footerBottomTrailing__XP8pk">
+<nav className="footer-legal" aria-label="Legal">
+<a href="/faq">FAQ</a>
+<a href="/privacy">Privacy Policy</a>
+<a href="/terms">Terms &amp; Conditions</a>
+</nav>
 <div className="styles_allLinksContainer__4cVXF">
 <div className="styles_socialsContainer__iETG5">
 {SOCIALS.map((social) => (

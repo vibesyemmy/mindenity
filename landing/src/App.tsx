@@ -7,9 +7,21 @@ import FaqSection from "./sections/FaqSection";
 import NewsletterSection from "./sections/NewsletterSection";
 import Footer from "./sections/Footer";
 import FaqPage from "./pages/FaqPage";
+import PrivacyPage from "./pages/legal/PrivacyPage";
+import TermsPage from "./pages/legal/TermsPage";
+
+/* Static site, so routing is a lookup rather than a router — every entry is a
+   full page load. Revisit if these pages ever need shared client-side state. */
+const ROUTES: Record<string, () => React.ReactElement> = {
+  "/faq": FaqPage,
+  "/privacy": PrivacyPage,
+  "/terms": TermsPage,
+};
 
 export default function App() {
-  if (window.location.pathname.replace(/\/+$/, "") === "/faq") return <FaqPage />;
+  const path = window.location.pathname.replace(/\/+$/, "");
+  const Page = ROUTES[path];
+  if (Page) return <Page />;
 
   return (
 <div id="__next"><Header /><div style={{opacity:"1"}}>
