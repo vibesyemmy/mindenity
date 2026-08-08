@@ -1,12 +1,15 @@
 /*
- * Plans page. Same language as the FAQ and legal pages — centred title with
- * the italic accent — with the plan cards borrowing the flat tinted surfaces
- * the features and who-it's-for sections already use, so pricing reads as part
- * of the same family rather than a bolted-on table.
+ * Plans page. Card layout follows the pattern the client picked: bordered
+ * white cards on a plain ground, price set large, the action high up, and the
+ * feature list below it as a scannable checklist rather than a table.
+ *
+ * The three audiences sit behind a segmented control instead of stacking down
+ * the page — most visitors want one of the three, and stacked they made the
+ * page long enough that the international and crisis notes fell far below.
  */
 
 .pl {
-  max-width: 1080px;
+  max-width: 1120px;
   margin: 0 auto;
   padding: 88px 24px 96px;
   font-family: var(--font-sans);
@@ -15,7 +18,7 @@
 
 .pl-head {
   max-width: 720px;
-  margin: 0 auto 64px;
+  margin: 0 auto 36px;
   text-align: center;
 }
 
@@ -49,141 +52,214 @@
   color: rgb(27 36 82 / 0.66);
 }
 
-/* ---- Segments ---- */
+/* ---- Segmented control ---- */
 
-.pl-segment {
-  margin-bottom: 72px;
-  scroll-margin-top: 90px;
+.pl-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 4px;
+  max-width: max-content;
+  margin: 0 auto 24px;
+  padding: 4px;
+  background: var(--mindenity-hero-tint);
+  border-radius: 999px;
 }
 
-.pl-segment-head {
-  max-width: 680px;
-  margin-bottom: 28px;
+.pl-tab {
+  border: 0;
+  border-radius: 999px;
+  padding: 10px 22px;
+  background: transparent;
+  font-family: var(--font-sans);
+  font-size: 15px;
+  font-weight: 600;
+  color: rgb(27 36 82 / 0.62);
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background-color 0.16s, color 0.16s;
 }
 
-.pl-segment-head h2 {
-  font-size: clamp(24px, 3.2vw, 30px);
-  font-weight: 700;
-  letter-spacing: -0.01em;
-  margin: 0 0 10px;
+.pl-tab:hover {
+  color: var(--mindenity-primary);
 }
 
-.pl-segment-head p {
-  margin: 0;
+.pl-tab-short {
+  display: none;
+}
+
+.pl-tab.is-active {
+  background: #fff;
+  color: var(--mindenity-primary);
+  box-shadow: 0 1px 4px rgb(27 36 82 / 0.1);
+}
+
+.pl-intro {
+  max-width: 660px;
+  margin: 0 auto 32px;
+  text-align: center;
   font-size: 16px;
   line-height: 1.65;
   color: rgb(27 36 82 / 0.7);
 }
 
+/* ---- Cards ---- */
+
 .pl-grid {
   display: grid;
   gap: 20px;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  align-items: start;
 }
 
 /* A lone plan should not stretch the full width of the page. */
 .pl-grid[data-count="1"] {
-  grid-template-columns: minmax(260px, 360px);
+  grid-template-columns: minmax(280px, 380px);
+  justify-content: center;
 }
 
-/* ---- Plan card ---- */
-
 .pl-card {
+  position: relative;
   display: flex;
   flex-direction: column;
-  background: var(--mindenity-hero-tint);
-  border-radius: 16px;
-  padding: 28px 26px;
+  background: #fff;
+  border: 1px solid rgb(27 36 82 / 0.13);
+  border-radius: 20px;
+  padding: 32px 28px;
+}
+
+.pl-card.is-featured {
+  border-color: var(--mindenity-accent);
+  border-width: 2px;
+  /* Compensate so the featured card's content stays on the same grid. */
+  padding: 31px 27px;
+}
+
+.pl-badge {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  padding: 5px 12px;
+  border-radius: 999px;
+  background: var(--mindenity-accent-soft);
+  color: var(--mindenity-accent-text);
+  font-size: 12px;
+  font-weight: 600;
+  white-space: nowrap;
 }
 
 .pl-name {
-  font-size: 18px;
-  font-weight: 600;
-  margin: 0 0 12px;
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0 0 16px;
+  /* Room for the badge on narrow cards. */
+  padding-right: 96px;
 }
 
 .pl-price {
   display: flex;
   align-items: baseline;
   gap: 8px;
-  margin: 0 0 14px;
+  flex-wrap: wrap;
+  margin: 0 0 12px;
 }
 
 .pl-price span {
-  font-size: clamp(30px, 4vw, 36px);
+  font-size: clamp(32px, 3.6vw, 40px);
   font-weight: 700;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.025em;
   line-height: 1;
 }
 
 .pl-price small {
-  font-size: 14px;
+  font-size: 14.5px;
   font-weight: 500;
-  color: rgb(27 36 82 / 0.6);
+  color: rgb(27 36 82 / 0.58);
 }
 
 .pl-summary {
-  margin: 0 0 20px;
+  margin: 0 0 24px;
   font-size: 15px;
   line-height: 1.6;
   color: rgb(27 36 82 / 0.72);
+  /* Two lines' worth, so a summary that wraps does not push its card's
+     action button out of line with the others in the row. */
+  min-height: 48px;
+}
+
+.pl-cta {
+  display: block;
+  padding: 13px 24px;
+  border: 1.5px solid var(--mindenity-primary);
+  border-radius: 999px;
+  text-align: center;
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+  color: var(--mindenity-primary);
+  transition: background-color 0.16s, color 0.16s;
+}
+
+.pl-cta:hover {
+  background: rgb(27 36 82 / 0.06);
+}
+
+.pl-cta.is-solid {
+  background: var(--mindenity-primary);
+  color: #fff;
+}
+
+.pl-cta.is-solid:hover {
+  background: var(--mindenity-primary-hover);
+}
+
+.pl-inherits {
+  margin: 26px 0 14px;
+  font-size: 14px;
+  color: rgb(27 36 82 / 0.55);
 }
 
 .pl-includes {
-  flex: 1;
-  margin: 0 0 24px;
+  margin: 26px 0 0;
   padding: 0;
   list-style: none;
 }
 
+/* When an inherits line is present it already provides the gap. */
+.pl-inherits + .pl-includes {
+  margin-top: 0;
+}
+
 .pl-includes li {
-  position: relative;
-  padding-left: 24px;
-  margin-bottom: 10px;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 12px;
   font-size: 15px;
-  line-height: 1.55;
-  color: rgb(27 36 82 / 0.8);
+  line-height: 1.5;
+  color: rgb(27 36 82 / 0.82);
 }
 
-/* Check mark drawn in CSS so the list needs no icon asset. */
-.pl-includes li::before {
-  content: "";
-  position: absolute;
-  left: 4px;
-  top: 6px;
-  width: 5px;
-  height: 9px;
-  border: solid var(--mindenity-accent-text);
-  border-width: 0 1.8px 1.8px 0;
-  transform: rotate(45deg);
+.pl-includes li:last-child {
+  margin-bottom: 0;
 }
 
-.pl-cta {
-  align-self: flex-start;
-  padding: 11px 22px;
-  border-radius: 999px;
-  background: var(--mindenity-primary);
-  color: #fff;
-  font-size: 15px;
-  font-weight: 600;
-  text-decoration: none;
-  transition: background-color 0.16s;
-}
-
-.pl-cta:hover {
-  background: var(--mindenity-primary-hover);
+.pl-includes svg {
+  flex: 0 0 14px;
+  margin-top: 4px;
+  color: var(--mindenity-accent-text);
 }
 
 /* Tiers the client has confirmed but not yet priced. */
 .pl-pending {
-  align-self: center;
-  margin: 0;
+  max-width: 380px;
+  margin: 18px auto 0;
   padding: 16px 20px;
   border: 1px dashed rgb(27 36 82 / 0.22);
   border-radius: 14px;
   font-size: 15px;
   line-height: 1.55;
   color: rgb(27 36 82 / 0.62);
+  text-align: center;
 }
 
 /* ---- International ---- */
@@ -192,7 +268,7 @@
   background: var(--mindenity-accent-soft);
   border-radius: 18px;
   padding: 36px 38px;
-  margin-bottom: 40px;
+  margin: 64px 0 40px;
 }
 
 .pl-intl h2 {
@@ -248,15 +324,31 @@
   color: rgb(27 36 82 / 0.7);
 }
 
-@media (max-width: 640px) {
+@media (max-width: 720px) {
   .pl {
     padding: 64px 20px 72px;
   }
-  .pl-segment {
-    margin-bottom: 56px;
+  /* The full labels do not fit one row on a phone, and wrapping leaves a
+     lone third pill. Short labels keep the control on a single row. */
+  .pl-tabs {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 100%;
+    max-width: 100%;
+  }
+  .pl-tab {
+    padding: 10px 8px;
+    font-size: 14.5px;
+  }
+  .pl-tab-full {
+    display: none;
+  }
+  .pl-tab-short {
+    display: inline;
   }
   .pl-intl {
     padding: 28px 22px;
+    margin-top: 48px;
   }
   .pl-grid[data-count="1"] {
     grid-template-columns: 1fr;

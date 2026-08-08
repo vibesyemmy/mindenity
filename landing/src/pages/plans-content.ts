@@ -16,11 +16,20 @@ export type Plan = {
   price: string;
   cadence: string;
   summary: string;
+  /* Named predecessor whose features carry over, so each card lists only
+     what it adds — the reference pattern. */
+  inherits?: string;
   includes: string[];
+  /* Only set where the client's own copy supports it. Drives the featured
+     card treatment; leave unset rather than inventing a claim. */
+  badge?: string;
 };
 
 export type Segment = {
   id: string;
+  tab: string;
+  /* Narrow-screen label — the full three do not fit one row on a phone. */
+  short: string;
   label: string;
   intro: string;
   plans: Plan[];
@@ -37,6 +46,8 @@ const SUBSCRIPTION_INCLUDES = [
 export const SEGMENTS: Segment[] = [
   {
     id: "individual",
+    tab: "For yourself",
+    short: "Yourself",
     label: "For yourself",
     intro:
       "One-to-one therapy by voice or video. Start with a single session, or subscribe for continuity with the same professional.",
@@ -46,6 +57,9 @@ export const SEGMENTS: Segment[] = [
         price: "₦30,000",
         cadence: "per session",
         summary: "One individual session, booked when you need it.",
+        /* The client's FAQ: "Most people start pay-as-you-go and move across
+           once they know who they want to work with." */
+        badge: "Where most people start",
         includes: [
           "45-minute session, voice or video",
           "Choose your own professional",
@@ -57,6 +71,7 @@ export const SEGMENTS: Segment[] = [
         price: "₦120,000",
         cadence: "per month",
         summary: "Four individual sessions a month.",
+        inherits: "Essential",
         includes: ["Four 45-minute sessions a month", ...SUBSCRIPTION_INCLUDES],
       },
       {
@@ -64,12 +79,15 @@ export const SEGMENTS: Segment[] = [
         price: "₦350,000",
         cadence: "per month",
         summary: "Eight individual sessions a month.",
-        includes: ["Eight 45-minute sessions a month", ...SUBSCRIPTION_INCLUDES],
+        inherits: "Balance",
+        includes: ["Eight 45-minute sessions a month"],
       },
     ],
   },
   {
     id: "couple",
+    tab: "For you two",
+    short: "You two",
     label: "For you two",
     intro:
       "Two people, one room. On a subscription the first session runs 60 minutes, split into two private 30-minute conversations — one with each partner. Every session after that is 45 minutes together.",
@@ -90,6 +108,8 @@ export const SEGMENTS: Segment[] = [
   },
   {
     id: "family",
+    tab: "For your family",
+    short: "Family",
     label: "For your family",
     intro:
       "Support for a household, with a professional who works with the family rather than one person in it.",
@@ -116,4 +136,5 @@ export const INTERNATIONAL = {
   note: "Mindenity's international pricing sits roughly 30% below comparable Western platforms.",
 };
 
-export const NO_FEES = "There is no joining fee, and no charge for creating an account or completing your wellness check-in.";
+export const NO_FEES =
+  "There is no joining fee, and no charge for creating an account or completing your wellness check-in.";

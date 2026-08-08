@@ -1,9 +1,35 @@
+import { useEffect, useState } from "react";
 import Header from "../sections/Header";
 import Footer from "../sections/Footer";
 import { SEGMENTS, INTERNATIONAL, NO_FEES } from "./plans-content";
 import "./plans.css";
 
+const IDS = SEGMENTS.map((s) => s.id);
+
+function segmentFromHash() {
+  const id = window.location.hash.replace("#", "");
+  return IDS.includes(id) ? id : IDS[0];
+}
+
 export default function PlansPage() {
+  /* The nav and the who-it's-for cards deep-link to #individual/#couple/#family,
+     so the hash picks the tab rather than scrolling to a section. */
+  const [activeId, setActiveId] = useState(segmentFromHash);
+
+  useEffect(() => {
+    const onHash = () => setActiveId(segmentFromHash());
+    window.addEventListener("hashchange", onHash);
+    return () => window.removeEventListener("hashchange", onHash);
+  }, []);
+
+  const select = (id: string) => {
+    setActiveId(id);
+    /* Keeps the link shareable without jumping the page. */
+    window.history.replaceState(null, "", `#${id}`);
+  };
+
+  const active = SEGMENTS.find((s) => s.id === activeId) ?? SEGMENTS[0];
+
   return (
     <div id="__next">
       <Header />
@@ -20,41 +46,87 @@ export default function PlansPage() {
             </p>
           </header>
 
-          {SEGMENTS.map((segment) => (
-            <section key={segment.id} id={segment.id} className="pl-segment">
-              <div className="pl-segment-head">
-                <h2>{segment.label}</h2>
-                <p>{segment.intro}</p>
-              </div>
+          <div className="pl-tabs" role="tablist" aria-label="Who the plan is for">
+            {SEGMENTS.map((segment) => (
+              <button
+                key={segment.id}
+                role="tab"
+                type="button"
+                id={`tab-${segment.id}`}
+                aria-selected={segment.id === activeId}
+                aria-controls={`panel-${segment.id}`}
+                className={`pl-tab ${segment.id === activeId ? "is-active" : ""}`}
+                onClick={() => select(segment.id)}
+              >
+                <span className="pl-tab-full">{segment.tab}</span>
+                <span className="pl-tab-short">{segment.short}</span>
+              </button>
+            ))}
+          </div>
 
-              <div className="pl-grid" data-count={segment.plans.length}>
-                {segment.plans.map((plan) => (
-                  <article key={plan.name} className="pl-card">
-                    <h3 className="pl-name">{plan.name}</h3>
-                    <p className="pl-price">
-                      <span>{plan.price}</span>
-                      <small>{plan.cadence}</small>
-                    </p>
-                    <p className="pl-summary">{plan.summary}</p>
-                    <ul className="pl-includes">
-                      {plan.includes.map((item) => (
-                        <li key={item}>{item}</li>
-                      ))}
-                    </ul>
-                    <a className="pl-cta" href="/find-my-plan">
-                      Get started
-                    </a>
-                  </article>
-                ))}
+          <section
+            className="pl-panel"
+            role="tabpanel"
+            id={`panel-${active.id}`}
+            aria-labelledby={`tab-${active.id}`}
+          >
+            <p className="pl-intro">{active.intro}</p>
 
-                {segment.pending && (
-                  <p className="pl-pending" role="note">
-                    {segment.pending}
+            <div className="pl-grid" data-count={active.plans.length}>
+              {active.plans.map((plan) => (
+                <article
+                  key={plan.name}
+                  className={`pl-card ${plan.badge ? "is-featured" : ""}`}
+                >
+                  {plan.badge && <span className="pl-badge">{plan.badge}</span>}
+
+                  <h2 className="pl-name">{plan.name}</h2>
+
+                  <p className="pl-price">
+                    <span>{plan.price}</span>
+                    <small>{plan.cadence}</small>
                   </p>
-                )}
-              </div>
-            </section>
-          ))}
+
+                  <p className="pl-summary">{plan.summary}</p>
+
+                  <a
+                    className={`pl-cta ${plan.badge ? "is-solid" : ""}`}
+                    href="/find-my-plan"
+                  >
+                    Get started
+                  </a>
+
+                  {plan.inherits && (
+                    <p className="pl-inherits">Everything in {plan.inherits}, plus</p>
+                  )}
+
+                  <ul className="pl-includes">
+                    {plan.includes.map((item) => (
+                      <li key={item}>
+                        <svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true">
+                          <path
+                            d="M2.5 7.5l3 3 6-6.5"
+                            fill="none"
+                            stroke="currentColor"
+                            strokeWidth="2"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                          />
+                        </svg>
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                </article>
+              ))}
+            </div>
+
+            {active.pending && (
+              <p className="pl-pending" role="note">
+                {active.pending}
+              </p>
+            )}
+          </section>
 
           <section className="pl-intl">
             <h2>{INTERNATIONAL.heading}</h2>

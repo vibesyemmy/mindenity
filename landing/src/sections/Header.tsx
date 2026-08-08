@@ -72,7 +72,9 @@ export default function Header() {
 </div>
 <div className="styles_headerNavigationButtonsContainer__Ti3NP" style={{opacity:"1"}}>
 <button className="styles_headerNavigationButton__gzr6Z " type="button">Product</button>
-<button className="styles_headerNavigationButton__gzr6Z " type="button">Plans</button>
+{/* The only one of the three whose destination exists. Product and Company
+    stay inert until their pages do — see the note in MENU_GROUPS. */}
+<a className="styles_headerNavigationButton__gzr6Z " href="/plans">Plans</a>
 <button className="styles_headerNavigationButton__gzr6Z " type="button">Company</button>
 </div>
 <div className="styles_headerButtonContainer__EYWrL">
