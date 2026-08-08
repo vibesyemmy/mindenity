@@ -51,6 +51,7 @@ export default function Footer() {
 </a>
 <div className="styles_footerBottomTrailing__XP8pk">
 <nav className="footer-legal" aria-label="Legal">
+<a href="/plans">Plans</a>
 <a href="/faq">FAQ</a>
 <a href="/privacy">Privacy Policy</a>
 <a href="/terms">Terms &amp; Conditions</a>

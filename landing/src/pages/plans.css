@@ -1,0 +1,264 @@
+/*
+ * Plans page. Same language as the FAQ and legal pages — centred title with
+ * the italic accent — with the plan cards borrowing the flat tinted surfaces
+ * the features and who-it's-for sections already use, so pricing reads as part
+ * of the same family rather than a bolted-on table.
+ */
+
+.pl {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 88px 24px 96px;
+  font-family: var(--font-sans);
+  color: var(--mindenity-primary);
+}
+
+.pl-head {
+  max-width: 720px;
+  margin: 0 auto 64px;
+  text-align: center;
+}
+
+.pl-eyebrow {
+  font-size: 11.5px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--mindenity-accent-text);
+  margin: 0 0 12px;
+}
+
+.pl-title {
+  font-size: clamp(34px, 6vw, 54px);
+  font-weight: 700;
+  line-height: 1.08;
+  letter-spacing: -0.015em;
+  margin: 0 0 16px;
+}
+
+.pl-title em {
+  font-style: italic;
+  font-weight: 500;
+  color: var(--mindenity-accent-text);
+}
+
+.pl-sub {
+  margin: 0;
+  font-size: clamp(16px, 2.4vw, 18px);
+  line-height: 1.65;
+  color: rgb(27 36 82 / 0.66);
+}
+
+/* ---- Segments ---- */
+
+.pl-segment {
+  margin-bottom: 72px;
+  scroll-margin-top: 90px;
+}
+
+.pl-segment-head {
+  max-width: 680px;
+  margin-bottom: 28px;
+}
+
+.pl-segment-head h2 {
+  font-size: clamp(24px, 3.2vw, 30px);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  margin: 0 0 10px;
+}
+
+.pl-segment-head p {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.65;
+  color: rgb(27 36 82 / 0.7);
+}
+
+.pl-grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+/* A lone plan should not stretch the full width of the page. */
+.pl-grid[data-count="1"] {
+  grid-template-columns: minmax(260px, 360px);
+}
+
+/* ---- Plan card ---- */
+
+.pl-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--mindenity-hero-tint);
+  border-radius: 16px;
+  padding: 28px 26px;
+}
+
+.pl-name {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0 0 12px;
+}
+
+.pl-price {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  margin: 0 0 14px;
+}
+
+.pl-price span {
+  font-size: clamp(30px, 4vw, 36px);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1;
+}
+
+.pl-price small {
+  font-size: 14px;
+  font-weight: 500;
+  color: rgb(27 36 82 / 0.6);
+}
+
+.pl-summary {
+  margin: 0 0 20px;
+  font-size: 15px;
+  line-height: 1.6;
+  color: rgb(27 36 82 / 0.72);
+}
+
+.pl-includes {
+  flex: 1;
+  margin: 0 0 24px;
+  padding: 0;
+  list-style: none;
+}
+
+.pl-includes li {
+  position: relative;
+  padding-left: 24px;
+  margin-bottom: 10px;
+  font-size: 15px;
+  line-height: 1.55;
+  color: rgb(27 36 82 / 0.8);
+}
+
+/* Check mark drawn in CSS so the list needs no icon asset. */
+.pl-includes li::before {
+  content: "";
+  position: absolute;
+  left: 4px;
+  top: 6px;
+  width: 5px;
+  height: 9px;
+  border: solid var(--mindenity-accent-text);
+  border-width: 0 1.8px 1.8px 0;
+  transform: rotate(45deg);
+}
+
+.pl-cta {
+  align-self: flex-start;
+  padding: 11px 22px;
+  border-radius: 999px;
+  background: var(--mindenity-primary);
+  color: #fff;
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 0.16s;
+}
+
+.pl-cta:hover {
+  background: var(--mindenity-primary-hover);
+}
+
+/* Tiers the client has confirmed but not yet priced. */
+.pl-pending {
+  align-self: center;
+  margin: 0;
+  padding: 16px 20px;
+  border: 1px dashed rgb(27 36 82 / 0.22);
+  border-radius: 14px;
+  font-size: 15px;
+  line-height: 1.55;
+  color: rgb(27 36 82 / 0.62);
+}
+
+/* ---- International ---- */
+
+.pl-intl {
+  background: var(--mindenity-accent-soft);
+  border-radius: 18px;
+  padding: 36px 38px;
+  margin-bottom: 40px;
+}
+
+.pl-intl h2 {
+  font-size: clamp(21px, 2.8vw, 25px);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  margin: 0 0 12px;
+}
+
+.pl-intl p {
+  max-width: 640px;
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.7;
+  color: rgb(27 36 82 / 0.78);
+}
+
+.pl-intl-note {
+  margin-top: 12px !important;
+  font-size: 14.5px !important;
+  color: rgb(27 36 82 / 0.6) !important;
+}
+
+/* ---- Tail ---- */
+
+.pl-more {
+  margin: 0 0 40px;
+  font-size: 16px;
+  line-height: 1.65;
+  color: rgb(27 36 82 / 0.7);
+}
+
+.pl-more a {
+  color: var(--mindenity-accent-text);
+}
+
+.pl-urgent {
+  background: var(--mindenity-hero-tint);
+  border-radius: 14px;
+  padding: 26px 28px;
+}
+
+.pl-urgent h2 {
+  margin: 0 0 8px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.pl-urgent p {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.7;
+  color: rgb(27 36 82 / 0.7);
+}
+
+@media (max-width: 640px) {
+  .pl {
+    padding: 64px 20px 72px;
+  }
+  .pl-segment {
+    margin-bottom: 56px;
+  }
+  .pl-intl {
+    padding: 28px 22px;
+  }
+  .pl-grid[data-count="1"] {
+    grid-template-columns: 1fr;
+  }
+}

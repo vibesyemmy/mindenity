@@ -7,6 +7,7 @@ import FaqSection from "./sections/FaqSection";
 import NewsletterSection from "./sections/NewsletterSection";
 import Footer from "./sections/Footer";
 import FaqPage from "./pages/FaqPage";
+import PlansPage from "./pages/PlansPage";
 import PrivacyPage from "./pages/legal/PrivacyPage";
 import TermsPage from "./pages/legal/TermsPage";
 
@@ -14,6 +15,10 @@ import TermsPage from "./pages/legal/TermsPage";
    full page load. Revisit if these pages ever need shared client-side state. */
 const ROUTES: Record<string, () => React.ReactElement> = {
   "/faq": FaqPage,
+  /* The nav and the who-it's-for cards have always pointed at /plans; /pricing
+     is an alias for anyone who guesses that instead. */
+  "/plans": PlansPage,
+  "/pricing": PlansPage,
   "/privacy": PrivacyPage,
   "/terms": TermsPage,
 };
