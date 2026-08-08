@@ -65,6 +65,29 @@ export default function LegalPage({
     [blocks]
   );
   const [active, setActive] = useState("");
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  /* Panel is a mobile-only overlay, so it closes on Escape, on choosing a
+     section, and when the viewport grows back to the sidebar layout. The page
+     behind it is locked while it is open. */
+  useEffect(() => {
+    if (!menuOpen) return;
+
+    const onKey = (e: KeyboardEvent) => e.key === "Escape" && setMenuOpen(false);
+    const mq = window.matchMedia("(min-width: 1000px)");
+    const onChange = () => mq.matches && setMenuOpen(false);
+
+    const { overflow } = document.body.style;
+    document.body.style.overflow = "hidden";
+    window.addEventListener("keydown", onKey);
+    mq.addEventListener("change", onChange);
+
+    return () => {
+      document.body.style.overflow = overflow;
+      window.removeEventListener("keydown", onKey);
+      mq.removeEventListener("change", onChange);
+    };
+  }, [menuOpen]);
 
   /* Highlight whichever section is currently being read. The bottom margin
      keeps the trigger band near the top of the viewport, so the active entry
@@ -102,8 +125,26 @@ export default function LegalPage({
           </header>
 
           <div className="lg-layout">
-          <nav className="lg-toc" aria-label="Contents">
-            <p className="lg-toc-label">Contents</p>
+          <div
+            className="lg-toc-backdrop"
+            data-open={menuOpen}
+            onClick={() => setMenuOpen(false)}
+            aria-hidden="true"
+          />
+          <nav className="lg-toc" aria-label="Contents" data-open={menuOpen}>
+            <div className="lg-toc-head">
+              <p className="lg-toc-label">Contents</p>
+              <button
+                className="lg-toc-close"
+                type="button"
+                onClick={() => setMenuOpen(false)}
+                aria-label="Close contents"
+              >
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true">
+                  <path d="M4 4l10 10M14 4L4 14" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+                </svg>
+              </button>
+            </div>
             <ol>
               {contents.map((heading) => {
                 const id = slug(heading);
@@ -113,6 +154,7 @@ export default function LegalPage({
                       href={`#${id}`}
                       className={active === id ? "is-active" : undefined}
                       aria-current={active === id ? "location" : undefined}
+                      onClick={() => setMenuOpen(false)}
                     >
                       {heading}
                     </a>
@@ -164,6 +206,25 @@ export default function LegalPage({
             })}
           </div>
           </div>
+
+          {/* Sidebar replacement below the two-column breakpoint. */}
+          <button
+            className="lg-toc-trigger"
+            type="button"
+            onClick={() => setMenuOpen(true)}
+            aria-expanded={menuOpen}
+            aria-label="Open contents"
+          >
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true">
+              <path
+                d="M2.5 4.5h13M2.5 9h13M2.5 13.5h8"
+                stroke="currentColor"
+                strokeWidth="1.8"
+                strokeLinecap="round"
+              />
+            </svg>
+            Contents
+          </button>
         </article>
         <Footer />
       </main>

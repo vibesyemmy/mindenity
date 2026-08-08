@@ -122,12 +122,123 @@
   }
 }
 
-/* Below the sidebar breakpoint it sits above the document, capped so 25
-   entries do not push the opening section off the screen. */
+/* The panel header and close button belong to the mobile overlay only. */
+.lg-toc-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.lg-toc-close,
+.lg-toc-trigger {
+  display: none;
+}
+
+.lg-toc-backdrop {
+  display: none;
+}
+
+/*
+ * Below the sidebar breakpoint the contents become a panel that slides in
+ * from the right, reached from a floating button. A 25-entry list inline
+ * either buries the opening section or gets capped so short it cannot be
+ * scanned; as an overlay it gets the full height and neither problem.
+ */
 @media (max-width: 999px) {
-  .lg-toc ol {
-    max-height: 240px;
+  .lg-toc {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    /* Above the site header (z-index 100), which otherwise paints over the
+       panel and swallows clicks on the close button. */
+    z-index: 120;
+    width: min(330px, 86vw);
+    border-radius: 0;
+    padding: 24px 20px calc(24px + env(safe-area-inset-bottom));
     overflow-y: auto;
+    overscroll-behavior: contain;
+    box-shadow: -12px 0 40px rgb(13 17 41 / 0.18);
+    transform: translateX(100%);
+    visibility: hidden;
+    transition: transform 0.28s cubic-bezier(0.4, 0, 0.2, 1), visibility 0.28s;
+  }
+
+  .lg-toc[data-open="true"] {
+    transform: translateX(0);
+    visibility: visible;
+  }
+
+  .lg-toc-head {
+    margin-bottom: 6px;
+  }
+
+  .lg-toc-label {
+    margin-bottom: 0;
+  }
+
+  .lg-toc-close {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    margin-right: -6px;
+    border: 0;
+    border-radius: 999px;
+    background: rgb(255 255 255 / 0.8);
+    color: var(--mindenity-primary);
+    cursor: pointer;
+  }
+
+  .lg-toc a {
+    padding: 10px 12px;
+    font-size: 15px;
+  }
+
+  .lg-toc-backdrop {
+    display: block;
+    position: fixed;
+    inset: 0;
+    z-index: 110;
+    background: rgb(13 17 41 / 0.4);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.28s, visibility 0.28s;
+  }
+
+  .lg-toc-backdrop[data-open="true"] {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  /* Floating trigger. Sits bottom-right, within thumb reach. */
+  .lg-toc-trigger {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    position: fixed;
+    right: 16px;
+    bottom: calc(16px + env(safe-area-inset-bottom));
+    z-index: 50;
+    padding: 12px 20px;
+    border: 0;
+    border-radius: 999px;
+    background: var(--mindenity-primary);
+    color: #fff;
+    font-family: var(--font-sans);
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 6px 20px rgb(13 17 41 / 0.28);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .lg-toc,
+  .lg-toc-backdrop {
+    transition: none;
   }
 }
 
